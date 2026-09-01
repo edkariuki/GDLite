@@ -2,10 +2,9 @@ import { useState } from 'react'
 
 const megaMenuData = {
     products: [
-        { title: 'Analytics', desc: 'Real-time performance tracking', icon: '📊' },
-        { title: 'Automation', desc: 'Workflow optimization tools', icon: '⚡' },
-        { title: 'Security', desc: 'Enterprise data protection', icon: '🔒' },
-        { title: 'Cloud Sync', desc: 'Seamless cross-platform storage', icon: '☁️' },
+        { title: 'Power Systems', desc: 'Real-time performance tracking', icon: '📊' },
+        { title: 'Security Systems', desc: 'Enterprise data protection', icon: '🔒' },
+        { title: 'Network Systems', desc: 'Seamless cross-platform storage', icon: '☁️' },
     ],
     resources: [
         { title: 'Documentation', desc: 'Guides, API references, and SDKs' },
@@ -65,19 +64,6 @@ export default function Navbar() {
                                             </a>
                                         ))}
                                     </div>
-
-                                    {/* Featured Promo Block (Right) */}
-                                    <div className="col-span-4 bg-gradient-to-br from-[#2547A8] to-blue-900 text-white rounded-2xl p-6 flex flex-col justify-between">
-                                        <div>
-                                            <span className="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">New Release</span>
-                                            <h4 className="text-xl font-bold mt-3">Platform V2.0 is Live</h4>
-                                            <p className="text-sm text-blue-100 mt-2">Explore faster response speeds and updated dashboard layout.</p>
-                                        </div>
-                                        <a href="#" className="inline-flex items-center text-sm font-semibold hover:underline mt-4">
-                                            Read announcement &rarr;
-                                        </a>
-                                    </div>
-
                                 </div>
                             </div>
                         )}
@@ -89,7 +75,7 @@ export default function Navbar() {
                 {/* Action Button */}
                 <div className="hidden md:flex items-center gap-4">
                     <a href="#" className="px-5 py-2.5 text-sm font-semibold text-white bg-[#2547A8] rounded-lg hover:bg-blue-800 transition-colors">
-                        Get Started
+                        Enquire Now
                     </a>
                 </div>
 
