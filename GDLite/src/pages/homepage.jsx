@@ -35,10 +35,8 @@ function Homepage() {
                     className="absolute inset-0 w-full h-full object-cover -z-10"
                 />
 
-                <p className="absolute top-42 left-6 md:top-48 md:left-12 text-4xl sm:text-5xl md:text-4xl lg:text-6xl font-extrabold whitespace-nowrap drop-shadow-md">
-                    <span className="text-[#EFA24C]">GD</span>
-                    <span className="text-[#2547A8]">LITE</span>
-                    <span className="text-black">AFRICA</span>
+                <p className="absolute top-20 left-6 right-6 md:top-26 md:left-12 md:right-auto md:max-w-2xl text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+                    <span>Your trusted partner for innovative technology solutions.</span>
                 </p>
 
             </div>

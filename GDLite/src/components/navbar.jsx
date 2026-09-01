@@ -89,7 +89,7 @@ export default function Navbar() {
 
             {/* Mobile Drawer */}
             {mobileOpen && (
-                <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4">
+                <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-2xl z-50">
                     <a href="#" className="block font-medium text-gray-800">Home</a>
                     <p className="font-semibold text-xs text-gray-400 uppercase tracking-wider mt-4">Products</p>
                     <div className="pl-2 space-y-3">
