@@ -1,5 +1,7 @@
 import HeroImg from '../assets/images/105.jpg'
 import WorkersSolarImg from '../assets/images/workers_solar.jpg'
+import CctvImg from '../assets/images/cctv_image.jpg'
+import SeverImg from '../assets/images/server_room.jpg'
 import StackingCard from '../components/stacking_card'
 
 const cardsData = [
@@ -13,13 +15,13 @@ const cardsData = [
         badge: "02 / Monitoring",
         title: "Security Systems",
         description: "Smart protection for homes, businesses, and institutions. Our security setups ensure peace of mind with intelligent monitoring, automated alerts, and secured access—always in your control.",
-        image: HeroImg,
+        image: CctvImg,
     },
     {
         badge: "03 / Scalability",
         title: "Network Systems",
         description: "Fast and secure networking for modern living and workspaces. GDLite Africa builds strong infrastructure with seamless data flow, structured cabling, and tailored smart connectivity.",
-        image: HeroImg,
+        image: SeverImg,
     },
 ]
 
@@ -41,7 +43,6 @@ function Homepage() {
 
             </div>
             <section className="bg-gray-50 min-h-screen py-20 px-4">
-                {/* Section Header */}
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
                         Explore Our Platform
@@ -51,7 +52,6 @@ function Homepage() {
                     </p>
                 </div>
 
-                {/* Stacking Cards Container */}
                 <div className="relative pb-24">
                     {cardsData.map((card, idx) => (
                         <StackingCard
