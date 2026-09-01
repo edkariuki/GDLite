@@ -45,10 +45,10 @@ function Homepage() {
             <section className="bg-gray-50 min-h-screen py-20 px-4">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
-                        Explore Our Platform
+                        Explore Our Solutions
                     </h1>
                     <p className="text-gray-600 text-lg">
-                        Scroll down to see our feature breakdown in action.
+                        Each solution is designed to provide maximum efficiency, security, and scalability for your home or business.
                     </p>
                 </div>
 
