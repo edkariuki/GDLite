@@ -1,29 +1,40 @@
-export default function StackingCard({ title, description, imageSrc, badgeText, index }) {
+export default function StackingCard({ title, description, imageSrc, badgeText, linkUrl = "#", index }) {
     return (
         <div
-            className="sticky top-12 w-full max-w-5xl mx-auto rounded-3xl bg-white border border-gray-200 shadow-xl overflow-hidden p-8 md:p-12 mb-8 transition-all"
+            className="sticky w-full max-w-5xl mx-auto rounded-3xl bg-white border border-gray-200 shadow-xl overflow-hidden p-8 md:p-12 mb-8 transition-all"
             style={{
-                // Offsets top sticky positioning slightly per card to create a subtle layered stack
                 top: `calc(4rem + ${index * 1.5}rem)`,
             }}
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                {/* Left Side: Content */}
-                <div className="flex flex-col justify-center space-y-4">
-                    {badgeText && (
-                        <span className="w-fit px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#2547A8] bg-[#2547A8]/10 rounded-full">
-                            {badgeText}
-                        </span>
-                    )}
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
-                        {title}
-                    </h2>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                        {description}
-                    </p>
+                <div className="flex flex-col justify-center space-y-6">
+                    <div className="space-y-4">
+                        {badgeText && (
+                            <span className="w-fit px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#2547A8] bg-[#2547A8]/10 rounded-full">
+                                {badgeText}
+                            </span>
+                        )}
+                        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+                            {title}
+                        </h2>
+                        <p className="text-gray-600 text-lg leading-relaxed">
+                            {description}
+                        </p>
+                    </div>
+
+                    <div>
+                        <a
+                            href={linkUrl}
+                            className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-[#2547A8] rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 transition-colors duration-200"
+                        >
+                            See More
+                            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
-                {/* Right Side: Image */}
                 <div className="w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden relative shadow-inner bg-gray-100">
                     <img
                         src={imageSrc}
