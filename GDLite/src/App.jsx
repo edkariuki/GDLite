@@ -2,20 +2,20 @@ import './App.css'
 import HeroImg from './assets/images/105.jpg'
 
 function App() {
-
   return (
-    <>
-      <div className="flex flex-col items-center min-h-screen">
-        <div className="relative w-full">
-          <img src={HeroImg} className="w-full h-auto" />
-          <p className="absolute top-1/4 left-1/5 -translate-x-1/2 -translate-y-1/2 text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-            <span className="text-[#EFA24C]">GD</span>
-            <span className="text-[#2547A8]">LITE</span>
-            <span className="text-black">AFRICA</span>
-          </p>
-        </div>
-      </div>
-    </>
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      <img
+        src={HeroImg}
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
+
+      <p className="absolute top-42 left-6 md:top-48 md:left-12 text-4xl sm:text-5xl md:text-4xl lg:text-6xl font-extrabold whitespace-nowrap drop-shadow-md">
+        <span className="text-[#EFA24C]">GD</span>
+        <span className="text-[#2547A8]">LITE</span>
+        <span className="text-black">AFRICA</span>
+      </p>
+    </div>
   )
 }
 
