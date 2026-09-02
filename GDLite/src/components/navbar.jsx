@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const megaMenuData = {
     products: [
-        { title: 'Power Systems', desc: 'Real-time performance tracking', icon: '📊' },
+        { title: 'Power Systems', desc: 'Real-time performance tracking', icon: '📊', linkUrl: '../solutions/power-systems' },
         { title: 'Security Systems', desc: 'Enterprise data protection', icon: '🔒' },
         { title: 'Network Systems', desc: 'Seamless cross-platform storage', icon: '☁️' },
     ],
@@ -22,14 +22,14 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-                <a href="#" className="text-2xl font-extrabold tracking-tight">
+                <a href="/" className="text-2xl font-extrabold tracking-tight">
                     <span className="text-[#EFA24C]">GD</span>
                     <span className="text-[#2547A8]">LITE</span>
                     <span className="text-black">AFRICA</span>
                 </a>
 
                 <div className="hidden md:flex items-center space-x-8 h-full">
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                    <a href="/" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
 
                     <div
                         className="h-full flex items-center"
@@ -49,7 +49,7 @@ export default function Navbar() {
 
                                     <div className="col-span-8 grid grid-cols-2 gap-6">
                                         {megaMenuData.products.map((item, idx) => (
-                                            <a key={idx} href="#" className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+                                            <a key={idx} href={item.linkUrl} className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
                                                 <span className="text-2xl p-2 bg-gray-100 rounded-lg">{item.icon}</span>
                                                 <div>
                                                     <p className="font-bold text-gray-900">{item.title}</p>
