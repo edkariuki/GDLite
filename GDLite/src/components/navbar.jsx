@@ -47,7 +47,6 @@ export default function Navbar() {
                             <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl transition-all">
                                 <div className="max-w-7xl mx-auto p-8 grid grid-cols-12 gap-8">
 
-                                    {/* Category Grid (Left/Center) */}
                                     <div className="col-span-8 grid grid-cols-2 gap-6">
                                         {megaMenuData.products.map((item, idx) => (
                                             <a key={idx} href="#" className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
@@ -65,6 +64,7 @@ export default function Navbar() {
                     </div>
 
                     <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">About</a>
+                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
                 </div>
 
                 <div className="hidden md:flex items-center gap-4">
