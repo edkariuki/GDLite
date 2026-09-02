@@ -1,8 +1,9 @@
-import HeroImg from '../assets/images/105.jpg'
-import WorkersSolarImg from '../assets/images/workers_solar.jpg'
-import CctvImg from '../assets/images/cctv_image.jpg'
-import SeverImg from '../assets/images/server_room.jpg'
-import StackingCard from '../components/stacking_card'
+import HeroImg from '../../assets/images/105.jpg'
+import WorkersSolarImg from '../../assets/images/workers_solar.jpg'
+import CctvImg from '../../assets/images/cctv_image.jpg'
+import SeverImg from '../../assets/images/server_room.jpg'
+import StackingCard from '../../components/stacking_card'
+// import PowerSystems from '../solutions/power_systems'
 
 const cardsData = [
     {
@@ -10,18 +11,21 @@ const cardsData = [
         title: "Power Systems",
         description: "Reliable, efficient, and sustainable energy solutions designed for homes and commercial spaces. GDLite Africa delivers control and independence through solar installations and integrated hybrid systems.",
         image: WorkersSolarImg,
+        linkUrl: "../solutions/power_systems",
     },
     {
         badge: "02 / Monitoring",
         title: "Security Systems",
         description: "Smart protection for homes, businesses, and institutions. Our security setups ensure peace of mind with intelligent monitoring, automated alerts, and secured access—always in your control.",
         image: CctvImg,
+        // linkUrl: PowerSystems,
     },
     {
         badge: "03 / Scalability",
         title: "Network Systems",
         description: "Fast and secure networking for modern living and workspaces. GDLite Africa builds strong infrastructure with seamless data flow, structured cabling, and tailored smart connectivity.",
         image: SeverImg,
+        // linkUrl: PowerSystems,
     },
 ]
 
@@ -59,6 +63,7 @@ function Homepage() {
                             title={card.title}
                             description={card.description}
                             imageSrc={card.image}
+                            linkUrl={card.linkUrl}
                         />
                     ))}
                 </div>
