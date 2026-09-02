@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Homepage from './pages/home/homepage'
 import Layout from './components/layout'
+import PowerSystems from './pages/solutions/power_systems'
 
 export const router = createBrowserRouter([
     {
@@ -11,10 +12,10 @@ export const router = createBrowserRouter([
                 index: true,
                 element: <Homepage />,
             },
-            //   {
-            //     path: 'about', // Matches path '/about'
-            //     element: <About />,
-            //   },
+            {
+                path: 'solutions/power-systems',
+                element: <PowerSystems />,
+            },
         ],
     },
 ])

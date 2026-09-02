@@ -3,7 +3,6 @@ import WorkersSolarImg from '../../assets/images/workers_solar.jpg'
 import CctvImg from '../../assets/images/cctv_image.jpg'
 import SeverImg from '../../assets/images/server_room.jpg'
 import StackingCard from '../../components/stacking_card'
-// import PowerSystems from '../solutions/power_systems'
 
 const cardsData = [
     {
@@ -11,7 +10,7 @@ const cardsData = [
         title: "Power Systems",
         description: "Reliable, efficient, and sustainable energy solutions designed for homes and commercial spaces. GDLite Africa delivers control and independence through solar installations and integrated hybrid systems.",
         image: WorkersSolarImg,
-        linkUrl: "../solutions/power_systems",
+        linkUrl: "../solutions/power-systems",
     },
     {
         badge: "02 / Monitoring",
