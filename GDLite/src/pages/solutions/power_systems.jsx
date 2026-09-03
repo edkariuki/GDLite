@@ -4,6 +4,8 @@ import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
 import BackupGeneratorImg from '../../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
+import OffGridSolarImg from '../../assets/images/off_grid_solar.png';
+
 
 export default function PowerSystems() {
     const coreServices = [
@@ -16,7 +18,7 @@ export default function PowerSystems() {
         {
             title: "Off-Grid Solar Solutions",
             description: "Complete energy independence for remote locations. Standalone solar and battery setups engineered to keep power running 24/7 without a grid connection.",
-            image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80",
+            image: OffGridSolarImg,
             linkUrl: "#contact",
         },
         {
