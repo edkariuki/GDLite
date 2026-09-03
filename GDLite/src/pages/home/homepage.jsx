@@ -10,7 +10,7 @@ const cardsData = [
         title: "Power Systems",
         description: "Reliable, efficient, and sustainable energy solutions designed for homes and commercial spaces. GDLite Africa delivers control and independence through solar installations and integrated hybrid systems.",
         image: WorkersSolarImg,
-        linkUrl: "../solutions/power-systems",
+        linkUrl: "/power-systems",
     },
     {
         badge: "02 / Monitoring",

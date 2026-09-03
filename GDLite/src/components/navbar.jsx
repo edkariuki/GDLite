@@ -3,7 +3,7 @@ import { Zap, Lock, Radio, ChevronDown } from 'lucide-react'
 
 const megaMenuData = {
     products: [
-        { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '../solutions/power-systems' },
+        { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '/power-systems' },
         { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock },
         { title: 'Network Systems', desc: 'Infrastucture for seamless connectivity', icon: Radio },
     ],

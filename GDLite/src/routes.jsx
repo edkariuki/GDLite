@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
                 element: <Homepage />,
             },
             {
-                path: 'solutions/power-systems',
+                path: 'power-systems',
                 element: <PowerSystems />,
             },
         ],
