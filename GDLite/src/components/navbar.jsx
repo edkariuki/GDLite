@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Zap, Lock } from 'lucide-react'
+import { Zap, Lock, Radio, ChevronDown } from 'lucide-react'
 
 const megaMenuData = {
     products: [
         { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '../solutions/power-systems' },
-        { title: 'Security Systems', desc: 'Enterprise data protection', icon: Lock },
-        { title: 'Network Systems', desc: 'Seamless cross-platform storage', icon: '☁️' },
+        { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock },
+        { title: 'Network Systems', desc: 'Infrastucture for seamless connectivity', icon: Radio },
     ],
     resources: [
         { title: 'Documentation', desc: 'Guides, API references, and SDKs' },
@@ -39,9 +39,10 @@ export default function Navbar() {
                     >
                         <button className="flex items-center gap-1 text-gray-600 hover:text-[#2547A8] font-medium py-2">
                             Products
-                            <svg className={`w-4 h-4 transition-transform ${activeMenu === 'products' ? 'rotate-180 text-[#2547A8]' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <ChevronDown
+                                className={`w-4 h-4 transition-transform duration-200 ${activeMenu === 'products' ? 'rotate-180 text-[#2547A8]' : ''
+                                    }`}
+                            />
                         </button>
 
                         {activeMenu === 'products' && (
