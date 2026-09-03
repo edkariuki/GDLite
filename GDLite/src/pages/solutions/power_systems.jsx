@@ -2,6 +2,7 @@ import React from 'react';
 import SolarWaterImg from '../../assets/images/solar_water.jpg';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
+import BackupGeneratorImg from '../../assets/images/backup_generator.jpg';
 
 export default function PowerSystems() {
     const coreServices = [
@@ -32,7 +33,7 @@ export default function PowerSystems() {
         {
             title: "Backup Generators",
             description: "Heavy-duty automatic and manual backup generators. Ensure essential machinery and critical systems stay powered during outages.",
-            image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+            image: BackupGeneratorImg,
             linkUrl: "#contact",
         },
         {
