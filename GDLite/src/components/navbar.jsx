@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { Zap } from 'lucide-react'
+import { Zap, Lock } from 'lucide-react'
 
 const megaMenuData = {
     products: [
         { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '../solutions/power-systems' },
-        { title: 'Security Systems', desc: 'Enterprise data protection', icon: '🔒' },
+        { title: 'Security Systems', desc: 'Enterprise data protection', icon: Lock },
         { title: 'Network Systems', desc: 'Seamless cross-platform storage', icon: '☁️' },
     ],
     resources: [
