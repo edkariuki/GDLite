@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Zap, Lock, Radio, ChevronDown } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const megaMenuData = {
     products: [
@@ -99,9 +100,12 @@ export default function Navbar() {
                     <p className="font-semibold text-xs text-gray-400 uppercase tracking-wider mt-4">Products</p>
                     <div className="pl-2 space-y-3">
                         {megaMenuData.products.map((item, idx) => (
-                            <a key={idx} href="#" className="block text-gray-600 font-medium text-sm">
-                                {item.title}
-                            </a>
+                            <Link
+                                key={idx}
+                                to={item.linkUrl}
+                                className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors"
+                            >
+                            </Link>
                         ))}
                     </div>
                     <a href="#" className="block font-medium text-gray-800 pt-2">About</a>

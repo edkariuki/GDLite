@@ -1,3 +1,6 @@
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 export default function StackingCard({ title, description, imageSrc, badgeText, linkUrl = "#", index }) {
     return (
         <div
@@ -23,15 +26,13 @@ export default function StackingCard({ title, description, imageSrc, badgeText, 
                     </div>
 
                     <div>
-                        <a
-                            href={linkUrl || "#"}
+                        <Link
+                            to={linkUrl || "#"}
                             className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-[#2547A8] rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 transition-colors duration-200"
                         >
                             Learn More
-                            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
                     </div>
                 </div>
 
