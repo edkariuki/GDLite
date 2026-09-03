@@ -17,14 +17,12 @@ const cardsData = [
         title: "Security Systems",
         description: "Smart protection for homes, businesses, and institutions. Our security setups ensure peace of mind with intelligent monitoring, automated alerts, and secured access—always in your control.",
         image: CctvImg,
-        // linkUrl: PowerSystems,
     },
     {
         badge: "03 / Scalability",
         title: "Network Systems",
         description: "Fast and secure networking for modern living and workspaces. GDLite Africa builds strong infrastructure with seamless data flow, structured cabling, and tailored smart connectivity.",
         image: SeverImg,
-        // linkUrl: PowerSystems,
     },
 ]
 
@@ -43,12 +41,12 @@ function Homepage() {
                 </p>
 
             </div>
-            <section className="bg-gray-50 min-h-screen py-20 px-4">
+            <section className="bg-surface-light min-h-screen py-20 px-4">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+                    <h1 className="text-4xl font-extrabold text-content-primary mb-4">
                         Explore Our Solutions
                     </h1>
-                    <p className="text-gray-600 text-lg">
+                    <p className="text-content-body text-lg">
                         Each solution is designed to provide maximum efficiency, security, and scalability for your home or business.
                     </p>
                 </div>

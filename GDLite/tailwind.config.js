@@ -7,29 +7,26 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                brand: {
-                    DEFAULT: '#2547A8',
-                    hover: '#1e3a8a',
-                    focus: '#93c5fd',
-                    light: 'rgba(37, 71, 168, 0.1)',
-                },
+                // Brand Colors
+                'brand': '#2547A8',
+                'brand-hover': '#1e3a8a',
+                'brand-focus': '#93c5fd',
+                'brand-light': 'rgba(37, 71, 168, 0.1)',
+                'brand-accent': '#EFA24C',
 
-                surface: {
-                    light: '#F9FAFB',
-                    card: '#FFFFFF',
-                    hero: '#0F172A',
-                },
+                // Surface / Background Colors
+                'surface-light': '#F9FAFB',
+                'surface-card': '#FFFFFF',
+                'surface-hero': '#0F172A',
 
-                content: {
-                    primary: '#111827',
-                    body: '#4B5563',
-                    muted: '#D1D5DB',
-                },
+                // Text Content Colors
+                'content-primary': '#111827',
+                'content-body': '#4B5563',
+                'content-muted': '#D1D5DB',
 
-                stroke: {
-                    DEFAULT: '#E5E7EB',
-                    light: '#F3F4F6',
-                },
+                // Borders & Dividers
+                'stroke': '#E5E7EB',
+                'stroke-light': '#F3F4F6',
             },
         },
     },
