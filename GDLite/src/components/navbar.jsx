@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { Zap } from 'lucide-react'
 
 const megaMenuData = {
     products: [
-        { title: 'Power Systems', desc: 'Real-time performance tracking', icon: '📊', linkUrl: '../solutions/power-systems' },
+        { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '../solutions/power-systems' },
         { title: 'Security Systems', desc: 'Enterprise data protection', icon: '🔒' },
         { title: 'Network Systems', desc: 'Seamless cross-platform storage', icon: '☁️' },
     ],
@@ -48,15 +49,26 @@ export default function Navbar() {
                                 <div className="max-w-7xl mx-auto p-8 grid grid-cols-12 gap-8">
 
                                     <div className="col-span-8 grid grid-cols-2 gap-6">
-                                        {megaMenuData.products.map((item, idx) => (
-                                            <a key={idx} href={item.linkUrl} className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
-                                                <span className="text-2xl p-2 bg-gray-100 rounded-lg">{item.icon}</span>
-                                                <div>
-                                                    <p className="font-bold text-gray-900">{item.title}</p>
-                                                    <p className="text-sm text-gray-500">{item.desc}</p>
-                                                </div>
-                                            </a>
-                                        ))}
+                                        {megaMenuData.products.map((item, idx) => {
+                                            const IconComponent = item.icon;
+                                            const isReactComponent = typeof IconComponent !== 'string';
+
+                                            return (
+                                                <a key={idx} href={item.linkUrl} className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+                                                    <span className="text-2xl p-2 bg-gray-100 rounded-lg flex items-center justify-center min-w-[40px] min-h-[40px]">
+                                                        {isReactComponent ? (
+                                                            <IconComponent className="w-5 h-5 text-gray-700" />
+                                                        ) : (
+                                                            <span>{item.icon}</span>
+                                                        )}
+                                                    </span>
+                                                    <div>
+                                                        <p className="font-bold text-gray-900">{item.title}</p>
+                                                        <p className="text-sm text-gray-500">{item.desc}</p>
+                                                    </div>
+                                                </a>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>
