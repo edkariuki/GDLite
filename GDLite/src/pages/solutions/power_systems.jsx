@@ -1,5 +1,5 @@
 import React from 'react';
-import SolarWaterImg from '../../assets/images/solar_water.jpg';
+import SolarWaterImg from '../../assets/images/solar_water.png';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
 import BackupGeneratorImg from '../../assets/images/backup_generator.jpg';
