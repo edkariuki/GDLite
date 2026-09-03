@@ -1,6 +1,7 @@
 import React from 'react';
 import SolarWaterImg from '../../assets/images/solar_water.jpg';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
+import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
 
 export default function PowerSystems() {
     const coreServices = [
@@ -19,7 +20,7 @@ export default function PowerSystems() {
         {
             title: "Solar Water Pumping",
             description: "Cost-effective, reliable water pumping powered directly by the sun. Perfect for agricultural irrigation, livestock, and domestic water supply.",
-            image: "https://images.unsplash.com/photo-1548611716-300181515206?auto=format&fit=crop&w=800&q=80",
+            image: SolarWaterPumpingImg,
             linkUrl: "#contact",
         },
         {
