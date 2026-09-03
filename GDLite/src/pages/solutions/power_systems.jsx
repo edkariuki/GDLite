@@ -3,6 +3,7 @@ import SolarWaterImg from '../../assets/images/solar_water.jpg';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
 import BackupGeneratorImg from '../../assets/images/backup_generator.jpg';
+import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
 
 export default function PowerSystems() {
     const coreServices = [
@@ -39,7 +40,7 @@ export default function PowerSystems() {
         {
             title: "Electrical Design & Contracting",
             description: "Certified professional electrical designs, load analysis, wiring, and turn-key installation services complying with EPRA and national safety standards.",
-            image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+            image: ElectricalDesignImg,
             linkUrl: "#contact",
         },
     ];
