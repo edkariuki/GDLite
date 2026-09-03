@@ -5,6 +5,7 @@ import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
 import BackupGeneratorImg from '../../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../../assets/images/off_grid_solar.png';
+import { ArrowRight } from 'lucide-react';
 
 
 export default function PowerSystems() {
@@ -49,7 +50,6 @@ export default function PowerSystems() {
 
     return (
         <div className="bg-gray-50 text-gray-900 font-sans min-h-screen">
-            {/* Hero Header */}
             <section className="bg-slate-900 text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-6">
                     <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-400 text-sm font-semibold tracking-wide uppercase">
@@ -69,21 +69,18 @@ export default function PowerSystems() {
                 </div>
             </section>
 
-            {/* Services Section - Grid Layout */}
             <section className="max-w-7xl mx-auto py-16 px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our Power Systems solutions</h2>
                     <p className="text-gray-600 mt-2">Tailored engineering services designed to meet your power requirements.</p>
                 </div>
 
-                {/* Responsive Grid: 1 column on mobile, 2 columns on desktop (md:) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {coreServices.map((service, index) => (
                         <div
                             key={index}
                             className="bg-white rounded-3xl border border-gray-200 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
                         >
-                            {/* Larger Image Container (Dominates the card) */}
                             <div className="w-full h-80 sm:h-96 overflow-hidden relative bg-gray-100">
                                 <img
                                     src={service.image}
@@ -92,7 +89,6 @@ export default function PowerSystems() {
                                 />
                             </div>
 
-                            {/* Compact Text Area */}
                             <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
                                 <div className="space-y-2">
                                     <h3 className="text-2xl font-extrabold text-gray-900 leading-tight">
@@ -109,9 +105,7 @@ export default function PowerSystems() {
                                         className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-[#2547A8] rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 transition-colors duration-200 w-full sm:w-auto"
                                     >
                                         Request Solution
-                                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                        </svg>
+                                        <ArrowRight className="w-4 h-4 ml-2" />
                                     </a>
                                 </div>
                             </div>
