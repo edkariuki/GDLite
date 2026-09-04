@@ -52,7 +52,7 @@ export default function PowerSystems() {
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
             <section className="bg-surface-hero text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-6">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-400 text-sm font-semibold tracking-wide uppercase">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-blue-accent/20 text-blue-accent-light text-sm font-semibold tracking-wide uppercase">
                         Energy & Electrical Engineering
                     </span>
                     <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
