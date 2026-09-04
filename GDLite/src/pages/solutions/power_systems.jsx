@@ -114,7 +114,6 @@ export default function PowerSystems() {
                 </div>
             </section>
 
-            {/* Location & Contact Section */}
             <section id="contact" className="bg-white border-t border-gray-200 py-16 px-6">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="space-y-6">
@@ -138,7 +137,7 @@ export default function PowerSystems() {
                         </div>
                     </div>
 
-                    {/* Quick Inquiry Form */}
+
                     <form className="bg-gray-50 p-8 rounded-3xl border border-gray-200 space-y-4">
                         <h3 className="text-xl font-bold text-gray-900">Request a Quote</h3>
                         <div>
