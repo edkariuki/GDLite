@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function StackingCard({ title, description, imageSrc, badgeText, linkUrl = "#", index }) {
     return (
         <div
-            className="sticky w-full max-w-5xl mx-auto rounded-3xl bg-white border border-gray-200 shadow-xl overflow-hidden p-8 md:p-12 mb-8 transition-all"
+            className="sticky w-full max-w-5xl mx-auto rounded-3xl bg-surface-card border border-stroke shadow-xl overflow-hidden p-8 md:p-12 mb-8 transition-all"
             style={{
                 top: `calc(4rem + ${index * 1.5}rem)`,
             }}
@@ -13,14 +13,14 @@ export default function StackingCard({ title, description, imageSrc, badgeText, 
                 <div className="flex flex-col justify-center space-y-6">
                     <div className="space-y-4">
                         {badgeText && (
-                            <span className="w-fit px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#2547A8] bg-[#2547A8]/10 rounded-full">
+                            <span className="w-fit px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand bg-brand-light rounded-full">
                                 {badgeText}
                             </span>
                         )}
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl font-extrabold text-content-primary leading-tight">
                             {title}
                         </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
+                        <p className="text-content-secondary text-lg leading-relaxed">
                             {description}
                         </p>
                     </div>
@@ -28,7 +28,7 @@ export default function StackingCard({ title, description, imageSrc, badgeText, 
                     <div>
                         <Link
                             to={linkUrl || "#"}
-                            className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-[#2547A8] rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 transition-colors duration-200"
+                            className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover focus:ring-4 focus:ring-brand-focus transition-colors duration-200"
                         >
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -36,7 +36,7 @@ export default function StackingCard({ title, description, imageSrc, badgeText, 
                     </div>
                 </div>
 
-                <div className="w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden relative shadow-inner bg-gray-100">
+                <div className="w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden relative shadow-inner bg-stroke-light">
                     <img
                         src={imageSrc}
                         alt={title}
