@@ -18,7 +18,6 @@ export const Dropdown = ({
             )}
 
             <Select.Root value={value} onValueChange={onChange}>
-                {/* Trigger Box */}
                 <Select.Trigger
                     className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary flex items-center justify-between cursor-pointer transition-colors"
                 >
@@ -28,7 +27,6 @@ export const Dropdown = ({
                     </Select.Icon>
                 </Select.Trigger>
 
-                {/* Dropdown Popup */}
                 <Select.Portal>
                     <Select.Content
                         side="bottom"
