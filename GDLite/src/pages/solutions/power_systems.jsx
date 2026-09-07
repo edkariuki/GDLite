@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SolarWaterImg from '../../assets/images/solar_water.png';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
@@ -48,6 +48,7 @@ export default function PowerSystems() {
             linkUrl: "#contact",
         },
     ];
+    const [selectedService, setSelectedService] = useState(coreServices[0].title);
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
@@ -149,7 +150,7 @@ export default function PowerSystems() {
                             <label className="block text-sm font-medium text-content-body mb-1">Service Required</label>
                             <Dropdown
                                 label="Service Required"
-                                options={services}
+                                options={coreServices.map(service => service.title)}
                                 value={selectedService}
                                 onChange={(e) => setSelectedService(e.target.value)}
                             />
