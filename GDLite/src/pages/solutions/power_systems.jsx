@@ -6,6 +6,7 @@ import BackupGeneratorImg from '../../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../../assets/images/off_grid_solar.png';
 import { ArrowRight } from 'lucide-react';
+import { Dropdown } from '../../components/dropdown';
 
 
 export default function PowerSystems() {
@@ -146,14 +147,12 @@ export default function PowerSystems() {
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-content-body mb-1">Service Required</label>
-                            <select className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary">
-                                <option>Hybrid Backup System</option>
-                                <option>Off-grid Solar</option>
-                                <option>Solar Pumps</option>
-                                <option>Solar Water Heaters</option>
-                                <option>Backup Generators</option>
-                                <option>Electrical Design & Contracting</option>
-                            </select>
+                            <Dropdown
+                                label="Service Required"
+                                options={services}
+                                value={selectedService}
+                                onChange={(e) => setSelectedService(e.target.value)}
+                            />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-content-body mb-1">Message</label>
