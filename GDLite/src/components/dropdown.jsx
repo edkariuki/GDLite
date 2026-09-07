@@ -7,7 +7,7 @@ export const Dropdown = ({
     options = [],
     value,
     onChange,
-    placeholder = "Select a service..."
+    placeholder = ""
 }) => {
     return (
         <div className="w-full">
