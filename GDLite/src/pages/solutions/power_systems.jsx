@@ -48,7 +48,7 @@ export default function PowerSystems() {
             linkUrl: "#contact",
         },
     ];
-    const [selectedService, setSelectedService] = useState(coreServices[0].title);
+    const [selectedService, setSelectedService] = useState('');
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
@@ -147,12 +147,11 @@ export default function PowerSystems() {
                             <input type="text" className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary" placeholder="John Doe" />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-content-body mb-1">Service Required</label>
+                            <label className="block text-sm font-medium text-content-body mb-1">Type of Service</label>
                             <Dropdown
-                                label="Service Required"
                                 options={coreServices.map(service => service.title)}
                                 value={selectedService}
-                                onChange={(e) => setSelectedService(e.target.value)}
+                                onChange={(value) => setSelectedService(value)}
                             />
                         </div>
                         <div>
