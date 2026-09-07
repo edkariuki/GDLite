@@ -134,6 +134,7 @@ code {
   --color-content-body: #4B5563;
   --color-content-secondary: #6B7280;
   --color-content-muted: #D1D5DB;
+  --color-content-placeholder: #9CA3AF;
 
   /* Borders & Dividers */
   --color-stroke: #E5E7EB;

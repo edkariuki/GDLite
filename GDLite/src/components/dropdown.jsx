@@ -19,7 +19,8 @@ export const Dropdown = ({
 
             <Select.Root value={value} onValueChange={onChange}>
                 <Select.Trigger
-                    className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary flex items-center justify-between cursor-pointer transition-colors"
+                    className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none 
+                    bg-surface-card text-content-primary flex items-center justify-between cursor-pointer transition-colors data-[placeholder]:text-content-placeholder"
                 >
                     <Select.Value placeholder={placeholder} />
                     <Select.Icon>
