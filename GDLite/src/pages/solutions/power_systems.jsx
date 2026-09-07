@@ -149,6 +149,7 @@ export default function PowerSystems() {
                         <div>
                             <label className="block text-sm font-medium text-content-body mb-1">Type of Service</label>
                             <Dropdown
+                                placeholder="Select a service..."
                                 options={coreServices.map(service => service.title)}
                                 value={selectedService}
                                 onChange={(value) => setSelectedService(value)}
