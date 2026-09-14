@@ -3,7 +3,7 @@ import AlarmSystemsImg from '../../assets/images/alarm_system.jpg';
 import CctvImg from '../../assets/images/cctv_img.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
-import BiometricAccessImg from '../../assets/images/biometric_access.jpg';
+import AccessPointsImg from '../../assets/images/access_points.jpg';
 import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
 import { ArrowRight } from 'lucide-react';
 import { Dropdown } from '../../components/dropdown';
@@ -38,7 +38,7 @@ export default function SecuritySystems() {
         {
             title: "Access Points",
             description: "Secure and efficient access point solutions for seamless connectivity in homes and businesses.",
-            image: AutomaticGateImg,
+            image: AccessPointsImg,
             linkUrl: "#contact",
         },
         {
