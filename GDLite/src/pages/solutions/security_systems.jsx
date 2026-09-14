@@ -4,7 +4,7 @@ import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
 import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
-import OffGridSolarImg from '../../assets/images/off_grid_solar.png';
+import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
 import { ArrowRight } from 'lucide-react';
 import { Dropdown } from '../../components/dropdown';
 
@@ -38,7 +38,7 @@ export default function SecuritySystems() {
         {
             title: "Gate Automation",
             description: "Automated gate systems for residential and commercial properties, providing convenience and security.",
-            image: ElectricalDesignImg,
+            image: AutomaticGateImg,
             linkUrl: "#contact",
         },
         {
