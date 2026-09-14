@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CableStructureImg from '../../assets/images/cable_structure.jpg';
 import CctvImg from '../../assets/images/cctv_img.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
-import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
+import FiberSplicingImg from '../../assets/images/fiber_splicing.jpg';
 import AccessPointsImg from '../../assets/images/access_points.jpg';
 import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
 import { ArrowRight } from 'lucide-react';
@@ -26,7 +26,7 @@ export default function NetworkSystems() {
         {
             title: "Fiber Splicing",
             description: "High-quality fiber optic splicing services for reliable data transmission and network connectivity.",
-            image: ElectricFenceImg,
+            image: FiberSplicingImg,
             linkUrl: "#contact",
         },
         {
