@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AlarmSystemsImg from '../../assets/images/alarm_system.jpg';
 import CctvImg from '../../assets/images/cctv_img.jpg';
-import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
+import FireExtinguisherImg from '../../assets/images/fire_suppression.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
 import BiometricAccessImg from '../../assets/images/biometric_access.jpg';
 import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
