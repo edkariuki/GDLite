@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import AlarmSystemsImg from '../../assets/images/alarm_system.png';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
-import SolarWaterPumpingImg from '../../assets/images/solar_water_pumping.jpg';
-import EkectricFence from '../../assets/images/electric_fence.jpg';
+import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
+import ElectricFence from '../../assets/images/electric_fence.jpg';
 import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../../assets/images/off_grid_solar.png';
 import { ArrowRight } from 'lucide-react';
@@ -26,7 +26,7 @@ export default function SecuritySystems() {
         {
             title: "Electric Fence",
             description: "High-security electric fencing solutions for perimeter protection of homes, farms, and commercial properties.",
-            image: SolarWaterPumpingImg,
+            image: ElectricFence,
             linkUrl: "#contact",
         },
         {
@@ -44,7 +44,7 @@ export default function SecuritySystems() {
         {
             title: "Fire Suppression",
             description: "Advanced fire suppression systems for residential and commercial properties, ensuring safety and compliance.",
-            image: SolarWaterImg,
+            image: FireExtinguisherImg,
             linkUrl: "#contact",
         },
     ];
