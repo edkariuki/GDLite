@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AlarmSystemsImg from '../../assets/images/alarm_system.png';
-import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
+import CctvImg from '../../assets/images/cctv_img.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
 import BiometricAccessImg from '../../assets/images/biometric_access.jpg';
@@ -14,7 +14,7 @@ export default function SecuritySystems() {
         {
             title: "CCTV",
             description: "Comprehensive surveillance solutions for residential and commercial properties.",
-            image: HybridBackupImg,
+            image: CctvImg,
             linkUrl: "#contact",
         },
         {
