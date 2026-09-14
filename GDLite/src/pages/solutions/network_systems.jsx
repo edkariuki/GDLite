@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CableStructureImg from '../../assets/images/cable_structure.jpg';
 import CctvImg from '../../assets/images/cctv_img.jpg';
-import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
+import DataCenterImg from '../../assets/images/data_center.jpg';
 import FiberSplicingImg from '../../assets/images/fiber_splicing.jpg';
 import AccessPointsImg from '../../assets/images/access_points.jpg';
 import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
@@ -44,7 +44,7 @@ export default function NetworkSystems() {
         {
             title: "Data Centers",
             description: "Advanced data center solutions for reliable and secure infrastructure management.",
-            image: FireExtinguisherImg,
+            image: DataCenterImg,
             linkUrl: "#contact",
         },
     ];
