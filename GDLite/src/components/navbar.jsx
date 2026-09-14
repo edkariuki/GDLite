@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const megaMenuData = {
     products: [
         { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '/power-systems' },
-        { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock },
+        { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock, linkUrl: '/security-systems' },
         { title: 'Network Systems', desc: 'Infrastructure for seamless connectivity', icon: Radio },
     ],
     resources: [

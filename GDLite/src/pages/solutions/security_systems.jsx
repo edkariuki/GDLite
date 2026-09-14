@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AlarmSystemsImg from '../../assets/images/alarm_system.png';
+import AlarmSystemsImg from '../../assets/images/alarm_system.jpg';
 import CctvImg from '../../assets/images/cctv_img.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
