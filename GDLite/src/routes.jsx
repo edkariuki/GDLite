@@ -3,6 +3,7 @@ import Homepage from './pages/home/homepage'
 import Layout from './components/layout'
 import PowerSystems from './pages/solutions/power_systems'
 import SecuritySystems from './pages/solutions/security_systems'
+import NetworkSystems from './pages/solutions/network_systems'
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: 'security-systems',
                 element: <SecuritySystems />,
+            },
+            {
+                path: 'network-systems',
+                element: <NetworkSystems />,
             },
         ],
     },

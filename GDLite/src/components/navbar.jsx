@@ -6,7 +6,7 @@ const megaMenuData = {
     products: [
         { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '/power-systems' },
         { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock, linkUrl: '/security-systems' },
-        { title: 'Network Systems', desc: 'Infrastructure for seamless connectivity', icon: Radio },
+        { title: 'Network Systems', desc: 'Infrastructure for seamless connectivity', icon: Radio, linkUrl: '/network-systems' },
     ],
     resources: [
         { title: 'Documentation', desc: 'Guides, API references, and SDKs' },
