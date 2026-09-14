@@ -55,13 +55,13 @@ export default function NetworkSystems() {
             <section className="bg-surface-hero text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-6">
                     <span className="inline-block px-4 py-1.5 rounded-full bg-blue-accent/20 text-blue-accent-light text-sm font-semibold tracking-wide uppercase">
-                        Security Systems
+                        Network Systems
                     </span>
                     <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-                        Reliable & Sustainable <br className="hidden sm:inline" /> Power Solutions
+                        Scalable and reliable <br className="hidden sm:inline" /> Network Solutions
                     </h1>
                     <p className="text-lg sm:text-xl text-content-muted max-w-2xl mx-auto">
-                        From solar installations to electrical contracting, we deliver energy independence for residential, commercial, and agricultural projects.
+                        We provide comprehensive network solutions, from internet provisioning to advanced cable structuring and fiber splicing. Our services ensure seamless connectivity, efficient data flow, and secure access for homes and businesses.
                     </p>
                     <div className="pt-4">
                         <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand rounded-xl hover:bg-brand-hover transition">
@@ -73,8 +73,8 @@ export default function NetworkSystems() {
 
             <section className="max-w-7xl mx-auto py-16 px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-content-primary">Our Security Systems solutions</h2>
-                    <p className="text-content-secondary mt-2">Tailored engineering services designed to meet your security requirements.</p>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-content-primary">Our Network Systems solutions</h2>
+                    <p className="text-content-secondary mt-2">Tailored engineering services designed to meet your network requirements.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
