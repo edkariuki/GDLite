@@ -4,7 +4,7 @@ import InternetProvisioningImg from '../../assets/images/internet_provisioning.j
 import DataCenterImg from '../../assets/images/data_center.jpg';
 import FiberSplicingImg from '../../assets/images/fiber_splicing.jpg';
 import AccessPointsImg from '../../assets/images/access_points.jpg';
-import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
+import NetworkingImg from '../../assets/images/networking.jpg';
 import { ArrowRight } from 'lucide-react';
 import { Dropdown } from '../../components/dropdown';
 
@@ -32,7 +32,7 @@ export default function NetworkSystems() {
         {
             title: "Networking",
             description: "Comprehensive networking solutions for homes and businesses, ensuring fast and secure data flow.",
-            image: BiometricAccessImg,
+            image: NetworkingImg,
             linkUrl: "#contact",
         },
         {
