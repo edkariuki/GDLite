@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CableStructureImg from '../../assets/images/cable_structure.jpg';
-import CctvImg from '../../assets/images/cctv_img.jpg';
+import InternetProvisioningImg from '../../assets/images/internet_provisioning.jpg';
 import DataCenterImg from '../../assets/images/data_center.jpg';
 import FiberSplicingImg from '../../assets/images/fiber_splicing.jpg';
 import AccessPointsImg from '../../assets/images/access_points.jpg';
@@ -14,7 +14,7 @@ export default function NetworkSystems() {
         {
             title: "Internet Provisioning",
             description: "Reliable internet provisioning services for homes and businesses, ensuring seamless connectivity.",
-            image: CctvImg,
+            image: InternetProvisioningImg,
             linkUrl: "#contact",
         },
         {
