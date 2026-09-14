@@ -3,7 +3,7 @@ import AlarmSystemsImg from '../../assets/images/alarm_system.png';
 import HybridBackupImg from '../../assets/images/hybrid_backup.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
-import ElectricalDesignImg from '../../assets/images/electrical_design.jpg';
+import BiometricAccessImg from '../../assets/images/biometric_access.jpg';
 import AutomaticGateImg from '../../assets/images/automatic_gate.jpg';
 import { ArrowRight } from 'lucide-react';
 import { Dropdown } from '../../components/dropdown';
@@ -32,7 +32,7 @@ export default function SecuritySystems() {
         {
             title: "Biometric Access Control",
             description: "Advanced access control systems using biometric authentication for secure and convenient entry management.",
-            image: HybridBackupImg,
+            image: BiometricAccessImg,
             linkUrl: "#contact",
         },
         {
