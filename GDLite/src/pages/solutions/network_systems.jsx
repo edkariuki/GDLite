@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AlarmSystemsImg from '../../assets/images/alarm_system.jpg';
+import CableStructureImg from '../../assets/images/cable_structure.jpg';
 import CctvImg from '../../assets/images/cctv_img.jpg';
 import FireExtinguisherImg from '../../assets/images/fire_extinguisher.jpg';
 import ElectricFenceImg from '../../assets/images/electric_fence.jpg';
@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react';
 import { Dropdown } from '../../components/dropdown';
 
 
-export default function SecuritySystems() {
+export default function NetworkSystems() {
     const coreServices = [
         {
             title: "Internet Provisioning",
@@ -18,9 +18,9 @@ export default function SecuritySystems() {
             linkUrl: "#contact",
         },
         {
-            title: "Cable Structures",
+            title: "Cable Structure",
             description: "Advanced cable structuring solutions for efficient and organized network installations.",
-            image: AlarmSystemsImg,
+            image: CableStructureImg,
             linkUrl: "#contact",
         },
         {
