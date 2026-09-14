@@ -58,10 +58,10 @@ export default function SecuritySystems() {
                         Security Systems
                     </span>
                     <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-                        Reliable & Sustainable <br className="hidden sm:inline" /> Power Solutions
+                        High integrity and reliable <br className="hidden sm:inline" /> Security Solutions
                     </h1>
                     <p className="text-lg sm:text-xl text-content-muted max-w-2xl mx-auto">
-                        From solar installations to electrical contracting, we deliver energy independence for residential, commercial, and agricultural projects.
+                        Security solutions for homes, businesses, and institutions. We delivers intelligent monitoring, automated alerts, and secured access, always in your control.
                     </p>
                     <div className="pt-4">
                         <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand rounded-xl hover:bg-brand-hover transition">
