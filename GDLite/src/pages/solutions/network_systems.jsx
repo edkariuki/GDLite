@@ -106,7 +106,7 @@ export default function NetworkSystems() {
                                         href={service.linkUrl || "#contact"}
                                         className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover focus:ring-4 focus:ring-brand-focus transition-colors duration-200 w-full sm:w-auto"
                                     >
-                                        Request Solution
+                                        Learn More
                                         <ArrowRight className="w-4 h-4 ml-2" />
                                     </a>
                                 </div>
