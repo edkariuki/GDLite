@@ -8,17 +8,17 @@ const megaMenuData = {
         { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock, linkUrl: '/security-systems' },
         { title: 'Network Systems', desc: 'Infrastructure for seamless connectivity', icon: Radio, linkUrl: '/network-systems' },
     ],
-    resources: [
-        { title: 'Documentation', desc: 'Guides, API references, and SDKs' },
-        { title: 'Case Studies', desc: 'See how companies scale with us' },
-        { title: 'Community', desc: 'Join our developer forums and events' },
-        { title: 'Blog', desc: 'Latest updates and industry trends' },
-    ],
 }
 
 export default function Navbar() {
     const [activeMenu, setActiveMenu] = useState(null)
     const [mobileOpen, setMobileOpen] = useState(false)
+    const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
+
+    const handleMobileLinkClick = () => {
+        setMobileOpen(false)
+        setMobileProductsOpen(false)
+    }
 
     return (
         <nav className="sticky top-0 z-50 bg-surface-card border-b border-stroke shadow-sm">
@@ -30,48 +30,49 @@ export default function Navbar() {
                     <span className="text-content-primary">AFRICA</span>
                 </a>
 
+                {/* Desktop Nav */}
                 <div className="hidden md:flex items-center space-x-8 h-full">
                     <a href="/" className="text-content-body hover:text-content-primary font-medium">Home</a>
 
                     <div
-                        className="h-full flex items-center"
+                        className="relative h-full flex items-center"
                         onMouseEnter={() => setActiveMenu('products')}
                         onMouseLeave={() => setActiveMenu(null)}
                     >
                         <button className="flex items-center gap-1 text-content-body hover:text-brand font-medium py-2">
                             Products
                             <ChevronDown
-                                className={`w-4 h-4 transition-transform duration-200 ${activeMenu === 'products' ? 'rotate-180 text-brand' : ''
-                                    }`}
+                                className={`w-4 h-4 transition-transform duration-200 ${activeMenu === 'products' ? 'rotate-180 text-brand' : ''}`}
                             />
                         </button>
 
                         {activeMenu === 'products' && (
-                            <div className="absolute top-20 left-0 w-full bg-surface-card border-b border-stroke shadow-xl transition-all">
-                                <div className="max-w-7xl mx-auto p-8 grid grid-cols-12 gap-8">
+                            <div className="absolute top-full left-0 w-80 bg-surface-card border border-stroke rounded-2xl shadow-xl p-3 mt-1 transition-all">
+                                <div className="flex flex-col gap-2">
+                                    {megaMenuData.products.map((item, idx) => {
+                                        const IconComponent = item.icon;
+                                        const isReactComponent = typeof IconComponent !== 'string';
 
-                                    <div className="col-span-8 grid grid-cols-2 gap-6">
-                                        {megaMenuData.products.map((item, idx) => {
-                                            const IconComponent = item.icon;
-                                            const isReactComponent = typeof IconComponent !== 'string';
-
-                                            return (
-                                                <a key={idx} href={item.linkUrl} className="flex items-start gap-4 p-3 rounded-xl hover:bg-surface-light transition-colors">
-                                                    <span className="text-2xl p-2 bg-stroke-light rounded-lg flex items-center justify-center min-w-[40px] min-h-[40px]">
-                                                        {isReactComponent ? (
-                                                            <IconComponent className="w-5 h-5 text-content-body" />
-                                                        ) : (
-                                                            <span>{item.icon}</span>
-                                                        )}
-                                                    </span>
-                                                    <div>
-                                                        <p className="font-bold text-content-primary">{item.title}</p>
-                                                        <p className="text-sm text-content-secondary">{item.desc}</p>
-                                                    </div>
-                                                </a>
-                                            );
-                                        })}
-                                    </div>
+                                        return (
+                                            <a
+                                                key={idx}
+                                                href={item.linkUrl}
+                                                className="flex items-start gap-3 p-3 rounded-xl hover:bg-surface-light transition-colors"
+                                            >
+                                                <span className="text-2xl p-2 bg-stroke-light rounded-lg flex items-center justify-center min-w-[36px] min-h-[36px]">
+                                                    {isReactComponent ? (
+                                                        <IconComponent className="w-4 h-4 text-content-body" />
+                                                    ) : (
+                                                        <span>{item.icon}</span>
+                                                    )}
+                                                </span>
+                                                <div>
+                                                    <p className="font-bold text-sm text-content-primary">{item.title}</p>
+                                                    <p className="text-xs text-content-secondary line-clamp-1">{item.desc}</p>
+                                                </div>
+                                            </a>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}
@@ -94,19 +95,49 @@ export default function Navbar() {
 
             {mobileOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-surface-card border-b border-stroke px-6 py-6 space-y-4 shadow-2xl z-50">
-                    <a href="#" className="block font-medium text-content-primary">Home</a>
-                    <p className="font-semibold text-xs text-content-muted uppercase tracking-wider mt-4">Products</p>
-                    <div className="pl-2 space-y-3">
-                        {megaMenuData.products.map((item, idx) => (
-                            <Link
-                                key={idx}
-                                to={item.linkUrl}
-                                className="flex items-start gap-4 p-3 rounded-xl hover:bg-surface-light transition-colors"
-                            >
-                            </Link>
-                        ))}
+                    <a href="/" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">Home</a>
+
+                    <div>
+                        <button
+                            onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                            className="flex items-center justify-between w-full font-medium text-content-primary py-2"
+                        >
+                            <span>Products</span>
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180 text-brand' : ''}`} />
+                        </button>
+
+                        {mobileProductsOpen && (
+                            <div className="pl-4 pt-2 space-y-2 border-l border-stroke ml-2 my-2">
+                                {megaMenuData.products.map((item, idx) => {
+                                    const IconComponent = item.icon;
+                                    return (
+                                        <Link
+                                            key={idx}
+                                            to={item.linkUrl}
+                                            onClick={handleMobileLinkClick}
+                                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-light transition-colors"
+                                        >
+                                            {IconComponent && <IconComponent className="w-4 h-4 text-brand" />}
+                                            <span className="text-sm font-medium text-content-body">{item.title}</span>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
-                    <a href="#" className="block font-medium text-content-primary pt-2">About</a>
+
+                    <a href="#" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">About</a>
+                    <a href="#" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">Contact</a>
+
+                    <div className="pt-4 border-t border-stroke">
+                        <a
+                            href="#"
+                            onClick={handleMobileLinkClick}
+                            className="block text-center w-full px-5 py-2.5 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover transition-colors"
+                        >
+                            Enquire Now
+                        </a>
+                    </div>
                 </div>
             )}
         </nav>
