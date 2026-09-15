@@ -47,7 +47,8 @@ export default function Navbar() {
                         </button>
 
                         {activeMenu === 'products' && (
-                            <div className="absolute top-full left-0 w-80 bg-surface-card border border-stroke rounded-2xl shadow-xl p-3 mt-1 transition-all">
+                            /* Updated absolute classes to center it horizontally under the button */
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 w-80 bg-surface-card border border-stroke rounded-2xl shadow-xl p-3 mt-1 transition-all">
                                 <div className="flex flex-col gap-2">
                                     {megaMenuData.products.map((item, idx) => {
                                         const IconComponent = item.icon;
