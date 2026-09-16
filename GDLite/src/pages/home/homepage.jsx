@@ -1,8 +1,9 @@
-import HeroImg from '../../assets/images/105.jpg'
-import WorkersSolarImg from '../../assets/images/workers_solar.jpg'
-import CctvImg from '../../assets/images/cctv_image.jpg'
-import SeverImg from '../../assets/images/server_room.jpg'
-import StackingCard from '../../components/stacking_card'
+import React, { useEffect, useRef, useState } from 'react';
+import HeroImg from '../../assets/images/105.jpg';
+import WorkersSolarImg from '../../assets/images/workers_solar.jpg';
+import CctvImg from '../../assets/images/cctv_image.jpg';
+import SeverImg from '../../assets/images/server_room.jpg';
+import StackingCard from '../../components/stacking_card';
 
 const cardsData = [
     {
@@ -24,9 +25,64 @@ const cardsData = [
         description: "Fast and secure networking for modern living and workspaces. GDLite Africa builds strong infrastructure with seamless data flow, structured cabling, and tailored smart connectivity.",
         image: SeverImg,
     },
-]
+];
 
 function Homepage() {
+    const sectionRef = useRef(null);
+    const [vantaEffect, setVantaEffect] = useState(null);
+
+    useEffect(() => {
+        const loadScript = (src) => {
+            return new Promise((resolve, reject) => {
+                if (document.querySelector(`script[src="${src}"]`)) {
+                    resolve();
+                    return;
+                }
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = true;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.body.appendChild(script);
+            });
+        };
+
+        const initVanta = async () => {
+            try {
+                await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js');
+                await loadScript('https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js');
+
+                if (!vantaEffect && sectionRef.current) {
+                    // eslint-disable-next-line no-undef
+                    const effect = VANTA.NET({
+                        el: sectionRef.current,
+                        mouseControls: true,
+                        touchControls: true,
+                        gyroControls: false,
+                        minHeight: 200.00,
+                        minWidth: 200.00,
+                        scale: 1.00,
+                        scaleMobile: 1.00,
+                        backgroundColor: 0x0F51B2, // Brand Primary Blue
+                        color: 0xF89E1D,           // Brand Accent Orange
+                        points: 12.00,
+                        maxDistance: 22.00,
+                        speed: 1.50
+                    });
+                    setVantaEffect(effect);
+                }
+            } catch (error) {
+                console.error("Failed to load Vanta background:", error);
+            }
+        };
+
+        initVanta();
+
+        return () => {
+            if (vantaEffect) vantaEffect.destroy();
+        };
+    }, [vantaEffect]);
+
     return (
         <>
             <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
@@ -39,19 +95,22 @@ function Homepage() {
                 <p className="absolute top-20 left-6 right-6 md:top-26 md:left-12 md:right-auto md:max-w-2xl text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
                     <span>Your trusted partner for innovative technology solutions.</span>
                 </p>
-
             </div>
-            <section className="bg-surface-light min-h-screen py-20 px-4">
-                <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl font-extrabold text-content-primary mb-4">
+
+            <section
+                ref={sectionRef}
+                className="relative min-h-screen py-20 px-4 bg-[#0F51B2]"
+            >
+                <div className="relative z-10 max-w-3xl mx-auto text-center mb-16">
+                    <h1 className="text-4xl font-extrabold text-white mb-4 tracking-tight">
                         Explore Our Solutions
                     </h1>
-                    <p className="text-content-body text-lg">
+                    <p className="text-blue-100 text-lg font-light">
                         Each solution is designed to provide maximum efficiency, security, and scalability for your home or business.
                     </p>
                 </div>
 
-                <div className="relative pb-24">
+                <div className="relative z-10 pb-24">
                     {cardsData.map((card, idx) => (
                         <StackingCard
                             key={idx}
@@ -66,8 +125,7 @@ function Homepage() {
                 </div>
             </section>
         </>
-
-    )
+    );
 }
 
-export default Homepage
+export default Homepage;
