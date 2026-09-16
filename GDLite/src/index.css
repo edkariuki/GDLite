@@ -114,29 +114,29 @@ code {
 
 @theme {
   /* Brand Colors */
-  --color-brand: #2547A8;
-  --color-brand-hover: #1e3a8a;
+  --color-brand: #0F51B2;
+  --color-brand-hover: #0c4190;
   --color-brand-focus: #93c5fd;
-  --color-brand-light: rgba(37, 71, 168, 0.1);
-  --color-brand-accent: #EFA24C;
+  --color-brand-light: rgba(15, 81, 178, 0.1);
+  --color-brand-accent: #F89E1D;
 
   /* Standard Blues */
-  --color-blue-accent: #3b82f6;
-  --color-blue-accent-light: #60a5fa;
+  --color-blue-accent: #0F51B2;
+  --color-blue-accent-light: #3b82f6;
 
   /* Surface / Background Colors */
-  --color-surface-light: #F9FAFB;
+  --color-surface-light: #F2F2F2;
   --color-surface-card: #FFFFFF;
-  --color-surface-hero: #0F172A;
+  --color-surface-hero: #0F51B2;
 
   /* Text Content Colors */
-  --color-content-primary: #111827;
-  --color-content-body: #4B5563;
+  --color-content-primary: #231F20;
+  --color-content-body: #353132;
   --color-content-secondary: #6B7280;
   --color-content-muted: #D1D5DB;
   --color-content-placeholder: #9CA3AF;
 
   /* Borders & Dividers */
   --color-stroke: #E5E7EB;
-  --color-stroke-light: #F3F4F6;
+  --color-stroke-light: #F2F2F2;
 }
