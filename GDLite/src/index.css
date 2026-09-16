@@ -110,6 +110,7 @@ code {
   background: var(--code-bg);
 } */
 
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 @import "tailwindcss";
 
 @theme {
@@ -139,4 +140,48 @@ code {
   /* Borders & Dividers */
   --color-stroke: #E5E7EB;
   --color-stroke-light: #F2F2F2;
+
+  /* Typography */
+  /* --font-sans: 'Poppins', sans-serif; */
+
+  /* Tracking */
+  /* --tracking-headline: -0.02em;
+  --tracking-subheadline: -0.01em;
+  --tracking-body: 0em; */
 }
+
+/* Global Application */
+
+/* body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--color-content-body);
+  background-color: var(--color-surface-light);
+  letter-spacing: var(--tracking-body);
+}
+
+h1,
+.font-headline {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: var(--tracking-headline);
+}
+
+h2,
+h3,
+.font-subheadline {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: var(--tracking-subheadline);
+}
+
+.font-medium {
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+p,
+.font-paragraph {
+  font-family: var(--font-sans);
+  font-weight: 300;
+} */
