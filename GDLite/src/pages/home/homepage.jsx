@@ -53,7 +53,6 @@ function Homepage() {
                 await loadScript('https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js');
 
                 if (!vantaEffect && sectionRef.current) {
-                    // eslint-disable-next-line no-undef
                     const effect = VANTA.NET({
                         el: sectionRef.current,
                         mouseControls: true,
