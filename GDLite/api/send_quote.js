@@ -25,7 +25,7 @@ export default async function handler(req, res) {
 
         // 4. Send email via Resend
         const data = await resend.emails.send({
-            from: 'GD-Lite Africa <onboarding@resend.dev>',
+            from: 'GDLite Africa <onboarding@resend.dev>',
             // to: [process.env.SALES_EMAIL || 'gdliteafrica@gmail.com'],
             to: ['mbichikariuki01@gmail.com'],
             subject: `New Quote Request: ${product || 'General'}`,

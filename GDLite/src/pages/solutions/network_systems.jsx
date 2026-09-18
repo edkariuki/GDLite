@@ -78,7 +78,9 @@ export default function NetworkSystems() {
             }
 
             setStatus({ loading: false, error: null, success: true });
-            e.currentTarget.reset();
+            if (e && e.currentTarget && typeof e.currentTarget.reset === 'function') {
+                e.currentTarget.reset();
+            }
             setSelectedService('');
         } catch (error) {
             setStatus({ loading: false, error: error.message, success: false });
