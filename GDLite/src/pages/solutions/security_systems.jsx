@@ -65,7 +65,7 @@ export default function SecuritySystems() {
         };
 
         try {
-            const response = await fetch('/api/send-quote', { // Adjust endpoint URL if needed
+            const response = await fetch('/api/send_quote', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
