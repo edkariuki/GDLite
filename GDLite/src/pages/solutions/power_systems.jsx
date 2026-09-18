@@ -8,7 +8,6 @@ import OffGridSolarImg from '../../assets/images/off_grid_solar.png';
 import { ArrowRight } from 'lucide-react';
 import { Dropdown } from '../../components/dropdown';
 
-
 export default function PowerSystems() {
     const coreServices = [
         {
@@ -48,7 +47,43 @@ export default function PowerSystems() {
             linkUrl: "#contact",
         },
     ];
+
     const [selectedService, setSelectedService] = useState('');
+    const [status, setStatus] = useState({ loading: false, error: null, success: false });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus({ loading: true, error: null, success: false });
+
+        const formData = new FormData(e.currentTarget);
+        const payload = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            product: selectedService, // Mapped to selected dropdown option
+            message: formData.get('message'),
+        };
+
+        try {
+            const response = await fetch('/api/send-quote', { // Adjust endpoint URL if needed
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to send inquiry.');
+            }
+
+            setStatus({ loading: false, error: null, success: true });
+            e.currentTarget.reset();
+            setSelectedService('');
+        } catch (error) {
+            setStatus({ loading: false, error: error.message, success: false });
+        }
+    };
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
@@ -139,13 +174,54 @@ export default function PowerSystems() {
                         </div>
                     </div>
 
-
-                    <form className="bg-surface-light p-8 rounded-3xl border border-stroke space-y-4">
+                    <form onSubmit={handleSubmit} className="bg-surface-light p-8 rounded-3xl border border-stroke space-y-4">
                         <h3 className="text-xl font-bold text-content-primary">Request a Quote</h3>
+
+                        {status.success && (
+                            <div className="p-3 bg-green-100 text-green-700 rounded-lg text-sm font-medium">
+                                Inquiry sent successfully! We will get back to you soon.
+                            </div>
+                        )}
+
+                        {status.error && (
+                            <div className="p-3 bg-red-100 text-red-700 rounded-lg text-sm font-medium">
+                                {status.error}
+                            </div>
+                        )}
+
                         <div>
                             <label className="block text-sm font-medium text-content-body mb-1">Full Name</label>
-                            <input type="text" className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary" placeholder="John Doe" />
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary"
+                                placeholder="John Doe"
+                            />
                         </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-content-body mb-1">Email Address</label>
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary"
+                                placeholder="john@example.com"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-content-body mb-1">Phone Number</label>
+                            <input
+                                type="tel"
+                                name="phone"
+                                required
+                                className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary"
+                                placeholder="+254 700 000000"
+                            />
+                        </div>
+
                         <div>
                             <label className="block text-sm font-medium text-content-body mb-1">Type of Service</label>
                             <Dropdown
@@ -155,12 +231,24 @@ export default function PowerSystems() {
                                 onChange={(value) => setSelectedService(value)}
                             />
                         </div>
+
                         <div>
                             <label className="block text-sm font-medium text-content-body mb-1">Message</label>
-                            <textarea rows="3" className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary" placeholder="Describe your power needs..."></textarea>
+                            <textarea
+                                name="message"
+                                rows="3"
+                                required
+                                className="w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary"
+                                placeholder="Describe your power needs..."
+                            ></textarea>
                         </div>
-                        <button type="button" className="w-full py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-hover transition">
-                            Send Inquiry
+
+                        <button
+                            type="submit"
+                            disabled={status.loading}
+                            className="w-full py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-hover transition disabled:opacity-50"
+                        >
+                            {status.loading ? 'Sending Inquiry...' : 'Send Inquiry'}
                         </button>
                     </form>
                 </div>
