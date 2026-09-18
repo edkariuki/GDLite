@@ -53,9 +53,13 @@ export default function PowerSystems() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Capture the form element reference before any await operations
+        const formElement = e.currentTarget;
+
         setStatus({ loading: true, error: null, success: false });
 
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(formElement);
         const payload = {
             name: formData.get('name'),
             email: formData.get('email'),
@@ -78,9 +82,13 @@ export default function PowerSystems() {
             }
 
             setStatus({ loading: false, error: null, success: true });
-            if (e && e.currentTarget && typeof e.currentTarget.reset === 'function') {
-                e.currentTarget.reset();
+
+            // Safely reset native inputs using the captured reference
+            if (formElement && typeof formElement.reset === 'function') {
+                formElement.reset();
             }
+
+            // Clear the custom dropdown component state
             setSelectedService('');
         } catch (error) {
             setStatus({ loading: false, error: error.message, success: false });

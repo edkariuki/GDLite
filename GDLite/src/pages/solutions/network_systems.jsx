@@ -60,7 +60,7 @@ export default function NetworkSystems() {
             name: formData.get('name'),
             email: formData.get('email'),
             phone: formData.get('phone'),
-            product: selectedService, // Mapped to your selected dropdown option
+            product: selectedService,
             message: formData.get('message'),
         };
 
@@ -78,6 +78,7 @@ export default function NetworkSystems() {
             }
 
             setStatus({ loading: false, error: null, success: true });
+
             if (e && e.currentTarget && typeof e.currentTarget.reset === 'function') {
                 e.currentTarget.reset();
             }
