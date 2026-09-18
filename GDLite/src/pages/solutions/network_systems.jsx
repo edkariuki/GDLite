@@ -83,6 +83,9 @@ export default function NetworkSystems() {
                 e.currentTarget.reset();
             }
             setSelectedService('');
+            setTimeout(() => {
+                setStatus(prev => ({ ...prev, success: false }));
+            }, 5000);
         } catch (error) {
             setStatus({ loading: false, error: error.message, success: false });
         }

@@ -90,6 +90,9 @@ export default function SecuritySystems() {
 
             // Clear the custom dropdown state
             setSelectedService('');
+            setTimeout(() => {
+                setStatus(prev => ({ ...prev, success: false }));
+            }, 5000);
         } catch (error) {
             setStatus({ loading: false, error: error.message, success: false });
         }
