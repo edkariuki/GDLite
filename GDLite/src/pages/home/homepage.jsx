@@ -51,6 +51,7 @@ function Homepage() {
             try {
                 await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js');
                 await loadScript('https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js');
+                // await loadScript('https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js');
 
                 if (!vantaEffect && sectionRef.current) {
                     const effect = VANTA.NET({
@@ -62,12 +63,30 @@ function Homepage() {
                         minWidth: 200.00,
                         scale: 1.00,
                         scaleMobile: 1.00,
-                        backgroundColor: 0x0F51B2, // Brand Primary Blue
-                        color: 0xF89E1D,           // Brand Accent Orange
-                        points: 12.00,
-                        maxDistance: 22.00,
+                        backgroundColor: 0x231F20, // Uses your --color-content-primary color
+                        color: 0xF89E1D,           // Keeps your vibrant Brand Accent Orange for high contrast nodes
+                        points: 20.00,             // Higher points density
+                        maxDistance: 14.00,        // Tighter lines
+                        spacing: 14.00,            // Tighter mesh grouping
+                        size: 0.50,                // Keeps base size tiny
                         speed: 1.50
                     });
+
+                    // const effect = VANTA.FOG({
+                    //     el: sectionRef.current,
+                    //     mouseControls: true,
+                    //     touchControls: true,
+                    //     gyroControls: false,
+                    //     minHeight: 200.00,
+                    //     minWidth: 200.00,
+                    //     highlightColor: 0xF89E1D, // Brand Accent Orange
+                    //     midtoneColor: 0x0F51B2,   // Brand Primary Blue
+                    //     lowlightColor: 0x0F51B2,
+                    //     baseColor: 0x231F20,      // Content Primary background
+                    //     blurFactor: 0.60,
+                    //     speed: 1.20,
+                    //     zoom: 0.80
+                    // });
                     setVantaEffect(effect);
                 }
             } catch (error) {
@@ -98,7 +117,7 @@ function Homepage() {
 
             <section
                 ref={sectionRef}
-                className="relative min-h-screen py-20 px-4 bg-[#0F51B2]"
+                className="relative min-h-screen py-20 px-4 bg-content-primary"
             >
                 <div className="relative z-10 max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl font-extrabold text-white mb-4 tracking-tight">
