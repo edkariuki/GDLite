@@ -102,17 +102,25 @@ export default function SecuritySystems() {
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
             <section className="bg-surface-hero text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-6">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-blue-accent/20 text-blue-accent-light text-sm font-semibold tracking-wide uppercase">
+                    {/* Badge: Uses brand-accent background with content-primary text for crisp contrast */}
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] text-sm font-bold tracking-wide uppercase">
                         Security Systems
                     </span>
+
                     <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
                         High integrity and reliable <br className="hidden sm:inline" /> Security Solutions
                     </h1>
-                    <p className="text-lg sm:text-xl text-content-muted max-w-2xl mx-auto">
+
+                    <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
                         Security solutions for homes, businesses, and institutions. We delivers intelligent monitoring, automated alerts, and secured access, always in your control.
                     </p>
+
                     <div className="pt-4">
-                        <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand rounded-xl hover:bg-brand-hover transition">
+                        {/* Button: Uses brand-accent for background and content-primary for dark, high-visibility text */}
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] rounded-xl hover:opacity-90 transition shadow-lg"
+                        >
                             Get a Free Consultation
                         </a>
                     </div>

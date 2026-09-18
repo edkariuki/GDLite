@@ -102,17 +102,23 @@ export default function PowerSystems() {
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
             <section className="bg-surface-hero text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-6">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-blue-accent/20 text-blue-accent-light text-sm font-semibold tracking-wide uppercase">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] text-sm font-bold tracking-wide uppercase">
                         Energy & Electrical Engineering
                     </span>
+
                     <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
                         Reliable & Sustainable <br className="hidden sm:inline" /> Power Solutions
                     </h1>
-                    <p className="text-lg sm:text-xl text-content-muted max-w-2xl mx-auto">
+
+                    <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
                         From solar installations to electrical contracting, we deliver energy independence for residential, commercial, and agricultural projects.
                     </p>
+
                     <div className="pt-4">
-                        <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand rounded-xl hover:bg-brand-hover transition">
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] rounded-xl hover:opacity-90 transition shadow-lg"
+                        >
                             Get a Free Consultation
                         </a>
                     </div>
