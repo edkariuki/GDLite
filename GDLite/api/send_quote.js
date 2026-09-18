@@ -16,7 +16,7 @@ export default async function handler(request) {
 
         const data = await resend.emails.send({
             from: 'GD-Lite Africa <onboarding@resend.dev>', // Change to your verified domain email later
-            to: ['sales@gdliteafrica.com'], // Where you want to receive quote alerts
+            to: [process.env.SALES_EMAIL || 'gdliteafrica@gmail.com'],
             subject: `New Quote Request: ${product || 'General'}`,
             html: `
         <h2>New Quote Enquiry Received</h2>
