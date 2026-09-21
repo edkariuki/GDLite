@@ -79,10 +79,10 @@ function Homepage() {
                         gyroControls: false,
                         minHeight: 200.00,
                         minWidth: 200.00,
-                        highlightColor: 0xF89E1D, // Brand Accent Orange
-                        midtoneColor: 0x0F51B2,   // Brand Primary Blue
+                        highlightColor: 0xF89E1D,
+                        midtoneColor: 0x0F51B2,
                         lowlightColor: 0x0F51B2,
-                        baseColor: 0x231F20,      // Content Primary background
+                        baseColor: 0x231F20,
                         blurFactor: 0.60,
                         speed: 1.20,
                         zoom: 0.80
