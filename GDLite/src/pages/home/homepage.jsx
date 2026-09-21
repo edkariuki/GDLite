@@ -63,12 +63,12 @@ function Homepage() {
                     //     minWidth: 200.00,
                     //     scale: 1.00,
                     //     scaleMobile: 1.00,
-                    //     backgroundColor: 0x231F20, // Uses your --color-content-primary color
-                    //     color: 0xF89E1D,           // Keeps your vibrant Brand Accent Orange for high contrast nodes
-                    //     points: 20.00,             // Higher points density
-                    //     maxDistance: 14.00,        // Tighter lines
-                    //     spacing: 14.00,            // Tighter mesh grouping
-                    //     size: 0.50,                // Keeps base size tiny
+                    //     backgroundColor: 0x231F20, 
+                    //     color: 0xF89E1D,          
+                    //     points: 20.00,            
+                    //     maxDistance: 14.00,       
+                    //     spacing: 14.00,          
+                    //     size: 0.50,     
                     //     speed: 1.50
                     // });
 
