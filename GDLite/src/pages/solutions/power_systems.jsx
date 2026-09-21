@@ -54,7 +54,6 @@ export default function PowerSystems() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Capture the form element reference before any await operations
         const formElement = e.currentTarget;
 
         setStatus({ loading: true, error: null, success: false });
@@ -64,7 +63,7 @@ export default function PowerSystems() {
             name: formData.get('name'),
             email: formData.get('email'),
             phone: formData.get('phone'),
-            product: selectedService, // Mapped to selected dropdown option
+            product: selectedService,
             message: formData.get('message'),
         };
 
@@ -83,12 +82,10 @@ export default function PowerSystems() {
 
             setStatus({ loading: false, error: null, success: true });
 
-            // Safely reset native inputs using the captured reference
             if (formElement && typeof formElement.reset === 'function') {
                 formElement.reset();
             }
 
-            // Clear the custom dropdown component state
             setSelectedService('');
             setTimeout(() => {
                 setStatus(prev => ({ ...prev, success: false }));
