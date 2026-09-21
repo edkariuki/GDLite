@@ -95,7 +95,6 @@ export default function NetworkSystems() {
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
             <section className="bg-surface-hero text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-6">
-                    {/* Badge: Uses brand-accent background with content-primary text for crisp contrast */}
                     <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] text-sm font-bold tracking-wide uppercase">
                         Network Systems
                     </span>
@@ -109,7 +108,6 @@ export default function NetworkSystems() {
                     </p>
 
                     <div className="pt-4">
-                        {/* Button: Uses brand-accent for background and content-primary for dark, high-visibility text */}
                         <a
                             href="#contact"
                             className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] rounded-xl hover:opacity-90 transition shadow-lg"
