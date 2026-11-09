@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { categories, getCategoryBySlug } from './data';
-import ContactSection from './ContactSection';
+import { categories, getCategoryBySlug } from '../../../data/data';
+import ContactSection from '../../../components/contact_section';
 
 export default function PowerSystemCategory() {
     const { categorySlug } = useParams();

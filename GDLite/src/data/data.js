@@ -32,12 +32,12 @@ export const categories = [
                     'Cost-effective, reliable water pumping powered directly by the sun. Perfect for agricultural irrigation, livestock, and domestic water supply.',
                 image: SolarWaterPumpingImg,
             },
-            {
-                title: 'Solar Water Heaters',
-                description:
-                    'High-efficiency thermal water heating for residential and commercial properties. Cut monthly water heating bills significantly.',
-                image: SolarWaterImg,
-            },
+            // {
+            //     title: 'Solar Water Heaters',
+            //     description:
+            //         'High-efficiency thermal water heating for residential and commercial properties. Cut monthly water heating bills significantly.',
+            //     image: SolarWaterImg,
+            // },
         ],
     },
     {
