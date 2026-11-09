@@ -149,25 +149,19 @@ export const categories = [
             'Certified electrical designs and turn-key installations complying with EPRA and national safety standards.',
         subcategories: [
             {
-                title: 'Electrical Design & Load Analysis',
+                title: 'Commercial',
                 description:
-                    'Professional drawings, load calculations and system sizing for residential, commercial and industrial projects.',
-                image: ElectricalDesignImg,
+                    'Electrical design and installation for offices, retail, hotels, schools and hospitals, from lighting and power layouts to distribution boards and backup integration.',
             },
             {
-                title: 'Wiring & Installation',
+                title: 'Industrial',
                 description:
-                    'New builds, rewiring and distribution board installations carried out by licensed electricians.',
+                    'Heavy-duty power distribution, motor control, three-phase systems and load analysis for factories, warehouses and processing plants.',
             },
             {
-                title: 'Compliance & Certification',
+                title: 'Residential',
                 description:
-                    'Inspection, testing and documentation to meet EPRA and national safety standards.',
-            },
-            {
-                title: 'Electrical Maintenance',
-                description:
-                    'Preventive maintenance, fault finding and repairs to keep your installation safe and efficient.',
+                    'Safe, certified wiring for new homes, renovations and estates, including consumer units, earthing, lighting and EV- and solar-ready circuits.',
             },
         ],
     },
