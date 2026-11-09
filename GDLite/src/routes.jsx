@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Homepage from './pages/home/homepage'
 import Layout from './components/layout'
-import PowerSystems from './pages/solutions/power_systems'
+import PowerSystems from './pages/solutions/power_systems/power_systems'
 import SecuritySystems from './pages/solutions/security_systems'
 import NetworkSystems from './pages/solutions/network_systems'
 
