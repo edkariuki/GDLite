@@ -19,6 +19,9 @@ import ApcLogo from '../assets/logos/apc.png'
 import IbmLogo from '../assets/logos/ibm.png'
 import MecerLogo from '../assets/logos/mecer.png'
 import DeltaLogo from '../assets/logos/delta.png'
+import CumminsLogo from '../assets/logos/cummins.png'
+import MantracCaterpillarLogo from '../assets/logos/mantrac_cat.png'
+import VolvoPentaLogo from '../assets/logos/volvo_penta.png'
 
 // Subcategories without an `image` fall back to the category icon on a tinted panel.
 export const categories = [
@@ -107,6 +110,11 @@ export const categories = [
         slug: 'generators',
         title: 'Generators',
         image: BackupGeneratorImg,
+        brands: [
+            { name: 'Cummins', logo: CumminsLogo },
+            { name: 'Mantrac/Caterpillar', logo: MantracCaterpillarLogo },
+            { name: 'Volvo Penta', logo: VolvoPentaLogo },
+        ],
         description:
             'Heavy-duty backup generation so essential machinery and critical systems stay powered during outages.',
         subcategories: [
