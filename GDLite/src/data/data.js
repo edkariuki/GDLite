@@ -5,15 +5,15 @@ import BackupGeneratorImg from '../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../assets/images/off_grid_solar.png';
 import ChlorideExideLogo from '../assets/logos/chloride_exide.png';
-import WecoLogo from '../assets/logos/weco.jpg'
-import TBBPowerLogo from '../assets/logos/tbb_power.jpeg'
+import WecoLogo from '../assets/logos/weco.png'
+import TBBPowerLogo from '../assets/logos/tbb_power.png'
 import SrneLogo from '../assets/logos/srne.png'
 import JinkoSolarLogo from '../assets/logos/jinko_solar.png'
 import LongiSolarLogo from '../assets/logos/longi_solar.png'
 import FelicitySolarLogo from '../assets/logos/felicity_solar.png'
 import DavisandShirtliffLogo from '../assets/logos/davis_shirtliff.png'
 import DeyeLogo from '../assets/logos/deye.png'
-import SolisLogo from '../assets/logos/solis.jpeg'
+import SolisLogo from '../assets/logos/solis.png'
 
 // Subcategories without an `image` fall back to the category icon on a tinted panel.
 export const categories = [
