@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function BrandCarousel({
     brands = [],
+    staticBelow,
     title,
     eyebrow = 'Trusted Brands',
     speed = 45,
@@ -10,6 +11,16 @@ export default function BrandCarousel({
     className = '',
 }) {
     if (!brands.length) return null;
+
+    if (brands.length < staticBelow) {
+        return (
+            <Section {...rest}>
+                <ul className="flex flex-wrap justify-center items-center gap-12 sm:gap-20 px-6">
+                    {brands.map((b) => <BrandLogo key={b.name} brand={b} />)}
+                </ul>
+            </Section>
+        );
+    }
 
     const repeats = Math.max(1, Math.ceil(minItems / brands.length));
     const group = Array.from({ length: repeats }, () => brands).flat();

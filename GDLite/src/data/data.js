@@ -14,6 +14,11 @@ import FelicitySolarLogo from '../assets/logos/felicity_solar.png'
 import DavisandShirtliffLogo from '../assets/logos/davis_shirtliff.png'
 import DeyeLogo from '../assets/logos/deye.png'
 import SolisLogo from '../assets/logos/solis.png'
+import ABBLogo from '../assets/logos/abb.png'
+import ApcLogo from '../assets/logos/apc.png'
+import IbmLogo from '../assets/logos/ibm.png'
+import MecerLogo from '../assets/logos/mecer.png'
+import DeltaLogo from '../assets/logos/delta.png'
 
 // Subcategories without an `image` fall back to the category icon on a tinted panel.
 export const categories = [
@@ -64,8 +69,15 @@ export const categories = [
     },
     {
         slug: 'ups',
-        title: 'UPS & Battery Backup',
+        title: 'UPS',
         image: HybridBackupImg,
+        brands: [
+            { name: 'ABB', logo: ABBLogo },
+            { name: 'APC', logo: ApcLogo },
+            { name: 'IBM', logo: IbmLogo },
+            { name: 'Mecer', logo: MecerLogo },
+            { name: 'Delta', logo: DeltaLogo },
+        ],
         description:
             'Uninterruptible power for offices, data rooms and sensitive equipment — no flicker, no lost work, no damaged hardware.',
         subcategories: [
