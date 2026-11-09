@@ -1,10 +1,11 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Feather, Anchor, Zap, Globe, Sun, BatteryCharging, Droplets } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ShieldCheck, Wallet, Leaf, Wrench, Sun, BatteryCharging, Droplets } from 'lucide-react';
 import { getCategoryBySlug } from '../../../../data/data';
 import ContactSection from '../../../../components/contact_section';
 import SolarHeroImg from '../../../../assets/images/solar_hero.png';
 import SolarRooftopImg from '../../../../assets/images/solar_solutions.png';
+import BrandCarousel from '../../../../components/brand_carousel';
 
 const SOLUTION_ICONS = {
     'Hybrid Solar Systems': BatteryCharging,
@@ -16,112 +17,34 @@ const FEATURED_SOLUTIONS = ['Hybrid Solar Systems', 'Off-Grid Solar Solutions', 
 
 const WHY_SOLAR = [
     {
-        icon: Feather,
-        title: 'Renewable & Abundant',
-        text: 'Sunlight is free and never runs out. Kenya enjoys strong sunshine all year round, making solar one of the most dependable energy sources available to homes, farms and businesses.',
+        icon: ShieldCheck,
+        title: 'Reliable',
+        text: 'Kenya enjoys strong sunshine all year round. Paired with battery storage, solar keeps your lights, pumps and equipment running through blackouts and load-shedding.',
     },
     {
-        icon: Anchor,
-        title: 'Environmentally Friendly',
-        text: 'Solar panels generate electricity without fuel, noise or emissions. Every kilowatt-hour you produce yourself replaces power from diesel generators or fossil-fuel plants, cutting your carbon footprint and keeping the air around your property clean.',
-    },
-    {
-        icon: Zap,
+        icon: Wallet,
         title: 'Cost-Effective',
-        text: 'After installation, sunshine costs nothing. Most systems pay for themselves within a few years through lower electricity and fuel bills, and quality panels keep producing for 25 years or more with very little maintenance.',
+        text: 'Once installed, sunshine costs nothing. Most systems pay for themselves within a few years through lower electricity and fuel bills.',
     },
     {
-        icon: Globe,
-        title: 'Energy Independence',
-        text: 'Generating your own power shields you from blackouts, tariff increases and fuel price swings. With battery storage, your lights, pumps and equipment keep running even when the grid goes down.',
+        icon: Leaf,
+        title: 'Environmentally Friendly',
+        text: 'Solar produces power without fuel, noise or emissions, cutting your reliance on diesel generators and fossil-fuel plants.',
     },
-];
-
-// Replace with the brands you actually supply. Add `logo: ImportedImg` to show an image instead of text.
-const BRANDS = [
-    { name: 'Brand One' },
-    { name: 'Brand Two' },
-    { name: 'Brand Three' },
-    { name: 'Brand Four' },
-    { name: 'Brand Five' },
-    { name: 'Brand Six' },
+    {
+        icon: Wrench,
+        title: 'Low Maintenance',
+        text: 'With no moving parts, panels need little more than occasional cleaning and keep producing power for 25 years or more.',
+    },
 ];
 
 function WhySolarCard({ icon: Icon, title, text }) {
-    const textRef = useRef(null);
-    const [expanded, setExpanded] = useState(false);
-    const [overflowing, setOverflowing] = useState(false);
-
-    // Only show "Show More" when the clamped text is actually cut off.
-    useLayoutEffect(() => {
-        const el = textRef.current;
-        if (!el) return;
-        const check = () => {
-            if (!expanded) setOverflowing(el.scrollHeight > el.clientHeight + 1);
-        };
-        check();
-        window.addEventListener('resize', check);
-        return () => window.removeEventListener('resize', check);
-    }, [expanded]);
-
     return (
         <div className="bg-surface-card rounded-3xl border border-stroke-light shadow-sm hover:shadow-md transition-shadow p-8 sm:p-10 flex flex-col">
-            <Icon className="w-10 h-10 self-end text-content-primary" strokeWidth={1.5} />
+            <Icon className="w-10 h-10 self-end text-brand" strokeWidth={1.5} />
             <h3 className="mt-8 text-2xl font-bold text-content-primary">{title}</h3>
-            <p
-                ref={textRef}
-                className={`mt-4 text-content-secondary leading-relaxed ${expanded ? '' : 'line-clamp-4'}`}
-            >
-                {text}
-            </p>
-            {(overflowing || expanded) && (
-                <button
-                    type="button"
-                    onClick={() => setExpanded((v) => !v)}
-                    className="mt-4 self-start text-sm font-medium text-content-primary hover:text-brand transition"
-                >
-                    {expanded ? 'Show Less' : 'Show More'}
-                </button>
-            )}
+            <p className="mt-4 text-content-secondary leading-relaxed">{text}</p>
         </div>
-    );
-}
-
-function BrandCarousel() {
-    // Duplicate the list so the marquee loops seamlessly.
-    const items = [...BRANDS, ...BRANDS];
-    return (
-        <section className="py-16 bg-surface-light border-t border-stroke-light">
-            <style>{`
-                @keyframes brand-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-                .brand-track { animation: brand-marquee 30s linear infinite; }
-                .brand-track:hover { animation-play-state: paused; }
-                @media (prefers-reduced-motion: reduce) { .brand-track { animation: none; } }
-            `}</style>
-            <div className="max-w-7xl mx-auto px-6 text-center mb-10">
-                <span className="text-brand font-bold text-sm tracking-wider uppercase">Trusted Brands</span>
-                <h2 className="mt-2 text-3xl font-bold text-content-primary">Quality Equipment We Supply & Install</h2>
-            </div>
-            <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <ul className="brand-track flex w-max items-center gap-16 px-8">
-                    {items.map((brand, i) => (
-                        <li
-                            key={`${brand.name}-${i}`}
-                            aria-hidden={i >= BRANDS.length}
-                            className="h-16 w-40 shrink-0 flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition"
-                        >
-                            {brand.logo ? (
-                                <img src={brand.logo} alt={brand.name} className="max-h-full max-w-full object-contain" />
-                            ) : (
-                                <span className="text-xl font-extrabold tracking-tight text-content-secondary">
-                                    {brand.name}
-                                </span>
-                            )}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </section>
     );
 }
 
@@ -159,12 +82,6 @@ export default function Solar() {
                     <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white max-w-5xl leading-[1.05]">
                         Harnessing the Power of the Sun
                     </h1>
-                    <a
-                        href="#contact"
-                        className="mt-10 sm:mt-12 inline-flex items-center px-8 py-4 text-base font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] rounded-xl hover:opacity-90 transition shadow-lg"
-                    >
-                        Get a Free Site Survey
-                    </a>
                 </div>
             </section>
 
@@ -223,19 +140,13 @@ export default function Solar() {
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
                             Why Solar <br />
-                            <span className="text-brand">Energy</span>?
+                            <span className="text-[var(--color-brand-accent)]">Energy ?</span>
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             Solar turns Kenya's abundant sunshine into clean, affordable power. It lowers running
                             costs, keeps you going through outages and reduces reliance on diesel and the grid —
                             a long-term investment in both your property and the environment.
                         </p>
-                        <a
-                            href="#contact"
-                            className="mt-8 inline-flex items-center px-6 py-3 rounded-full border-2 border-content-primary text-content-primary font-medium hover:bg-content-primary hover:text-white transition"
-                        >
-                            Talk to an Engineer
-                        </a>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -246,7 +157,7 @@ export default function Solar() {
                 </div>
             </section>
 
-            <BrandCarousel />
+            <BrandCarousel title="Quality Equipment We Supply & Install" brands={category.brands} />
 
             <ContactSection
                 serviceOptions={category.subcategories.map((s) => s.title)}

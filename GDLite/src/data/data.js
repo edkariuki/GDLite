@@ -4,6 +4,16 @@ import SolarWaterPumpingImg from '../assets/images/solar_water_pumping.jpg';
 import BackupGeneratorImg from '../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../assets/images/off_grid_solar.png';
+import ChlorideExideLogo from '../assets/logos/chloride_exide.png';
+import WecoLogo from '../assets/logos/weco.jpg'
+import TBBPowerLogo from '../assets/logos/tbb_power.jpeg'
+import SrneLogo from '../assets/logos/srne.png'
+import JinkoSolarLogo from '../assets/logos/jinko_solar.png'
+import LongiSolarLogo from '../assets/logos/longi_solar.png'
+import FelicitySolarLogo from '../assets/logos/felicity_solar.png'
+import DavisandShirtliffLogo from '../assets/logos/davis_shirtliff.png'
+import DeyeLogo from '../assets/logos/deye.png'
+import SolisLogo from '../assets/logos/solis.jpeg'
 
 // Subcategories without an `image` fall back to the category icon on a tinted panel.
 export const categories = [
@@ -11,6 +21,18 @@ export const categories = [
         slug: 'solar',
         title: 'Solar Solutions',
         image: OffGridSolarImg,
+        brands: [
+            { name: 'Chloride Exide', logo: ChlorideExideLogo },
+            { name: 'Weco', logo: WecoLogo },
+            { name: 'TBB Power', logo: TBBPowerLogo },
+            { name: 'SRNE', logo: SrneLogo },
+            { name: 'Jinko Solar', logo: JinkoSolarLogo },
+            { name: 'Longi Solar', logo: LongiSolarLogo },
+            { name: 'Felicity Solar', logo: FelicitySolarLogo },
+            { name: 'Davis and Shirtliff', logo: DavisandShirtliffLogo },
+            { name: 'Deye', logo: DeyeLogo },
+            { name: 'Solis', logo: SolisLogo },
+        ],
         description:
             'Harness the sun for electricity, water pumping and water heating — from grid-tied homes to fully off-grid sites.',
         subcategories: [
