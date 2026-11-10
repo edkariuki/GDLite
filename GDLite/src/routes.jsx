@@ -7,7 +7,7 @@ import Ups from './pages/solutions/power_systems/subcategories/ups'
 import Generators from './pages/solutions/power_systems/subcategories/generators'
 import Electrical from './pages/solutions/power_systems/subcategories/electrical'
 import PowerSystemCategory from './pages/solutions/power_systems/power_systems_categories'
-import SecuritySystems from './pages/solutions/security_systems'
+import SecuritySystems from './pages/solutions/security_systems/security_systems'
 import NetworkSystems from './pages/solutions/network_systems'
 
 export const router = createBrowserRouter([
