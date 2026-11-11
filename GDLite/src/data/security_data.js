@@ -19,6 +19,8 @@ import IdsLogo from '../assets/logos/ids.png';
 import StafixLogo from '../assets/logos/stafix.png';
 import NemtekLogo from '../assets/logos/nemtek.png';
 import JvaLogo from '../assets/logos/jva.png';
+import CenturionLogo from '../assets/logos/centurion.png';
+import NiceLogo from '../assets/logos/nice.png';
 
 export const securityCategories = [
     {
@@ -148,9 +150,13 @@ export const securityCategories = [
         title: 'Gate Automation',
         icon: DoorOpen,
         image: AutomaticGateImg,
+        brands: [
+            { name: 'Centurion', logo: CenturionLogo },
+            { name: 'Nice', logo: NiceLogo },
+            { name: 'Hikvision', logo: HikvisionLogo },
+        ],
         description:
             'Sliding and swing gate motors, boom barriers and smart controls that make entry faster, safer and fully under your control.',
-        brands: [],
         subcategories: [
             {
                 title: 'Home',
