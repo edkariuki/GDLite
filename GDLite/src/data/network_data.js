@@ -10,6 +10,10 @@ import SophosLogo from '../assets/logos/sophos.png'
 import NiafiberLogo from '../assets/logos/niafiber.png'
 import CiscoLogo from '../assets/logos/cisco.png'
 import UbiquitiLogo from '../assets/logos/ubiquiti.png';
+import PanasonicLogo from '../assets/logos/panasonic.png';
+import DahuaLogo from '../assets/logos/dahua.png';
+import HikvisionLogo from '../assets/logos/hikvision.png';
+import YealinkLogo from '../assets/logos/yealink.png';
 
 // Subcategories are empty until each category page is built.
 export const networkCategories = [
@@ -104,7 +108,13 @@ export const networkCategories = [
         slug: 'intercomms',
         title: 'Intercomms',
         image: NetworkingImg,
-        brands: [],
+        brands: [
+            { name: 'Panasonic', logo: PanasonicLogo },
+            { name: 'Dahua', logo: DahuaLogo },
+            { name: 'Hikvision', logo: HikvisionLogo },
+            { name: 'Yealink', logo: YealinkLogo },
+            { name: 'Huawei', logo: HuaweiLogo },
+        ],
         description:
             'Audio and video intercoms for homes, estates and offices, letting you screen visitors and open doors and gates from a monitor or your phone.',
         subcategories: [],
