@@ -51,12 +51,12 @@ export const networkCategories = [
         ],
     },
     {
-        slug: 'fiber-splicing',
-        title: 'Fiber Splicing',
+        slug: 'fibre-optic-deployment',
+        title: 'Fibre Optic Deployment',
         image: FiberSplicingImg,
-        description:
-            'Precision fusion splicing, termination and OTDR testing for low-loss fibre links between buildings, floors and sites.',
         brands: [],
+        description:
+            'End-to-end fibre installation, from route planning and cable laying to fusion splicing, termination and OTDR testing.',
         subcategories: [],
     },
     {
