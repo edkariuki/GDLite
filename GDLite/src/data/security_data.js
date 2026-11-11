@@ -1,42 +1,35 @@
+import { Fingerprint, Cctv, BellRing } from 'lucide-react';
 import AlarmSystemsImg from '../assets/images/alarm_system.jpg';
 import CctvImg from '../assets/images/cctv_img.jpg';
 import FireSuppressionImg from '../assets/images/fire_suppression.jpg';
-import ElectricFenceImg from '../assets/images/electric_fence.jpg';
 import BiometricAccessImg from '../assets/images/biometric_access.jpg';
-import AutomaticGateImg from '../assets/images/automatic_gate.jpg';
 
 export const securityCategories = [
     {
         slug: 'access-control',
         title: 'Access Control',
+        icon: Fingerprint,
         image: BiometricAccessImg,
         description:
             'Decide exactly who gets in, where and when — from biometric door access to automated gates and secured perimeters.',
         brands: [],
         subcategories: [
             {
-                title: 'Biometric Access Control',
+                title: 'Residential',
                 description:
-                    'Advanced access control systems using biometric authentication for secure and convenient entry management.',
-                image: BiometricAccessImg,
+                    'Biometric and keypad door locks, automated gates, video intercoms and electric fencing that keep your home and family secure without slowing you down.',
             },
             {
-                title: 'Gate Automation',
+                title: 'Commercial',
                 description:
-                    'Automated gate systems for residential and commercial properties, providing convenience and security.',
-                image: AutomaticGateImg,
-            },
-            {
-                title: 'Electric Fence',
-                description:
-                    'High-security electric fencing solutions for perimeter protection of homes, farms, and commercial properties.',
-                image: ElectricFenceImg,
+                    'Biometric and card readers, turnstiles, boom barriers and time-and-attendance systems that control and record who enters every part of your premises.',
             },
         ],
     },
     {
         slug: 'cctv',
         title: 'CCTV',
+        icon: Cctv,
         image: CctvImg,
         description:
             'Comprehensive surveillance for residential and commercial properties, with clear footage and remote viewing from your phone.',
@@ -46,6 +39,7 @@ export const securityCategories = [
     {
         slug: 'alarms',
         title: 'Alarms',
+        icon: BellRing,
         image: AlarmSystemsImg,
         description:
             'Intruder and fire alarm systems with real-time alerts, so threats are detected and acted on before they escalate.',
