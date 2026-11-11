@@ -3,12 +3,16 @@ import CableStructureImg from '../assets/images/cable_structure.jpg';
 import FiberSplicingImg from '../assets/images/fiber_splicing.jpg';
 import NetworkingImg from '../assets/images/networking.jpg';
 import DataCenterImg from '../assets/images/data_center.jpg';
+import IbmLogo from '../assets/logos/ibm.png'
+import MicrotikLogo from '../assets/logos/microtik.png'
+import HuaweiLogo from '../assets/logos/huawei.png'
+import SophosLogo from '../assets/logos/sophos.png'
+import NiafiberLogo from '../assets/logos/niafiber.png'
 
 // Subcategories are empty until each category page is built.
 export const networkCategories = [
     {
         slug: 'internet-provisioning',
-        title: 'Internet Provisioning',
         image: InternetProvisioningImg,
         brands: [],
         description:
@@ -54,7 +58,13 @@ export const networkCategories = [
         slug: 'fibre-optic-deployment',
         title: 'Fibre Optic Deployment',
         image: FiberSplicingImg,
-        brands: [],
+        brands: [
+            { name: 'Niafiber', logo: NiafiberLogo },
+            { name: 'Huawei', logo: HuaweiLogo },
+            { name: 'Mikrotik', logo: MicrotikLogo },
+            { name: 'Sophos', logo: SophosLogo },
+            { name: 'IBM', logo: IbmLogo },
+        ],
         description:
             'End-to-end fibre installation, from route planning and cable laying to fusion splicing, termination and OTDR testing.',
         subcategories: [],
