@@ -8,6 +8,8 @@ import MicrotikLogo from '../assets/logos/microtik.png'
 import HuaweiLogo from '../assets/logos/huawei.png'
 import SophosLogo from '../assets/logos/sophos.png'
 import NiafiberLogo from '../assets/logos/niafiber.png'
+import CiscoLogo from '../assets/logos/cisco.png'
+import UbiquitiLogo from '../assets/logos/ubiquiti.png';
 
 // Subcategories are empty until each category page is built.
 export const networkCategories = [
@@ -74,6 +76,12 @@ export const networkCategories = [
         slug: 'networking',
         title: 'Networking',
         image: NetworkingImg,
+        brands: [
+            { name: 'Ubiquiti', logo: UbiquitiLogo },
+            { name: 'Mikrotik', logo: MicrotikLogo },
+            { name: 'Sophos', logo: SophosLogo },
+            { name: 'Cisco', logo: CiscoLogo },
+        ],
         description:
             'Switches, routers, firewalls and Wi-Fi access points configured for fast, secure data flow and full coverage across your premises.',
         brands: [],
