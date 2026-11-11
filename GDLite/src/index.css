@@ -119,6 +119,7 @@ code {
   --color-brand-hover: #0c4190;
   --color-brand-focus: #93c5fd;
   --color-brand-light: rgba(15, 81, 178, 0.1);
+  --color-brand-dark: #231F20;
   --color-brand-accent: #F89E1D;
 
   /* Standard Blues */

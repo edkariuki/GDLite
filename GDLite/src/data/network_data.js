@@ -10,10 +10,25 @@ export const networkCategories = [
         slug: 'internet-provisioning',
         title: 'Internet Provisioning',
         image: InternetProvisioningImg,
+        brands: [],
         description:
             'Reliable internet for homes and businesses, from fibre and wireless links to failover connections that keep you online.',
-        brands: [],
-        subcategories: [],
+        subcategories: [
+            {
+                title: 'Linknet Fiber',
+                description:
+                    'High-speed fibre internet for homes and businesses, with symmetrical upload and download speeds, unlimited data and 24/7 support.',
+                url: 'https://linknetkenya.co.ke/',
+                highlights: [
+                    'Speeds up to 1 Gbps',
+                    'Symmetrical upload & download',
+                    'Unlimited data',
+                    'Home & business plans',
+                    'Enterprise plans with dedicated bandwidth',
+                    '24/7 support',
+                ],
+            },
+        ],
     },
     {
         slug: 'cable-structures',

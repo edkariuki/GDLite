@@ -14,6 +14,7 @@ import Alarms from './pages/solutions/security_systems/subcategories/alarms'
 import ElectricFence from './pages/solutions/security_systems/subcategories/electric_fence'
 import GateAutomation from './pages/solutions/security_systems/subcategories/gate_automation'
 import NetworkSystems from './pages/solutions/network_systems/network_systems'
+import InternetProvisioning from './pages/solutions/network_systems/subcategories/internet_provisioning'
 
 export const router = createBrowserRouter([
     {
@@ -85,7 +86,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'network-systems',
-                element: <NetworkSystems />,
+                children: [
+                    {
+                        index: true,
+                        element: <NetworkSystems />,
+                    },
+                    {
+                        path: 'internet-provisioning',
+                        element: <InternetProvisioning />,
+                    },
+                ],
             },
         ],
     },
