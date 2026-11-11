@@ -11,6 +11,10 @@ import UbiquitiLogo from '../assets/logos/ubiquiti.png';
 import SonyLogo from '../assets/logos/sony.png';
 import AxisLogo from '../assets/logos/axis.png';
 import VitronicLogo from '../assets/logos/vitronic.png';
+import RingLogo from '../assets/logos/ring.png';
+import SecolinkLogo from '../assets/logos/secolink.png';
+import LightsysLogo from '../assets/logos/lightsys.png';
+import IdsLogo from '../assets/logos/ids.png';
 
 export const securityCategories = [
     {
@@ -83,9 +87,14 @@ export const securityCategories = [
         title: 'Alarms',
         icon: BellRing,
         image: AlarmSystemsImg,
+        brands: [
+            { name: 'Ring', logo: RingLogo },
+            { name: 'Secolink', logo: SecolinkLogo },
+            { name: 'Lightsys', logo: LightsysLogo },
+            { name: 'IDS', logo: IdsLogo },
+        ],
         description:
             'Intruder and fire alarm systems with real-time alerts, so threats are detected and acted on before they escalate.',
-        brands: [],
         subcategories: [
             {
                 title: 'Residential',
