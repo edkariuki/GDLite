@@ -13,6 +13,7 @@ import NiafiberLogo from '../assets/logos/niafiber.png'
 export const networkCategories = [
     {
         slug: 'internet-provisioning',
+        title: 'Internet Provisioning',
         image: InternetProvisioningImg,
         brands: [],
         description:
@@ -76,7 +77,20 @@ export const networkCategories = [
         description:
             'Switches, routers, firewalls and Wi-Fi access points configured for fast, secure data flow and full coverage across your premises.',
         brands: [],
-        subcategories: [],
+        subcategories: [
+            {
+                title: 'Residential',
+                tagline: 'Smart Homes',
+                description:
+                    'Whole-home Wi-Fi and wired networks that keep smart TVs, speakers, cameras, lighting and every family device connected in every room.',
+            },
+            {
+                title: 'Commercial',
+                tagline: 'Offices & Businesses',
+                description:
+                    'Business-grade switches, routers, firewalls and access points for offices, with secure staff and guest networks and room to grow.',
+            },
+        ],
     },
     {
         slug: 'data-centers',

@@ -17,6 +17,7 @@ import NetworkSystems from './pages/solutions/network_systems/network_systems'
 import InternetProvisioning from './pages/solutions/network_systems/subcategories/internet_provisioning'
 import CableStructures from './pages/solutions/network_systems/subcategories/cable_structures'
 import FibreOpticDeployment from './pages/solutions/network_systems/subcategories/fibre_optic_deployment'
+import Networking from './pages/solutions/network_systems/subcategories/networking'
 
 export const router = createBrowserRouter([
     {
@@ -104,6 +105,10 @@ export const router = createBrowserRouter([
                     {
                         path: 'fibre-optic-deployment',
                         element: <FibreOpticDeployment />,
+                    },
+                    {
+                        path: 'networking',
+                        element: <Networking />,
                     }
                 ],
             },
