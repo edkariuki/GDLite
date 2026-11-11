@@ -11,6 +11,7 @@ import SecuritySystems from './pages/solutions/security_systems/security_systems
 import AccessControl from './pages/solutions/security_systems/subcategories/access_control'
 import Cctv from './pages/solutions/security_systems/subcategories/cctv'
 import Alarms from './pages/solutions/security_systems/subcategories/alarms'
+import ElectricFence from './pages/solutions/security_systems/subcategories/electric_fence'
 import NetworkSystems from './pages/solutions/network_systems'
 
 export const router = createBrowserRouter([
@@ -69,6 +70,10 @@ export const router = createBrowserRouter([
                     {
                         path: 'alarms',
                         element: <Alarms />,
+                    },
+                    {
+                        path: 'electric-fence',
+                        element: <ElectricFence />,
                     }
                 ],
             },

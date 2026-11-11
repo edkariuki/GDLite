@@ -1,8 +1,8 @@
 import { Fingerprint, Cctv, BellRing } from 'lucide-react';
 import AlarmSystemsImg from '../assets/images/alarm_system.jpg';
 import CctvImg from '../assets/images/cctv_img.jpg';
-import FireSuppressionImg from '../assets/images/fire_suppression.jpg';
 import BiometricAccessImg from '../assets/images/biometric_access.jpg';
+import ElectricFenceImg from '../assets/images/electric_fence.jpg';
 import DahuaLogo from '../assets/logos/dahua.png';
 import HikvisionLogo from '../assets/logos/hikvision.png';
 import ZKTecoLogo from '../assets/logos/zkteco.png';
@@ -105,6 +105,32 @@ export const securityCategories = [
                 title: 'Commercial',
                 description:
                     'Intruder and fire alarm systems for offices, warehouses and retail, plus specialist protection for critical rooms such as server rooms, data centres and electrical rooms, including gas-based fire suppression. All alerts can feed into your command centre for round-the-clock monitoring and rapid response.',
+            },
+        ],
+    },
+    {
+        slug: 'electric-fence',
+        title: 'Electric Fence',
+        icon: Fence,
+        image: ElectricFenceImg,
+        description:
+            'High-security electric fencing that deters intruders and wildlife and raises the alarm the moment the perimeter is touched or cut.',
+        brands: [],
+        subcategories: [
+            {
+                title: 'Residential',
+                description:
+                    'Wall-top and free-standing electric fencing for homes and compounds, with alarm energizers, warning signs and remote alerts.',
+            },
+            {
+                title: 'Big Estates',
+                description:
+                    'Zoned perimeter fencing for gated communities and large estates, so guards know exactly which section has been breached.',
+            },
+            {
+                title: 'Big Farms',
+                description:
+                    'Long-range, solar-powered fencing that keeps livestock in, wildlife and intruders out, and holds up across rough terrain.',
             },
         ],
     },
