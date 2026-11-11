@@ -1,8 +1,9 @@
-import { Fingerprint, Cctv, BellRing } from 'lucide-react';
+import { Fingerprint, Cctv, BellRing, DoorOpen } from 'lucide-react';
 import AlarmSystemsImg from '../assets/images/alarm_system.jpg';
 import CctvImg from '../assets/images/cctv_img.jpg';
 import BiometricAccessImg from '../assets/images/biometric_access.jpg';
 import ElectricFenceImg from '../assets/images/electric_fence.jpg';
+import AutomaticGateImg from '../assets/images/automatic_gate.jpg';
 import DahuaLogo from '../assets/logos/dahua.png';
 import HikvisionLogo from '../assets/logos/hikvision.png';
 import ZKTecoLogo from '../assets/logos/zkteco.png';
@@ -139,6 +140,32 @@ export const securityCategories = [
                 title: 'Big Farms',
                 description:
                     'Long-range, solar-powered fencing that keeps livestock in, wildlife and intruders out, and holds up across rough terrain.',
+            },
+        ],
+    },
+    {
+        slug: 'gate-automation',
+        title: 'Gate Automation',
+        icon: DoorOpen,
+        image: AutomaticGateImg,
+        description:
+            'Sliding and swing gate motors, boom barriers and smart controls that make entry faster, safer and fully under your control.',
+        brands: [],
+        subcategories: [
+            {
+                title: 'Home',
+                description:
+                    'Quiet sliding and swing gate motors with remotes, keypads and phone control, plus battery backup so the gate still opens during power cuts.',
+            },
+            {
+                title: 'Estates',
+                description:
+                    'Heavy-duty gates and boom barriers for gated communities, with resident access tags, visitor intercoms and guard-house controls.',
+            },
+            {
+                title: 'Parking Lots',
+                description:
+                    'Boom barriers, ticketing and number-plate recognition for malls, offices and hospitals, keeping traffic moving and every vehicle recorded.',
             },
         ],
     },
