@@ -15,6 +15,9 @@ import RingLogo from '../assets/logos/ring.png';
 import SecolinkLogo from '../assets/logos/secolink.png';
 import LightsysLogo from '../assets/logos/lightsys.png';
 import IdsLogo from '../assets/logos/ids.png';
+import StafixLogo from '../assets/logos/stafix.png';
+import NemtekLogo from '../assets/logos/nemtek.png';
+import JvaLogo from '../assets/logos/jva.png';
 
 export const securityCategories = [
     {
@@ -113,9 +116,14 @@ export const securityCategories = [
         title: 'Electric Fence',
         icon: Fence,
         image: ElectricFenceImg,
+        brands: [
+            { name: 'Stafix', logo: StafixLogo },
+            { name: 'Nemtek', logo: NemtekLogo },
+            { name: 'Jva', logo: JvaLogo },
+            { name: 'Hikvision', logo: HikvisionLogo },
+        ],
         description:
             'High-security electric fencing that deters intruders and wildlife and raises the alarm the moment the perimeter is touched or cut.',
-        brands: [],
         subcategories: [
             {
                 title: 'Residential',
