@@ -19,6 +19,7 @@ import CableStructures from './pages/solutions/network_systems/subcategories/cab
 import FibreOpticDeployment from './pages/solutions/network_systems/subcategories/fibre_optic_deployment'
 import Networking from './pages/solutions/network_systems/subcategories/networking'
 import Intercomms from './pages/solutions/network_systems/subcategories/intercomms'
+import AccessPoints from './pages/solutions/network_systems/subcategories/access_points'
 
 export const router = createBrowserRouter([
     {
@@ -114,6 +115,10 @@ export const router = createBrowserRouter([
                     {
                         path: 'intercomms',
                         element: <Intercomms />,
+                    },
+                    {
+                        path: 'access-points',
+                        element: <AccessPoints />,
                     }
                 ],
             },

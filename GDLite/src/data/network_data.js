@@ -120,6 +120,15 @@ export const networkCategories = [
         subcategories: [],
     },
     {
+        slug: 'access-points',
+        title: 'Access Points',
+        image: NetworkingImg,
+        description:
+            'Professionally planned Wi-Fi with indoor and outdoor access points, seamless roaming and central management for full coverage everywhere.',
+        brands: [],
+        subcategories: [],
+    },
+    {
         slug: 'data-centers',
         title: 'Data Centers',
         image: DataCenterImg,
