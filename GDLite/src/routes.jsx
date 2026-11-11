@@ -10,6 +10,7 @@ import PowerSystemCategory from './pages/solutions/power_systems/power_systems_c
 import SecuritySystems from './pages/solutions/security_systems/security_systems'
 import AccessControl from './pages/solutions/security_systems/subcategories/access_control'
 import Cctv from './pages/solutions/security_systems/subcategories/cctv'
+import Alarms from './pages/solutions/security_systems/subcategories/alarms'
 import NetworkSystems from './pages/solutions/network_systems'
 
 export const router = createBrowserRouter([
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
                     {
                         path: 'cctv',
                         element: <Cctv />,
+                    },
+                    {
+                        path: 'alarms',
+                        element: <Alarms />,
                     }
                 ],
             },

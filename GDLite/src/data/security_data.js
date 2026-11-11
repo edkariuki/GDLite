@@ -88,16 +88,14 @@ export const securityCategories = [
         brands: [],
         subcategories: [
             {
-                title: 'Intruder Alarm Systems',
+                title: 'Residential',
                 description:
-                    'Advanced alarm systems with real-time alerts and monitoring for enhanced security.',
-                image: AlarmSystemsImg,
+                    'Intruder alarms, door and window sensors, panic buttons and smoke detectors that alert you and your security provider the moment something is wrong at home.',
             },
             {
-                title: 'Fire Alarm & Suppression',
+                title: 'Commercial',
                 description:
-                    'Advanced fire detection and suppression systems for residential and commercial properties, ensuring safety and compliance.',
-                image: FireSuppressionImg,
+                    'Intruder and fire alarm systems for offices, warehouses and retail, plus specialist protection for critical rooms such as server rooms, data centres and electrical rooms, including gas-based fire suppression. All alerts can feed into your command centre for round-the-clock monitoring and rapid response.',
             },
         ],
     },
