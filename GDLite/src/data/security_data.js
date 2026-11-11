@@ -6,6 +6,11 @@ import BiometricAccessImg from '../assets/images/biometric_access.jpg';
 import DahuaLogo from '../assets/logos/dahua.png';
 import HikvisionLogo from '../assets/logos/hikvision.png';
 import ZKTecoLogo from '../assets/logos/zkteco.png';
+import UniviewLogo from '../assets/logos/uniview.png';
+import UbiquitiLogo from '../assets/logos/ubiquiti.png';
+import SonyLogo from '../assets/logos/sony.png';
+import AxisLogo from '../assets/logos/axis.png';
+import VitronicLogo from '../assets/logos/vitronic.png';
 
 export const securityCategories = [
     {
@@ -13,9 +18,13 @@ export const securityCategories = [
         title: 'Access Control',
         icon: Fingerprint,
         image: BiometricAccessImg,
+        brands: [
+            { name: 'Dahua', logo: DahuaLogo },
+            { name: 'Hikvision', logo: HikvisionLogo },
+            { name: 'ZKTeco', logo: ZKTecoLogo },
+        ],
         description:
             'Decide exactly who gets in, where and when — from biometric door access to automated gates and secured perimeters.',
-        brands: [],
         subcategories: [
             {
                 title: 'Residential',
@@ -34,13 +43,18 @@ export const securityCategories = [
         title: 'CCTV',
         icon: Cctv,
         image: CctvImg,
-        description:
-            'Comprehensive surveillance for residential and commercial properties, with clear footage and remote viewing from your phone.',
         brands: [
             { name: 'Dahua', logo: DahuaLogo },
             { name: 'Hikvision', logo: HikvisionLogo },
             { name: 'ZKTeco', logo: ZKTecoLogo },
+            { name: 'Uniview', logo: UniviewLogo },
+            { name: 'Ubiquiti', logo: UbiquitiLogo },
+            { name: 'Sony', logo: SonyLogo },
+            { name: 'Axis', logo: AxisLogo },
+            { name: 'Vitronic', logo: VitronicLogo },
         ],
+        description:
+            'Comprehensive surveillance for residential and commercial properties, with clear footage and remote viewing from your phone.',
         subcategories: [
             {
                 title: 'Residential',
