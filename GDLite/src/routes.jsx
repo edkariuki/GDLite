@@ -15,6 +15,7 @@ import ElectricFence from './pages/solutions/security_systems/subcategories/elec
 import GateAutomation from './pages/solutions/security_systems/subcategories/gate_automation'
 import NetworkSystems from './pages/solutions/network_systems/network_systems'
 import InternetProvisioning from './pages/solutions/network_systems/subcategories/internet_provisioning'
+import CableStructures from './pages/solutions/network_systems/subcategories/cable_structures'
 
 export const router = createBrowserRouter([
     {
@@ -95,6 +96,10 @@ export const router = createBrowserRouter([
                         path: 'internet-provisioning',
                         element: <InternetProvisioning />,
                     },
+                    {
+                        path: 'cable-structures',
+                        element: <CableStructures />,
+                    }
                 ],
             },
         ],

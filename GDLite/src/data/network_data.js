@@ -34,10 +34,21 @@ export const networkCategories = [
         slug: 'cable-structures',
         title: 'Cable Structures',
         image: CableStructureImg,
+        brands: [],
         description:
             'Structured cabling designed, installed, labelled and tested to standard, giving you a tidy and dependable network backbone.',
-        brands: [],
-        subcategories: [],
+        subcategories: [
+            {
+                title: 'Commercial',
+                description:
+                    'Structured cabling for supermarkets, shops, offices and warehouses, connecting tills, POS systems, Wi-Fi, CCTV and back-office networks through neat, labelled racks.',
+            },
+            {
+                title: 'Estates',
+                description:
+                    'Estate-wide cabling backbones that bring internet, intercoms, CCTV and access control to every house or apartment block, planned for easy expansion.',
+            },
+        ],
     },
     {
         slug: 'fiber-splicing',
