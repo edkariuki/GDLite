@@ -14,6 +14,8 @@ import PanasonicLogo from '../assets/logos/panasonic.png';
 import DahuaLogo from '../assets/logos/dahua.png';
 import HikvisionLogo from '../assets/logos/hikvision.png';
 import YealinkLogo from '../assets/logos/yealink.png';
+import TplinkLogo from '../assets/logos/tplink.png';
+import TendaLogo from '../assets/logos/tenda.png';
 
 // Subcategories are empty until each category page is built.
 export const networkCategories = [
@@ -123,9 +125,16 @@ export const networkCategories = [
         slug: 'access-points',
         title: 'Access Points',
         image: NetworkingImg,
+        brands: [
+            { name: 'Ubiquiti', logo: UbiquitiLogo },
+            { name: 'Mikrotik', logo: MikrotikLogo },
+            { name: 'TP Link', logo: TplinkLogo },
+            { name: 'Cisco', logo: CiscoLogo },
+            { name: 'Huawei', logo: HuaweiLogo },
+            { name: 'Tenda', logo: TendaLogo },
+        ],
         description:
             'Professionally planned Wi-Fi with indoor and outdoor access points, seamless roaming and central management for full coverage everywhere.',
-        brands: [],
         subcategories: [],
     },
     {
