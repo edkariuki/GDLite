@@ -101,6 +101,15 @@ export const networkCategories = [
         ],
     },
     {
+        slug: 'intercomms',
+        title: 'Intercomms',
+        image: NetworkingImg,
+        brands: [],
+        description:
+            'Audio and video intercoms for homes, estates and offices, letting you screen visitors and open doors and gates from a monitor or your phone.',
+        subcategories: [],
+    },
+    {
         slug: 'data-centers',
         title: 'Data Centers',
         image: DataCenterImg,
