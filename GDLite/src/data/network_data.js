@@ -127,7 +127,7 @@ export const networkCategories = [
         image: NetworkingImg,
         brands: [
             { name: 'Ubiquiti', logo: UbiquitiLogo },
-            { name: 'Mikrotik', logo: MikrotikLogo },
+            { name: 'Mikrotik', logo: MicrotikLogo },
             { name: 'TP Link', logo: TplinkLogo },
             { name: 'Cisco', logo: CiscoLogo },
             { name: 'Huawei', logo: HuaweiLogo },
