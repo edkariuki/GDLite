@@ -70,7 +70,7 @@ export const networkCategories = [
         brands: [
             { name: 'Niafiber', logo: NiafiberLogo },
             { name: 'Huawei', logo: HuaweiLogo },
-            { name: 'Mikrotik', logo: MicrotikLogo },
+            { name: 'Microtik', logo: MicrotikLogo },
             { name: 'Sophos', logo: SophosLogo },
             { name: 'IBM', logo: IbmLogo },
         ],
@@ -84,7 +84,7 @@ export const networkCategories = [
         image: NetworkingImg,
         brands: [
             { name: 'Ubiquiti', logo: UbiquitiLogo },
-            { name: 'Mikrotik', logo: MicrotikLogo },
+            { name: 'Microtik', logo: MicrotikLogo },
             { name: 'Sophos', logo: SophosLogo },
             { name: 'Cisco', logo: CiscoLogo },
         ],
@@ -127,7 +127,7 @@ export const networkCategories = [
         image: NetworkingImg,
         brands: [
             { name: 'Ubiquiti', logo: UbiquitiLogo },
-            { name: 'Mikrotik', logo: MicrotikLogo },
+            { name: 'Microtik', logo: MicrotikLogo },
             { name: 'TP Link', logo: TplinkLogo },
             { name: 'Cisco', logo: CiscoLogo },
             { name: 'Huawei', logo: HuaweiLogo },
