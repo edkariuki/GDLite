@@ -83,7 +83,7 @@ export default function AccessControl() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        The Right People, Through the Right Doors
+                        Access Granted, Security Assured.
                     </h1>
                 </div>
 
@@ -97,9 +97,8 @@ export default function AccessControl() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Access Control Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    From a single front gate to a multi-storey office, we design and install access control that
-                    keeps intruders out and lets the right people in — biometric readers, smart locks, automated
-                    gates and perimeter fencing, all managed from one place.
+                    Take control of your security with smart access control solutions that help prevent unauthorized entry, protect valuable assets, keep a log of entry and give you piece of mind.
+                    From biometric and card-based systems to keypads and advanced entry solutions, we help homes, businesses and institutions improve security while managing access with ease and confidence.
                 </p>
             </section>
 
@@ -147,18 +146,12 @@ export default function AccessControl() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Invest in <span className="text-brand">Access Control</span>?
+                            Why Invest in <span className="text-brand">Access Control </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             Locks and keys only go so far. Electronic access control lets you decide exactly who
                             can enter, where and when — and gives you a record of every visit.
                         </p>
-                        <a
-                            href="#contact"
-                            className="mt-8 inline-flex items-center px-6 py-3 rounded-full border-2 border-content-primary text-content-primary font-medium hover:bg-content-primary hover:text-white transition"
-                        >
-                            Talk to an Expert
-                        </a>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
