@@ -77,7 +77,7 @@ export default function InternetProvisioning() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Connected at the Speed of Light
+                        Fast, Reliable Internet.
                     </h1>
                 </div>
 

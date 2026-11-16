@@ -30,7 +30,7 @@ export const networkCategories = [
             {
                 title: 'Linknet Fiber',
                 description:
-                    'High-speed fibre internet for homes and businesses, with symmetrical upload and download speeds, unlimited data and 24/7 support.',
+                    'Enjoy reliable, high-speed internet through Litenet Fiber, our dedicated ISP subsidiary committed to keeping homes and businesses seamlessly connected.',
                 url: 'https://linknetkenya.co.ke/',
                 highlights: [
                     'Speeds up to 1 Gbps',
