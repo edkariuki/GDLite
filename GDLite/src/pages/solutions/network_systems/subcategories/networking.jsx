@@ -73,7 +73,7 @@ export default function Networking() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Every Device, Seamlessly Connected
+                        Connecting Systems, Driving Productivity.
                     </h1>
                 </div>
 
@@ -87,9 +87,9 @@ export default function Networking() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Networking Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    We design, install and configure wired and wireless networks that keep every phone, laptop,
-                    camera and smart device online — with full Wi-Fi coverage, secure firewalls and switches sized
-                    for how you actually use your space.
+                    We deliver reliable, scalable networking solutions that keep your business connected, systems communicating and operations
+                    running efficiently. From office networks and structured cabling to enterprise connectivity and data center infrastructure,
+                    we design and implement solutions that enhance performance, improve productivity amd support your business as it grows.
                 </p>
             </section>
 
