@@ -85,7 +85,7 @@ export default function AccessPoints() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Strong Wi-Fi in Every Corner
+                        Extending Reach, Enhancing Connectivity
                     </h1>
                 </div>
 
@@ -99,9 +99,10 @@ export default function AccessPoints() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Access Point Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    Reliable Wi-Fi depends on the right access points in the right places. We survey your space,
-                    then design and install wireless networks that cover every corner — from a single home to
-                    offices, hotels, schools and outdoor campuses.
+                    Enjoy reliable WiFi coverage across your premises with professionally installed access points designed
+                    to eliminate dead zones and keep everyone connected. Whether for offices, commercial facilities, hotels or large
+                    buildings our our solutions deliver consistent conectivity, enhanced network security and greater control over user access,
+                    supporting productivity and seamless connection.
                 </p>
             </section>
 
