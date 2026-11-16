@@ -82,7 +82,7 @@ export default function Alarms() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Alerted the Moment It Matters
+                        Detect Early, Protect Always.
                     </h1>
                 </div>
 
@@ -96,9 +96,9 @@ export default function Alarms() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Alarm Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    We design and install intruder and fire alarm systems that detect threats early and get the
-                    right people responding fast — from a family home to critical facilities that can never be
-                    left unprotected.
+                    We provide reliable intruder alarm solutions designed to detect unauthorized entry and protect homes,
+                    businesses and critical facilities. Our systems deliver timely alerts and enhanced security helping you safeguard
+                    people, property and valuable assets.
                 </p>
             </section>
 
