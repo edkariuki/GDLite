@@ -85,7 +85,7 @@ export default function GateAutomation() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Smooth, Secure Entry Every Time
+                        Open with Ease, Secure with Confidence.
                     </h1>
                 </div>
 
@@ -99,9 +99,9 @@ export default function GateAutomation() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Gate Automation Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    From a single driveway gate to a busy parking lot, we supply, install and maintain gate
-                    motors, boom barriers and smart access controls — with battery backup, safety sensors and
-                    integration with your intercom, CCTV and access control.
+                    Enjoy seamless entry and enhanced security with intelligent gate automation solutions designed around your needs.
+                    From remote-controlled gates to automatic number plate recognition (ANPR), we help homes, residential estates amd commerrcial
+                    premises streamline vehicle access, reduce unauthorized entry and enjoy greater convenience and control.
                 </p>
             </section>
 
