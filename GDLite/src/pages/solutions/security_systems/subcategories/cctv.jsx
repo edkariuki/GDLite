@@ -103,7 +103,7 @@ export default function Cctv() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Eyes on What Matters, Day and Night
+                        Eyes on What Matters
                     </h1>
                 </div>
 
@@ -117,9 +117,9 @@ export default function Cctv() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">CCTV Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    We design and install surveillance systems for every kind of property — from a single home
-                    to a multi-site institution. HD and night-vision cameras, reliable recording and remote
-                    viewing on your phone, with off-grid solar options for sites without power.
+                    We deliver intelligent CCTV solutions tailored to protect homes, businesses and critical facilities.
+                    From system design and installation to remote monitoring, we provide reliable secutity and clear visibility
+                    of what matters most.
                 </p>
             </section>
 
@@ -167,19 +167,13 @@ export default function Cctv() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Install <span className="text-brand">CCTV</span>?
+                            Why Install <span className="text-brand">CCTV </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             A well-planned camera system protects people and property around the clock. It
                             discourages intruders, lets you check in from anywhere and gives you a reliable record
                             when something does go wrong.
                         </p>
-                        <a
-                            href="#contact"
-                            className="mt-8 inline-flex items-center px-6 py-3 rounded-full border-2 border-content-primary text-content-primary font-medium hover:bg-content-primary hover:text-white transition"
-                        >
-                            Talk to an Expert
-                        </a>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
