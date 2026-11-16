@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import { Navigation } from 'lucide-react';
 import { Dropdown } from '../components/dropdown';
 
 const inputClass =
     'w-full px-4 py-2.5 rounded-lg border border-content-muted focus:ring-2 focus:ring-brand outline-none bg-surface-card text-content-primary';
 
-/**
- * Office info + quote form, shared by the main and category pages.
- * The selected service is controlled by the parent so cards can pre-fill it.
- */
+const OFFICE = {
+    address: '3rd Floor, Spur Mall, Thika Road',
+    mapQuery: 'Spur Mall, Thika Super Highway',
+};
+const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE.mapQuery)}&z=16&output=embed`;
+const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(OFFICE.mapQuery)}`;
+
 export default function ContactSection({ serviceOptions, selectedService, onServiceChange }) {
     const [status, setStatus] = useState({ loading: false, error: null, success: false });
 
@@ -50,7 +54,7 @@ export default function ContactSection({ serviceOptions, selectedService, onServ
     return (
         <section id="contact" className="bg-surface-card border-t border-stroke py-16 px-6 scroll-mt-20">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="space-y-6">
+                <div className="space-y-6 flex flex-col">
                     <span className="text-brand font-bold text-sm tracking-wider uppercase">Visit Our Office</span>
                     <h2 className="text-3xl font-extrabold text-content-primary">Get in Touch with Our Team</h2>
                     <p className="text-content-secondary leading-relaxed">
@@ -58,17 +62,38 @@ export default function ContactSection({ serviceOptions, selectedService, onServ
                         directly to schedule a technical site survey.
                     </p>
 
-                    <div className="p-6 bg-surface-light rounded-2xl border border-stroke-light space-y-4">
-                        <div className="flex items-start space-x-3">
-                            <svg className="w-6 h-6 text-brand flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <div>
-                                <h4 className="font-semibold text-content-primary">Office Location</h4>
-                                <p className="text-content-secondary text-sm">3rd Floor, Spur Mall, Thika Road</p>
+                    {/* Address + map */}
+                    <div className="flex-1 flex flex-col bg-surface-light rounded-2xl border border-stroke-light overflow-hidden">
+                        <div className="p-6 flex items-start justify-between gap-4">
+                            <div className="flex items-start space-x-3">
+                                <svg className="w-6 h-6 text-brand flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <div>
+                                    <h4 className="font-semibold text-content-primary">Office Location</h4>
+                                    <p className="text-content-secondary text-sm">{OFFICE.address}</p>
+                                </div>
                             </div>
+                            <a
+                                href={DIRECTIONS_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="shrink-0 inline-flex items-center text-sm font-semibold text-brand hover:text-brand-hover transition"
+                            >
+                                <Navigation className="w-4 h-4 mr-1.5" />
+                                Get directions
+                            </a>
                         </div>
+
+                        <iframe
+                            title={`Map showing our office at ${OFFICE.address}`}
+                            src={MAP_EMBED_URL}
+                            className="w-full flex-1 min-h-[16rem] border-0 border-t border-stroke-light"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
                     </div>
                 </div>
 
