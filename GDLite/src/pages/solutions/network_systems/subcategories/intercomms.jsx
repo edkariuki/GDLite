@@ -85,7 +85,7 @@ export default function Intercoms() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Know Who's at the Door, Wherever You Are
+                        Clear Communication, Secure Access
                     </h1>
                 </div>
 
@@ -99,9 +99,9 @@ export default function Intercoms() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Intercom Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    From a single front gate to a multi-block apartment complex, we install audio and video
-                    intercoms that let you screen visitors, talk to them and open the door — from an indoor
-                    monitor or straight from your phone.
+                    Enhance communication and everyday convenience with reliable intercom solutions designed to keep people
+                    connected across your property. From homesand residential estates to hotels and commercial facilities, our systems make it
+                    easy to communicate with visitors, coordinate access and connect reception areas with rooms, offices and entry points-all through clear, secure and convenient communications.
                 </p>
             </section>
 
