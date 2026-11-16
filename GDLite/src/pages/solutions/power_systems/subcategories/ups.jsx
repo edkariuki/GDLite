@@ -109,9 +109,7 @@ export default function Ups() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">UPS Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    An uninterruptible power supply bridges the gap between a power cut and your backup source —
-                    instantly. We size, supply and install UPS systems for everything from a single workstation to
-                    an entire server room, and keep them healthy with battery replacement and routine servicing.
+                    We provide high-performance Uninterruptible Power Supply (UPS) solutions designed to protect critical equipment and mainatin power continuity in demanding environments. From hospital ICUs, labs and radiology departments to serveer rooms and data centers, we deliver tailored UPS systems that safeguard sensitive equipment, eliminate downtime and keep essential operations running when reliable power matters most.
                 </p>
             </section>
 
