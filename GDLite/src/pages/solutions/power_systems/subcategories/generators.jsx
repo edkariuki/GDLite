@@ -117,9 +117,9 @@ export default function Generators() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Generator Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    When the grid goes down, a properly sized generator keeps your home, business or site running.
-                    We supply, install and maintain automatic and manual generators — complete with changeover
-                    switches, load assessment and routine servicing so they start every time you need them.
+                    We provide dependable generator solutions designed to meet the power demands of commercial facilities, industrial operations and institutions.
+                    From generator supply and installation to servicing and maintenance, we deliver tailored power backup solutions taht help minimize downtime,
+                    maintain operational continuity and keep your business running when the grid goes down.
                 </p>
             </section>
 
