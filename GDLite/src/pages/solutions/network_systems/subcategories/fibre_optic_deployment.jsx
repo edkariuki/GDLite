@@ -80,7 +80,7 @@ export default function FibreOpticDeployment() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Fibre Built to Carry the Future
+                        Connecting at the Speed of Light
                     </h1>
                 </div>
 
@@ -94,9 +94,10 @@ export default function FibreOpticDeployment() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Fibre Optic Deployment</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    Fibre is the fastest, most reliable medium for moving data — but only when it is installed
-                    properly. We handle the full deployment, from the first route survey to the final certified
-                    link, for businesses, campuses, estates and service providers.
+                    Future-proof your business with high performance fibre optic solutions designed to support growth, efficiency,
+                    and reliable connectivity. Whether upgrading outdated cabling or connecting offices, branches, industrial facilities
+                    and data centers across long distances, we deliver tailored fibre infrastructure that supports faster data transfer,
+                    seamless communication and dependable connectivity accross your operations.
                 </p>
             </section>
 
