@@ -41,7 +41,7 @@ export const categories = [
             { name: 'Solis', logo: SolisLogo },
         ],
         description:
-            'Harness the sun for electricity, water pumping and water heating — from grid-tied homes to fully off-grid sites.',
+            'We deliver reliable solar energy solutions designed to help homes and businesses take control of their energy needs. From lowering electricity bills to improving energy reliability and supporting a cleaner environment, our solutions are tailored to your unique requirements, helping you enjoy greater efficiency and long term value.',
         subcategories: [
             {
                 title: 'Hybrid Solar Systems',
