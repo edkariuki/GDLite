@@ -73,7 +73,7 @@ export default function CableStructures() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        The Backbone Behind Every Connection
+                        Precision, Safety, Durability
                     </h1>
                 </div>
 
@@ -87,9 +87,9 @@ export default function CableStructures() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Cable Structures</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    A reliable network starts with what is behind the walls. We design, install, label and test
-                    structured cabling to standard — giving businesses and estates a clean, dependable backbone
-                    for data, Wi-Fi, CCTV and every system that runs on the network.
+                    We provide quality cable management solutions designed for safe, organized, and durable ICT
+                    installations. From cable trays and trunking to cable ladders and support systems, our solutions
+                    ensure neat cable routing, protect your installations and deliver long-term reliability accross residential, commercial and industrial projects.
                 </p>
             </section>
 
