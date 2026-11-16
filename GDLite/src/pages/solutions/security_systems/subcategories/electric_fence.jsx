@@ -85,7 +85,7 @@ export default function ElectricFence() {
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
                     <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
-                        Secure Every Metre of Your Boundary
+                        Defining boundaries, Deterring Intruders.
                     </h1>
                 </div>
 
@@ -99,9 +99,9 @@ export default function ElectricFence() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Electric Fence Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    Your perimeter is your first line of defence. We design and install electric fencing for
-                    homes, large estates and farms — with alarm energizers, zone monitoring and solar power
-                    options, built to standard and maintained to stay live.
+                    We design and install reliable electric fencing solutions to secure homes, residential estates,
+                    commercial premises and farms. Our systems provide effective perimeter protection, deter intruders and
+                    help safeguard your property, people, animals and valuable assets.
                 </p>
             </section>
 
@@ -149,7 +149,7 @@ export default function ElectricFence() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Choose an <span className="text-brand">Electric Fence</span>?
+                            Why Choose an <span className="text-brand">Electric Fence </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             Walls and ordinary fences can be climbed or cut quietly. An electric fence turns your
