@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, ShieldCheck, Wallet, Leaf, Wrench, Sun, BatteryCharging, Droplets } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ShieldCheck, Wallet, Leaf, Unplug, Sun, BatteryCharging, Droplets } from 'lucide-react';
 import { getCategoryBySlug } from '../../../../data/data';
 import ContactSection from '../../../../components/contact_section';
 import SolarHeroImg from '../../../../assets/images/solar_hero.png';
 import SolarRooftopImg from '../../../../assets/images/solar_solutions.png';
 import BrandCarousel from '../../../../components/brand_carousel';
+import SolarFarm from '../../../../assets/images/solar_farm.png';
 
 const SOLUTION_ICONS = {
     'Hybrid Solar Systems': BatteryCharging,
@@ -32,9 +33,9 @@ const WHY_SOLAR = [
         text: 'Solar produces power without fuel, noise or emissions, cutting your reliance on diesel generators and fossil-fuel plants.',
     },
     {
-        icon: Wrench,
-        title: 'Low Maintenance',
-        text: 'With no moving parts, panels need little more than occasional cleaning and keep producing power for 25 years or more.',
+        icon: Unplug,
+        title: 'Energy Independence',
+        text: 'Generate your own power and rely less on the grid. Blackouts, tariff hikes and fuel price swings stop dictating your bills and your day.',
     },
 ];
 
@@ -60,7 +61,7 @@ export default function Solar() {
         window.scrollTo(0, 0);
     }, []);
 
-    const requestQuote = (title) => {
+    const seeMore = (title) => {
         setSelectedService(title);
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -89,9 +90,7 @@ export default function Solar() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Solar Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    Whether you want to cut your power bills, keep running through blackouts, or bring
-                    electricity and water to a remote site, we design and install solar systems sized to your
-                    exact needs — backed by professional engineering and after-sales support.
+                    We deliver reliable solar energy solutions designed to help homes and businesses take control of their energy needs. From lowering electricity bills to improving energy reliability and supporting a cleaner environment, our solutions are tailored to your unique requirements, helping you enjoy greater efficiency and long term value.
                 </p>
             </section>
 
@@ -122,10 +121,10 @@ export default function Solar() {
                                 <p className="mt-4 text-white/80 leading-relaxed flex-1">{sol.description}</p>
                                 <button
                                     type="button"
-                                    onClick={() => requestQuote(sol.title)}
+                                    onClick={() => seeMore(sol.title)}
                                     className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)] hover:text-white transition-colors group"
                                 >
-                                    Request a Quote
+                                    See More
                                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                                 </button>
                             </div>
@@ -139,8 +138,8 @@ export default function Solar() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Solar <br />
-                            <span className="text-[var(--color-brand-accent)]">Energy ?</span>
+                            Why <br />
+                            <span className="text-[var(--color-brand-accent)]">Solar Energy </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             Solar turns Kenya's abundant sunshine into clean, affordable power. It lowers running
@@ -154,6 +153,27 @@ export default function Solar() {
                             <WhySolarCard key={item.title} {...item} />
                         ))}
                     </div>
+                </div>
+            </section>
+
+            <section className="relative min-h-[60vh] sm:min-h-[75vh] flex items-end overflow-hidden">
+                <img src={SolarFarm} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background:
+                            'linear-gradient(to bottom, rgba(15, 81, 178, 0) 0%, rgba(15, 81, 178, 0.1) 30%, rgba(15, 81, 178, 0.55) 55%, rgba(15, 81, 178, 0.9) 75%, var(--color-brand) 100%)',
+                    }}
+                />
+
+                <div className="relative w-full max-w-4xl mx-auto px-6 pb-20 sm:pb-24 text-center text-white">
+                    <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                        Ready to Switch to <span className="text-[var(--color-brand-accent)]">Solar</span> ?
+                    </h2>
+                    <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+                        Tell us about your property and power needs. Our engineers will size the right system and
+                        send you a free, no-obligation quote.
+                    </p>
                 </div>
             </section>
 
