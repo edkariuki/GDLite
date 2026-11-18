@@ -1,5 +1,6 @@
 import InternetProvisioningImg from '../assets/images/internet_provisioning.jpg';
 import InternetSolutionsImg from '../assets/images/internet_solutions.jpg';
+import CableStructuresSolutionsImg from '../assets/images/cable_mgt_solutions.jpg';
 import CableStructureImg from '../assets/images/cable_structure.jpg';
 import FiberSplicingImg from '../assets/images/fiber_splicing.jpg';
 import NetworkingImg from '../assets/images/networking.jpg';
@@ -47,7 +48,7 @@ export const networkCategories = [
     {
         slug: 'cable-structures',
         title: 'Cable Structures',
-        image: CableStructureImg,
+        image: CableStructuresSolutionsImg,
         brands: [],
         description:
             'Structured cabling designed, installed, labelled and tested to standard, giving you a tidy and dependable network backbone.',
