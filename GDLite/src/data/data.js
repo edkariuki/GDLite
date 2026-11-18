@@ -3,6 +3,7 @@ import SolarWaterPumpingImg from '../assets/images/solar_water_pumping.jpg';
 import BackupGeneratorImg from '../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../assets/images/off_grid_solar.png';
+import SolarSolutionsImg from '../assets/images/solar_solutions.jpg';
 import ChlorideExideLogo from '../assets/logos/chloride_exide.png';
 import WecoLogo from '../assets/logos/weco.png'
 import TBBPowerLogo from '../assets/logos/tbb_power.png'
@@ -27,7 +28,7 @@ export const categories = [
     {
         slug: 'solar',
         title: 'Solar Solutions',
-        image: OffGridSolarImg,
+        image: SolarSolutionsImg,
         brands: [
             { name: 'Chloride Exide', logo: ChlorideExideLogo },
             { name: 'Weco', logo: WecoLogo },
@@ -41,7 +42,7 @@ export const categories = [
             { name: 'Solis', logo: SolisLogo },
         ],
         description:
-            'We deliver reliable solar energy solutions designed to help homes and businesses take control of their energy needs. From lowering electricity bills to improving energy reliability and supporting a cleaner environment, our solutions are tailored to your unique requirements, helping you enjoy greater efficiency and long term value.',
+            'Harness the sun for electricity, water pumping — from grid-tied homes to fully off-grid sites.',
         subcategories: [
             {
                 title: 'Hybrid Solar Systems',

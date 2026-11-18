@@ -156,19 +156,19 @@ export default function Solar() {
                 </div>
             </section>
 
-            <section className="relative min-h-[60vh] sm:min-h-[75vh] flex items-end overflow-hidden">
+            <section className="relative min-h-[85vh] sm:min-h-screen flex items-end overflow-hidden">
                 <img src={SolarFarm} alt="" className="absolute inset-0 w-full h-full object-cover" />
                 <div
                     className="absolute inset-0"
                     style={{
                         background:
-                            'linear-gradient(to bottom, rgba(15, 81, 178, 0) 0%, rgba(15, 81, 178, 0.1) 30%, rgba(15, 81, 178, 0.55) 55%, rgba(15, 81, 178, 0.9) 75%, var(--color-brand) 100%)',
+                            'linear-gradient(to bottom, rgba(15, 81, 178, 0) 0%, rgba(15, 81, 178, 0) 40%, rgba(15, 81, 178, 0.45) 62%, rgba(15, 81, 178, 0.9) 80%, var(--color-brand) 100%)',
                     }}
                 />
 
-                <div className="relative w-full max-w-4xl mx-auto px-6 pb-20 sm:pb-24 text-center text-white">
-                    <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1]">
-                        Ready to Switch to <span className="text-[var(--color-brand-accent)]">Solar</span> ?
+                <div className="relative w-full max-w-4xl mx-auto px-6 pb-24 sm:pb-32 text-center text-white">
+                    <h2 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                        Ready to Switch to <span className="text-[var(--color-brand-accent)]">Solar</span>?
                     </h2>
                     <p className="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
                         Tell us about your property and power needs. Our engineers will size the right system and
