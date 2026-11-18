@@ -3,6 +3,7 @@ import InternetSolutionsImg from '../assets/images/internet_solutions.jpg';
 import CableStructuresSolutionsImg from '../assets/images/cable_mgt_solutions.jpg';
 import FiberSolutionsImg from '../assets/images/fiber_solutions.jpg';
 import IntercomsSolutionsImg from '../assets/images/intercoms_solutions.jpg';
+import AccessSolutionsImg from '../assets/images/access_solutions.jpg';
 import CableStructureImg from '../assets/images/cable_structure.jpg';
 import FiberSplicingImg from '../assets/images/fiber_splicing.jpg';
 import NetworkingImg from '../assets/images/networking.jpg';
@@ -127,7 +128,7 @@ export const networkCategories = [
     {
         slug: 'access-points',
         title: 'Access Points',
-        image: NetworkingImg,
+        image: AccessSolutionsImg,
         brands: [
             { name: 'Ubiquiti', logo: UbiquitiLogo },
             { name: 'Microtik', logo: MicrotikLogo },
