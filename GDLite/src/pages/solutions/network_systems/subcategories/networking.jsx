@@ -5,8 +5,8 @@ import { getNetworkCategoryBySlug } from '../../../../data/network_data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. networking_hero.png, networking_solutions.png)
-import NetworkingHeroImg from '../../../../assets/images/networking.jpg';
-import NetworkingFeatureImg from '../../../../assets/images/networking.jpg';
+import NetworkingHeroImg from '../../../../assets/images/cisco.jpg';
+import NetworkingFeatureImg from '../../../../assets/images/networking_server.jpg';
 
 const SUBCATEGORY_ICONS = {
     Residential: Home,
@@ -62,24 +62,20 @@ export default function Networking() {
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
-            {/* Hero: title on a solid band, image fades in below it.
-                Set the band colour (#262b2e, used twice) to match the top of the hero photo. */}
-            <section className="relative overflow-hidden bg-[#262b2e]">
-                <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-24 text-white">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
+                <img src={NetworkingHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24 text-white">
                     <Link
                         to="/network-systems"
-                        className="inline-flex items-center text-sm text-white/80 hover:text-white transition"
+                        className="inline-flex items-center text-sm font-medium text-white hover:opacity-80 transition [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"
                     >
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
-                    <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
+                    <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Connecting Systems, Driving Productivity.
                     </h1>
-                </div>
-
-                <div className="relative h-[50vh] sm:h-[65vh] lg:h-[75vh] -mt-16 sm:-mt-24">
-                    <img src={NetworkingHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#262b2e] via-[#262b2e]/40 via-30% to-transparent to-70%" />
                 </div>
             </section>
 
@@ -144,19 +140,13 @@ export default function Networking() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why a <span className="text-[var(--color-brand-accent)]">Professional</span> Network?
+                            Why Professional <span className="text-[var(--color-brand-accent)]">Networking </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             A single consumer router can't keep up with today's homes and offices. A properly
                             designed network gives you speed everywhere, keeps intruders out and scales as you add
                             more people and devices.
                         </p>
-                        <a
-                            href="#contact"
-                            className="mt-8 inline-flex items-center px-6 py-3 rounded-full border-2 border-content-primary text-content-primary font-medium hover:bg-content-primary hover:text-white transition"
-                        >
-                            Talk to an Expert
-                        </a>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -167,7 +157,7 @@ export default function Networking() {
                 </div>
             </section>
 
-            <BrandCarousel title="Trusted Networking Brands" brands={category?.brands} />
+            <BrandCarousel title="Networking Brands We Install" brands={category?.brands} />
 
             <ContactSection
                 serviceOptions={subcategories.map((s) => s.title)}

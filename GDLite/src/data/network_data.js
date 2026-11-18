@@ -93,7 +93,6 @@ export const networkCategories = [
         ],
         description:
             'Switches, routers, firewalls and Wi-Fi access points configured for fast, secure data flow and full coverage across your premises.',
-        brands: [],
         subcategories: [
             {
                 title: 'Residential',
