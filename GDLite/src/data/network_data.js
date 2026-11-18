@@ -1,4 +1,5 @@
 import InternetProvisioningImg from '../assets/images/internet_provisioning.jpg';
+import InternetSolutionsImg from '../assets/images/internet_solutions.jpg';
 import CableStructureImg from '../assets/images/cable_structure.jpg';
 import FiberSplicingImg from '../assets/images/fiber_splicing.jpg';
 import NetworkingImg from '../assets/images/networking.jpg';
@@ -22,7 +23,7 @@ export const networkCategories = [
     {
         slug: 'internet-provisioning',
         title: 'Internet Provisioning',
-        image: InternetProvisioningImg,
+        image: InternetSolutionsImg,
         brands: [],
         description:
             'Reliable internet for homes and businesses, from fibre and wireless links to failover connections that keep you online.',
