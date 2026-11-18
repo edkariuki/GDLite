@@ -5,8 +5,8 @@ import { getNetworkCategoryBySlug } from '../../../../data/network_data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. intercoms_hero.png, intercoms_solutions.png)
-import IntercomsHeroImg from '../../../../assets/images/networking.jpg';
-import IntercomsFeatureImg from '../../../../assets/images/networking.jpg';
+import IntercomsHeroImg from '../../../../assets/images/intercoms_hero.jpg';
+import IntercomsFeatureImg from '../../../../assets/images/intercoms_use.jpg';
 
 // Shown in the "Type of Service" dropdown on this page.
 const INTERCOM_SERVICES = [
@@ -74,24 +74,20 @@ export default function Intercoms() {
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
-            {/* Hero: title on a solid band, image fades in below it.
-                Set the band colour (#262b2e, used twice) to match the top of the hero photo. */}
-            <section className="relative overflow-hidden bg-[#262b2e]">
-                <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-24 text-white">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
+                <img src={IntercomsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24 text-white">
                     <Link
                         to="/network-systems"
-                        className="inline-flex items-center text-sm text-white/80 hover:text-white transition"
+                        className="inline-flex items-center text-sm font-medium text-white hover:opacity-80 transition [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"
                     >
                         <ArrowLeft className="w-4 h-4 mr-1" /> Network Systems
                     </Link>
-                    <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
+                    <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Clear Communication, Secure Access
                     </h1>
-                </div>
-
-                <div className="relative h-[50vh] sm:h-[65vh] lg:h-[75vh] -mt-16 sm:-mt-24">
-                    <img src={IntercomsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#262b2e] via-[#262b2e]/40 via-30% to-transparent to-70%" />
                 </div>
             </section>
 
