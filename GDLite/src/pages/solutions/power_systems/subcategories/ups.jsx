@@ -15,7 +15,9 @@ import { getCategoryBySlug } from '../../../../data/data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
 import UpsHeroImg from '../../../../assets/images/ups_hero.png';
-import UpsFeatureImg from '../../../../assets/images/ups_solution.jpg';
+import UpsFeatureImg from '../../../../assets/images/ups_solution.png';
+import UpsSecurity from '../../../../assets/images/ups_security.jpeg';
+import UpsHospital from '../../../../assets/images/ups_hospital.jpeg'
 
 // Shown in the "Type of Service" dropdown on this page.
 const UPS_SERVICES = ['New UPS Supply & Installation', 'UPS Battery Replacement', 'UPS Servicing & Repair'];
@@ -89,7 +91,7 @@ export default function Ups() {
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
             {/* Hero */}
             <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
-                <img src={UpsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={UpsFeatureImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/35 to-black/10" />
 
                 <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24">
@@ -109,18 +111,18 @@ export default function Ups() {
             <section className="max-w-3xl mx-auto pt-20 pb-14 px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">UPS Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
-                    We provide high-performance Uninterruptible Power Supply (UPS) solutions designed to protect critical equipment and mainatin power continuity in demanding environments. From hospital ICUs, labs and radiology departments to serveer rooms and data centers, we deliver tailored UPS systems that safeguard sensitive equipment, eliminate downtime and keep essential operations running when reliable power matters most.
+                    We provide high-performance Uninterruptible Power Supply (UPS) solutions designed to protect critical equipment and maintain power continuity in demanding environments. From hospital ICUs, labs and radiology departments to server rooms and data centers, we deliver tailored UPS systems that safeguard sensitive equipment, eliminate downtime and keep essential operations running when reliable power matters most.
                 </p>
             </section>
 
             {/* Image fading into brand blue */}
             <section aria-hidden="true" className="relative h-[55vh] sm:h-[75vh] overflow-hidden">
-                <img src={UpsFeatureImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={UpsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
                 <div
                     className="absolute inset-0"
                     style={{
                         background:
-                            'linear-gradient(to bottom, rgba(15, 81, 178, 0) 0%, rgba(15, 81, 178, 0.05) 25%, rgba(15, 81, 178, 0.35) 50%, rgba(15, 81, 178, 0.75) 75%, var(--color-brand) 100%)',
+                            'linear-gradient(to bottom, rgba(15, 81, 178, 0) 0%, rgba(15, 81, 178, 0) 45%, rgba(15, 81, 178, 0.3) 65%, rgba(15, 81, 178, 0.75) 85%, var(--color-brand) 100%)',
                     }}
                 />
             </section>
@@ -180,6 +182,23 @@ export default function Ups() {
                         ))}
                     </div>
                 </div>
+            </section>
+
+            {/* Statement between two full-width photos (no gradient) */}
+            <section aria-hidden="true">
+                <img src={UpsSecurity} alt="" className="block w-full h-auto" />
+            </section>
+
+            <section className="bg-surface-light py-20 sm:py-28 px-6">
+                <p className="max-w-4xl mx-auto text-center text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.2] text-content-primary">
+                    When every second counts in keeping patients alive or data flowing, count on us for{' '}
+                    <span className="text-brand">installation</span> and{' '}
+                    <span className="text-[var(--color-brand-accent)]">maintenance</span>.
+                </p>
+            </section>
+
+            <section aria-hidden="true">
+                <img src={UpsHospital} alt="" className="block w-full h-auto" />
             </section>
 
             <BrandCarousel title="UPS Brands we work with" brands={category?.brands} />

@@ -4,6 +4,7 @@ import BackupGeneratorImg from '../assets/images/backup_generator.jpg';
 import ElectricalDesignImg from '../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../assets/images/off_grid_solar.png';
 import SolarSolutionsImg from '../assets/images/solar_solutions.jpg';
+import UpsSolutionsImg from '../assets/images/ups_solutions.jpg'
 import ChlorideExideLogo from '../assets/logos/chloride_exide.png';
 import WecoLogo from '../assets/logos/weco.png'
 import TBBPowerLogo from '../assets/logos/tbb_power.png'
@@ -73,7 +74,7 @@ export const categories = [
     {
         slug: 'ups',
         title: 'UPS',
-        image: HybridBackupImg,
+        image: UpsSolutionsImg,
         brands: [
             { name: 'ABB', logo: ABBLogo },
             { name: 'APC', logo: ApcLogo },
@@ -85,24 +86,13 @@ export const categories = [
             'Uninterruptible power for offices, data rooms and sensitive equipment — no flicker, no lost work, no damaged hardware.',
         subcategories: [
             {
-                title: 'Online (Double-Conversion) UPS',
-                description:
-                    'Zero transfer time and fully conditioned power for servers, medical equipment and other critical loads.',
+                title: 'Homes and Offices',
             },
             {
-                title: 'Line-Interactive UPS',
-                description:
-                    'Affordable protection for workstations, POS systems and networking gear, with automatic voltage regulation.',
+                title: 'Servers and Data Rooms',
             },
             {
-                title: 'Inverter & Battery Banks',
-                description:
-                    'Inverter and deep-cycle battery setups that keep homes and small businesses running through grid outages.',
-            },
-            {
-                title: 'UPS Maintenance & Battery Replacement',
-                description:
-                    'Scheduled servicing, load testing and battery replacement to keep existing UPS systems dependable.',
+                title: 'Critical Equipment',
             },
         ],
     },
