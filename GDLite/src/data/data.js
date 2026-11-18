@@ -5,6 +5,7 @@ import ElectricalDesignImg from '../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../assets/images/off_grid_solar.png';
 import SolarSolutionsImg from '../assets/images/solar_solutions.jpg';
 import UpsSolutionsImg from '../assets/images/ups_solutions.jpg'
+import GeneratorSolutionImg from '../assets/images/generator_solution.jpg'
 import ChlorideExideLogo from '../assets/logos/chloride_exide.png';
 import WecoLogo from '../assets/logos/weco.png'
 import TBBPowerLogo from '../assets/logos/tbb_power.png'
@@ -99,7 +100,7 @@ export const categories = [
     {
         slug: 'generators',
         title: 'Generators',
-        image: BackupGeneratorImg,
+        image: GeneratorSolutionImg,
         brands: [
             { name: 'Cummins', logo: CumminsLogo },
             { name: 'Mantrac/Caterpillar', logo: MantracCaterpillarLogo },
@@ -109,25 +110,13 @@ export const categories = [
             'Heavy-duty backup generation so essential machinery and critical systems stay powered during outages.',
         subcategories: [
             {
-                title: 'Automatic Standby Generators',
-                description:
-                    'Generators with automatic transfer switches that take over within seconds of a grid failure.',
-                image: BackupGeneratorImg,
+                title: 'Homes and Estates',
             },
             {
-                title: 'Manual & Portable Generators',
-                description:
-                    'Flexible manual-start and portable units for homes, sites and events.',
+                title: 'Businesses and Institutions',
             },
             {
-                title: 'Changeover & ATS Installation',
-                description:
-                    'Safe manual changeover switches and automatic transfer switch (ATS) panels wired to your distribution board.',
-            },
-            {
-                title: 'Generator Servicing & Repair',
-                description:
-                    'Routine servicing, overhauls and emergency repairs to keep your generator ready when you need it.',
+                title: 'Farms and Industry',
             },
         ],
     },

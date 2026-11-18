@@ -17,6 +17,7 @@ import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated generator photos (e.g. generators_hero.png, generators_solutions.png)
 import GeneratorsHeroImg from '../../../../assets/images/generator_hero.png';
 import GeneratorsFeatureImg from '../../../../assets/images/backup_generator.jpg';
+import GeneratorCumminsImg from '../../../../assets/images/generator_cummins.jpeg';
 
 // Shown in the "Type of Service" dropdown on this page.
 const GENERATOR_SERVICES = [
@@ -92,24 +93,20 @@ export default function Generators() {
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
-            {/* Hero: title on a solid band, image fades in below it.
-                Set the band colour (#262b2e, used twice) to match the top of the hero photo. */}
-            <section className="relative overflow-hidden bg-[#262b2e]">
-                <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-24 text-white">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
+                <img src={GeneratorsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24 text-white">
                     <Link
                         to="/power-systems"
-                        className="inline-flex items-center text-sm text-white/80 hover:text-white transition"
+                        className="inline-flex items-center text-sm font-medium text-white hover:opacity-80 transition [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"
                     >
                         <ArrowLeft className="w-4 h-4 mr-1" /> Power Systems
                     </Link>
-                    <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
+                    <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Power Through Every Outage
                     </h1>
-                </div>
-
-                <div className="relative h-[50vh] sm:h-[65vh] lg:h-[75vh] -mt-16 sm:-mt-24">
-                    <img src={GeneratorsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#262b2e] via-[#262b2e]/40 via-30% to-transparent to-70%" />
                 </div>
             </section>
 
@@ -169,19 +166,13 @@ export default function Generators() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Invest in a <span className="text-[var(--color-brand-accent)]">Generator</span>?
+                            Why Invest in a <span className="text-[var(--color-brand-accent)]">Generator </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             Extended blackouts cost money — spoiled stock, idle staff, missed orders. A generator
                             gives you full, independent power for as long as you need it, keeping your operations
                             and your household running no matter what the grid does.
                         </p>
-                        <a
-                            href="#contact"
-                            className="mt-8 inline-flex items-center px-6 py-3 rounded-full border-2 border-content-primary text-content-primary font-medium hover:bg-content-primary hover:text-white transition"
-                        >
-                            Talk to an Engineer
-                        </a>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -192,7 +183,25 @@ export default function Generators() {
                 </div>
             </section>
 
-            <BrandCarousel title="Trusted Generator Brands" brands={category?.brands} />
+            {/* Statement between two full photos (no gradient, no crop) */}
+            <section aria-hidden="true">
+                <img src={GeneratorCumminsImg} alt="" className="block w-full h-auto" />
+            </section>
+
+            <section className="bg-surface-light py-20 sm:py-28 px-6">
+                <p className="max-w-4xl mx-auto text-center text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.2] text-content-primary">
+                    We are trusted by schools, petrol stations, hotels and factories to{' '}
+                    <span className="text-brand">supply, install</span> and{' '}
+                    <span className="text-[var(--color-brand-accent)]">maintain</span> their power backup
+                    equipment and generators.
+                </p>
+            </section>
+
+            <section aria-hidden="true">
+                <img src={GeneratorCumminsImg} alt="" className="block w-full h-auto" />
+            </section>
+
+            <BrandCarousel title="Generator Brands We Install and Maintain" brands={category?.brands} />
 
             <ContactSection
                 serviceOptions={GENERATOR_SERVICES}
