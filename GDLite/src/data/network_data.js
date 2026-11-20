@@ -141,15 +141,15 @@ export const networkCategories = [
             'Professionally planned Wi-Fi with indoor and outdoor access points, seamless roaming and central management for full coverage everywhere.',
         subcategories: [],
     },
-    {
-        slug: 'data-centers',
-        title: 'Data Centers',
-        image: DataCenterImg,
-        description:
-            'Server rooms and data centres built for uptime: racks, power, cooling, cable management and monitoring under one design.',
-        brands: [],
-        subcategories: [],
-    },
+    // {
+    //     slug: 'data-centers',
+    //     title: 'Data Centers',
+    //     image: DataCenterImg,
+    //     description:
+    //         'Server rooms and data centres built for uptime: racks, power, cooling, cable management and monitoring under one design.',
+    //     brands: [],
+    //     subcategories: [],
+    // },
 ];
 
 export const getNetworkCategoryBySlug = (slug) => networkCategories.find((c) => c.slug === slug);
