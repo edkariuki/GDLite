@@ -53,38 +53,71 @@ export const securityCategories = [
         title: 'CCTV',
         icon: Cctv,
         image: CctvImg,
-        brands: [
-            { name: 'Dahua', logo: DahuaLogo },
-            { name: 'Hikvision', logo: HikvisionLogo },
-            { name: 'ZKTeco', logo: ZKTecoLogo },
-            { name: 'Uniview', logo: UniviewLogo },
-            { name: 'Ubiquiti', logo: UbiquitiLogo },
-            { name: 'Sony', logo: SonyLogo },
-            { name: 'Axis', logo: AxisLogo },
-            { name: 'Vitronic', logo: VitronicLogo },
-        ],
         description:
-            'Comprehensive surveillance for residential and commercial properties, with clear footage and remote viewing from your phone.',
+            'Comprehensive surveillance for homes, businesses, farms, sites and vehicles, with clear footage and remote viewing from your phone.',
+        brands: [],
         subcategories: [
             {
-                title: 'Residential',
-                description:
-                    'Discreet HD cameras for gates, compounds and entrances, with live viewing and playback on your phone wherever you are.',
+                slug: 'residential',
+                title: 'Residential CCTV',
+                tagline: 'Protect your home and loved ones with smart surveillance and remote monitoring, wherever you are.',
+                cover: CctvImg,
+                gallery: [
+                    { src: CctvImg, caption: 'Homestead fitted with CCTV' },
+                    { src: CctvImg, caption: 'Homestead fitted with CCTV' },
+                    { src: CctvImg, caption: 'Homestead fitted with CCTV' },
+                    { src: CctvImg, caption: 'Viewing home cameras on your phone' },
+                ],
             },
             {
-                title: 'Commercial',
-                description:
-                    'Multi-camera systems for shops, offices and warehouses that deter theft, monitor staff areas and protect stock around the clock.',
+                slug: 'commercial',
+                title: 'Commercial CCTV',
+                tagline: 'Safeguard your business, monitor daily operations and maintain visibility across your premises.',
+                cover: CctvImg,
+                gallery: [
+                    { src: CctvImg, caption: 'Factory CCTV' },
+                    { src: CctvImg, caption: 'Retail CCTV' },
+                    { src: CctvImg, caption: 'Go-down CCTV' },
+                    { src: CctvImg, caption: 'Office CCTV' },
+                    { src: CctvImg, caption: 'Command & monitoring station' },
+                ],
             },
             {
-                title: 'Institutional',
-                description:
-                    'Large-scale surveillance for schools, hospitals, churches and government facilities, with centralised monitoring and long-term recording.',
+                slug: 'outdoor-traffic',
+                title: 'Outdoor & Traffic CCTV',
+                tagline:
+                    'From highway surveillance to fleet and logistics monitoring, we deliver intelligent traffic solutions that improve visibility, track vehicle movement and support safer, more efficient operations.',
+                cover: CctvImg,
+                gallery: [
+                    { src: CctvImg, caption: 'Highway CCTV' },
+                    { src: CctvImg, caption: 'Depot & yard CCTV' },
+                    { src: CctvImg, caption: 'Stadium CCTV' },
+                ],
             },
             {
-                title: 'Solar',
-                description:
-                    'Solar-powered cameras with battery and 4G connectivity for farms, construction sites and remote areas with no power or internet.',
+                slug: 'farm',
+                title: 'Farm CCTV',
+                tagline: 'Protect livestock, crops, equipment and farm operations with surveillance solutions tailored to agricultural environments.',
+                cover: CctvImg,
+                gallery: [
+                    { src: CctvImg, caption: 'Farm surveillance' },
+                    { src: CctvImg, caption: 'Farm surveillance' },
+                    { src: CctvImg, caption: 'Farm surveillance' },
+                ],
+            },
+            {
+                slug: 'site',
+                title: 'Site CCTV',
+                tagline: 'Secure construction sites and project locations against theft, vandalism and unauthorised access.',
+                cover: CctvImg,
+                gallery: [{ src: CctvImg, caption: 'Construction site CCTV' }],
+            },
+            {
+                slug: 'vehicle',
+                title: 'Vehicle CCTV',
+                tagline: 'Enhance vehicle security with onboard surveillance that helps monitor activities, protect assets and improve accountability.',
+                cover: CctvImg,
+                gallery: [{ src: CctvImg, caption: 'Onboard vehicle CCTV' }],
             },
         ],
     },

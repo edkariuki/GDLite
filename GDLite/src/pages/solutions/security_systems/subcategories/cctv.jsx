@@ -1,47 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-    ArrowLeft,
-    ArrowRight,
-    Home,
-    Building2,
-    School,
-    Sun,
-    Cctv as CctvIcon,
-    ShieldAlert,
-    Smartphone,
-    FileVideo,
-    Moon,
-} from 'lucide-react';
+import { ArrowLeft, ShieldAlert, Smartphone, FileVideo, Moon } from 'lucide-react';
 import { getSecurityCategoryBySlug } from '../../../../data/security_data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
+import SubcategoryShowcase from '../../../../components/subcategory_showcase';
 // TODO: replace with dedicated photos (e.g. cctv_hero.png, cctv_solutions.png)
 import CctvHeroImg from '../../../../assets/images/cctv_img.jpg';
 import CctvFeatureImg from '../../../../assets/images/cctv_img.jpg';
-
-const SUBCATEGORY_ICONS = {
-    Residential: Home,
-    Commercial: Building2,
-    Institutional: School,
-    Solar: Sun,
-};
-
-// Divider lines for a list that is 1 column on phones, 2x2 on tablets and 4 across on desktop.
-const columnBorders = (i) =>
-    [
-        i > 0 && 'border-t',
-        i === 1 && 'md:border-t-0 md:border-l',
-        i === 3 && 'md:border-l',
-        'lg:border-t-0',
-        i > 0 && 'lg:border-l',
-        i === 0 && 'md:pl-0',
-        i === 2 && 'md:pl-0 lg:pl-8',
-        i === 1 && 'md:pr-0 lg:pr-8',
-        i === 3 && 'md:pr-0',
-    ]
-        .filter(Boolean)
-        .join(' ');
 
 const WHY_CCTV = [
     {
@@ -85,31 +51,22 @@ export default function Cctv() {
         window.scrollTo(0, 0);
     }, []);
 
-    const requestQuote = (title) => {
-        setSelectedService(title);
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
-            {/* Hero: title on a solid band, image fades in below it.
-                Set the band colour (#262b2e, used twice) to match the top of the hero photo. */}
-            <section className="relative overflow-hidden bg-[#262b2e]">
-                <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-24 text-white">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
+                <img src={CctvHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24 text-white">
                     <Link
                         to="/security-systems"
-                        className="inline-flex items-center text-sm text-white/80 hover:text-white transition"
+                        className="inline-flex items-center text-sm font-medium text-white hover:opacity-80 transition [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"
                     >
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
-                    <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
+                    <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Eyes on What Matters
                     </h1>
-                </div>
-
-                <div className="relative h-[50vh] sm:h-[65vh] lg:h-[75vh] -mt-16 sm:-mt-24">
-                    <img src={CctvHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#262b2e] via-[#262b2e]/40 via-30% to-transparent to-70%" />
                 </div>
             </section>
 
@@ -118,7 +75,7 @@ export default function Cctv() {
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">CCTV Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
                     We deliver intelligent CCTV solutions tailored to protect homes, businesses and critical facilities.
-                    From system design and installation to remote monitoring, we provide reliable secutity and clear visibility
+                    From system design and installation to remote monitoring, we provide reliable security and clear visibility
                     of what matters most.
                 </p>
             </section>
@@ -135,31 +92,13 @@ export default function Cctv() {
                 />
             </section>
 
-            {/* Subcategories on brand accent (dark text for contrast): 1 column on phones, 2x2 on tablets, 4 in one row on desktop */}
-            <section className="bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] px-6 pb-24 pt-4 sm:pt-8">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                    {subcategories.map((sub, i) => {
-                        const Icon = SUBCATEGORY_ICONS[sub.title] || CctvIcon;
-                        return (
-                            <div
-                                key={sub.title}
-                                className={`flex flex-col py-10 md:px-8 lg:py-4 border-black/15 ${columnBorders(i)}`}
-                            >
-                                <Icon className="w-10 h-10 text-brand" strokeWidth={1.5} />
-                                <h3 className="mt-6 text-2xl font-extrabold leading-tight">{sub.title}</h3>
-                                <p className="mt-4 opacity-80 leading-relaxed flex-1">{sub.description}</p>
-                                <button
-                                    type="button"
-                                    onClick={() => requestQuote(sub.title)}
-                                    className="mt-8 self-start inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white bg-brand hover:bg-brand-hover transition-colors group"
-                                >
-                                    Request a Quote
-                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                </button>
-                            </div>
-                        );
-                    })}
-                </div>
+            {/* Subcategories: one large highlighted card, arrows to change it (titles only).
+                Clicking the highlighted card opens its page with tagline + project slideshow. */}
+            <section className="bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] pb-24 pt-4 sm:pt-8">
+                <h2 className="max-w-7xl mx-auto px-6 text-3xl sm:text-4xl font-extrabold mb-8 md:mb-10">
+                    Explore Our CCTV Solutions
+                </h2>
+                <SubcategoryShowcase items={subcategories} basePath="/security-systems/cctv" />
             </section>
 
             {/* Why CCTV */}
@@ -167,7 +106,7 @@ export default function Cctv() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Install <span className="text-brand">CCTV </span>?
+                            Why Install <span className="text-brand">CCTVs </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             A well-planned camera system protects people and property around the clock. It
