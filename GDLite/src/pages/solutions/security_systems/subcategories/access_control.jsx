@@ -4,8 +4,9 @@ import {
     ArrowLeft,
     ArrowRight,
     Home,
+    Briefcase,
     Building2,
-    Fingerprint,
+    Server,
     Users,
     KeyRound,
     ClipboardList,
@@ -14,14 +15,45 @@ import {
 import { getSecurityCategoryBySlug } from '../../../../data/security_data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
-// TODO: replace with dedicated photos (e.g. access_control_hero.png, access_control_solutions.png)
-import AccessHeroImg from '../../../../assets/images/biometric_access.jpg';
-import AccessFeatureImg from '../../../../assets/images/automatic_gate.jpg';
+import AccessHeroImg from '../../../../assets/images/access_hero.jpg';
+import BiometricAccessImg from '../../../../assets/images/biometric_access.jpg';
+import SmartLocksImg from '../../../../assets/images/smart_lock.jpg';
+import CardAccessImg from '../../../../assets/images/card_access.jpg';
+import OfficeAccessImg from '../../../../assets/images/office_access.jpg';
+import CriticalAccessImg from '../../../../assets/images/critical_access.jpg';
 
-const SUBCATEGORY_ICONS = {
-    Residential: Home,
-    Commercial: Building2,
-};
+// The four access control areas, each shown as a photo fading into orange with its text below.
+// Swap `image` per section when you have dedicated photos; `imagePosition` picks which part of the photo shows.
+const ACCESS_SECTIONS = [
+    {
+        icon: Home,
+        title: 'Residential Access Control',
+        text: 'Enhance your home security with smart locks and access solutions that give you greater control over who enters, keeping your family and property safer.',
+        image: SmartLocksImg,
+        imagePosition: 'center',
+    },
+    {
+        icon: Briefcase,
+        title: 'Workplace & Office Access Control',
+        text: 'Manage employee time logs and visitor access with ease, protect sensitive work areas and improve workplace security through reliable controlled-entry systems.',
+        image: OfficeAccessImg,
+        // imagePosition: 'top',
+    },
+    {
+        icon: Building2,
+        title: 'Commercial Access Control',
+        text: 'Protect your business, staff and assets with intelligent access solutions that help prevent unauthorised entry and give you greater control over your premises.',
+        image: CardAccessImg,
+        // imagePosition: 'bottom',
+    },
+    {
+        icon: Server,
+        title: 'Secure Rooms & Server Rooms',
+        text: 'Protect critical infrastructure and sensitive equipment, such as IT and lab equipment, with restricted access systems that ensure only authorised personnel can enter your secure rooms.',
+        image: BiometricAccessImg,
+        imagePosition: 'center',
+    },
+];
 
 const WHY_ACCESS_CONTROL = [
     {
@@ -58,7 +90,6 @@ function WhyCard({ icon: Icon, title, text }) {
 
 export default function AccessControl() {
     const category = getSecurityCategoryBySlug('access-control');
-    const subcategories = category?.subcategories ?? [];
     const [selectedService, setSelectedService] = useState('');
 
     useEffect(() => {
@@ -72,24 +103,20 @@ export default function AccessControl() {
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
-            {/* Hero: title on a solid band, image fades in below it.
-                Set the band colour (#262b2e, used twice) to match the top of the hero photo. */}
-            <section className="relative overflow-hidden bg-[#262b2e]">
-                <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-24 text-white">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
+                <img src={AccessHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24 text-white">
                     <Link
                         to="/security-systems"
-                        className="inline-flex items-center text-sm text-white/80 hover:text-white transition"
+                        className="inline-flex items-center text-sm font-medium text-white hover:opacity-80 transition [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"
                     >
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
-                    <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
+                    <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Access Granted, Security Assured.
                     </h1>
-                </div>
-
-                <div className="relative h-[50vh] sm:h-[65vh] lg:h-[75vh] -mt-16 sm:-mt-24">
-                    <img src={AccessHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#262b2e] via-[#262b2e]/40 via-30% to-transparent to-70%" />
                 </div>
             </section>
 
@@ -102,44 +129,46 @@ export default function AccessControl() {
                 </p>
             </section>
 
-            {/* Image fading into brand accent */}
-            <section aria-hidden="true" className="relative h-[55vh] sm:h-[75vh] overflow-hidden">
-                <img src={AccessFeatureImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        background:
-                            'linear-gradient(to bottom, rgba(248, 158, 29, 0) 0%, rgba(248, 158, 29, 0.05) 25%, rgba(248, 158, 29, 0.35) 50%, rgba(248, 158, 29, 0.75) 75%, var(--color-brand-accent) 100%)',
-                    }}
-                />
-            </section>
+            {/* Four access control areas: photo fading into orange, then title + text on orange */}
+            {ACCESS_SECTIONS.map(({ icon: Icon, title, text, image, imagePosition }) => (
+                <React.Fragment key={title}>
+                    <section aria-hidden="true" className="relative h-[60vh] sm:h-[80vh] overflow-hidden">
+                        <img
+                            src={image}
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                            style={{ objectPosition: imagePosition }}
+                        />
+                        <div
+                            className="absolute inset-0"
+                            style={{
+                                background:
+                                    'linear-gradient(to bottom, rgba(248, 158, 29, 0) 0%, rgba(248, 158, 29, 0) 50%, rgba(248, 158, 29, 0.4) 70%, rgba(248, 158, 29, 0.85) 88%, var(--color-brand-accent) 100%)',
+                            }}
+                        />
+                    </section>
 
-            {/* Subcategories on brand accent (dark text for contrast on orange) */}
-            <section className="bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] px-6 pb-24 pt-4 sm:pt-8">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:divide-x divide-black/15">
-                    {subcategories.map((sub, i) => {
-                        const Icon = SUBCATEGORY_ICONS[sub.title] || Fingerprint;
-                        return (
-                            <div
-                                key={sub.title}
-                                className={`flex flex-col py-10 md:py-6 md:px-14 lg:px-20 ${i > 0 ? 'border-t border-black/15 md:border-t-0' : ''} ${i === 0 ? 'md:pl-0' : ''} ${i === subcategories.length - 1 ? 'md:pr-0' : ''}`}
-                            >
+                    <section className="bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] px-6 pb-20 sm:pb-24 pt-2 sm:pt-4">
+                        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 items-start">
+                            <div>
                                 <Icon className="w-10 h-10 text-brand" strokeWidth={1.5} />
-                                <h3 className="mt-6 text-3xl sm:text-4xl font-extrabold leading-tight">{sub.title}</h3>
-                                <p className="mt-4 text-lg opacity-80 leading-relaxed flex-1 max-w-md">{sub.description}</p>
+                                <h3 className="mt-5 text-3xl sm:text-5xl font-extrabold leading-tight">{title}</h3>
+                            </div>
+                            <div className="md:pt-16">
+                                <p className="text-lg sm:text-xl opacity-85 leading-relaxed">{text}</p>
                                 <button
                                     type="button"
-                                    onClick={() => requestQuote(sub.title)}
-                                    className="mt-8 self-start inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white bg-brand hover:bg-brand-hover transition-colors group"
+                                    onClick={() => requestQuote(title)}
+                                    className="mt-8 inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white bg-brand hover:bg-brand-hover transition-colors group"
                                 >
                                     Request a Quote
                                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                                 </button>
                             </div>
-                        );
-                    })}
-                </div>
-            </section>
+                        </div>
+                    </section>
+                </React.Fragment>
+            ))}
 
             {/* Why access control */}
             <section className="bg-surface-light py-20 px-6">
@@ -165,7 +194,7 @@ export default function AccessControl() {
             <BrandCarousel title="Trusted Access Control Brands" brands={category?.brands} />
 
             <ContactSection
-                serviceOptions={subcategories.map((s) => s.title)}
+                serviceOptions={ACCESS_SECTIONS.map((s) => s.title)}
                 selectedService={selectedService}
                 onServiceChange={setSelectedService}
             />
