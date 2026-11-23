@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Eye, Target, Zap, ShieldCheck, Network } from 'lucide-react';
+import AboutHeroImg from '../../assets/images/about_hero.png';
 
 const PILLARS = [
     { icon: Zap, title: 'Power Systems', to: '/power-systems' },
@@ -12,12 +13,15 @@ export default function About() {
     return (
         <main className="bg-surface-light text-content-primary font-sans min-h-screen">
             {/* Intro band */}
-            <section className="bg-brand-dark text-white px-6 sm:px-10 lg:px-12 pt-20 sm:pt-28 pb-32 sm:pb-40">
-                <div className="mx-auto max-w-7xl">
-                    <span className="text-sm font-bold tracking-wider uppercase text-[var(--color-brand-accent)]">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col justify-end overflow-hidden">
+                <img src={AboutHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12 pt-28 pb-32 sm:pb-40 text-white">
+                    <span className="text-sm font-bold tracking-wider uppercase text-[var(--color-brand-dark)] [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]">
                         About Us
                     </span>
-                    <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
+                    <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Quality-built solutions that make a{' '}
                         <span className="text-[var(--color-brand-accent)]">lasting difference</span>.
                     </h1>
@@ -25,7 +29,8 @@ export default function About() {
             </section>
 
             {/* Vision & Mission cards, pulled up over the band */}
-            <section className="px-6 sm:px-10 lg:px-12 -mt-20 sm:-mt-28">
+            {/* Vision & Mission cards, pulled up over the hero */}
+            <section className="relative z-10 px-6 sm:px-10 lg:px-12 -mt-20 sm:-mt-28">
                 <div className="mx-auto max-w-7xl grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <div className="rounded-3xl bg-brand p-8 text-white shadow-xl sm:p-12">
                         <Eye className="h-10 w-10 text-[var(--color-brand-accent)]" strokeWidth={1.5} />
