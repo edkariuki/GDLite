@@ -14,9 +14,9 @@ import {
 import { getCategoryBySlug } from '../../../../data/data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
-import UpsHeroImg from '../../../../assets/images/ups_hero.png';
-import UpsFeatureImg from '../../../../assets/images/ups_solution.png';
-import UpsSecurity from '../../../../assets/images/ups_security.jpeg';
+import UpsFeatureImg from '../../../../assets/images/ups_hero.png';
+import UpsHeroImg from '../../../../assets/images/commercial_ups.jpeg';
+import UpsSecurity from '../../../../assets/images/ups_solution.png';
 import UpsHospital from '../../../../assets/images/ups_hospital.jpeg'
 
 // Shown in the "Type of Service" dropdown on this page.
@@ -91,7 +91,7 @@ export default function Ups() {
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
             {/* Hero */}
             <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
-                <img src={UpsFeatureImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={UpsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/35 to-black/10" />
 
                 <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24">
@@ -117,7 +117,7 @@ export default function Ups() {
 
             {/* Image fading into brand blue */}
             <section aria-hidden="true" className="relative h-[55vh] sm:h-[75vh] overflow-hidden">
-                <img src={UpsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={UpsFeatureImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
                 <div
                     className="absolute inset-0"
                     style={{
