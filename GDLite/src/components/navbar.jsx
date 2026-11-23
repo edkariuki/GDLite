@@ -79,7 +79,7 @@ export default function Navbar() {
                         )}
                     </div>
 
-                    <a href="#" className="text-content-body hover:text-content-primary font-medium">About</a>
+                    <a href="/about" className="text-content-body hover:text-content-primary font-medium">About</a>
                     <a href="#" className="text-content-body hover:text-content-primary font-medium">Contact</a>
                 </div>
 

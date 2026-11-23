@@ -20,6 +20,7 @@ import FibreOpticDeployment from './pages/solutions/network_systems/subcategorie
 import Networking from './pages/solutions/network_systems/subcategories/networking'
 import Intercomms from './pages/solutions/network_systems/subcategories/intercomms'
 import AccessPoints from './pages/solutions/network_systems/subcategories/access_points'
+import About from './pages/about/about'
 
 export const router = createBrowserRouter([
     {
@@ -121,6 +122,10 @@ export const router = createBrowserRouter([
                         element: <AccessPoints />,
                     }
                 ],
+            },
+            {
+                path: 'about',
+                element: <About />,
             },
         ],
     },
