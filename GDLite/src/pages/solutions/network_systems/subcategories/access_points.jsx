@@ -6,7 +6,7 @@ import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. access_points_hero.png, access_points_solutions.png)
 import AccessPointsHeroImg from '../../../../assets/images/wifi_extender.jpeg';
-import AccessPointsFeatureImg from '../../../../assets/images/access_points.jpg';
+import AccessPointsFeatureImg from '../../../../assets/images/omada.png';
 
 // Shown in the "Type of Service" dropdown on this page.
 const WIFI_SERVICES = [
