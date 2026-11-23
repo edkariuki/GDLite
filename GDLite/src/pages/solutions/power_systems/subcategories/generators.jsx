@@ -17,7 +17,8 @@ import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated generator photos (e.g. generators_hero.png, generators_solutions.png)
 import GeneratorsHeroImg from '../../../../assets/images/generator_hero.png';
 import GeneratorsFeatureImg from '../../../../assets/images/backup_generator.jpg';
-import GeneratorCumminsImg from '../../../../assets/images/generator_cummins.jpeg';
+import GeneratorCumminsImg from '../../../../assets/images/cat_generator.jpg';
+import GeneratorsFeatureImg2 from '../../../../assets/images/backup_generator.jpg';
 
 // Shown in the "Type of Service" dropdown on this page.
 const GENERATOR_SERVICES = [
@@ -198,7 +199,7 @@ export default function Generators() {
             </section>
 
             <section aria-hidden="true">
-                <img src={GeneratorCumminsImg} alt="" className="block w-full h-auto" />
+                <img src={GeneratorsFeatureImg2} alt="" className="block w-full h-auto" />
             </section>
 
             <BrandCarousel title="Generator Brands We Install and Maintain" brands={category?.brands} />

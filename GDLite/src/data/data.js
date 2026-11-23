@@ -5,7 +5,7 @@ import ElectricalDesignImg from '../assets/images/electrical_design.jpg';
 import OffGridSolarImg from '../assets/images/off_grid_solar.png';
 import SolarSolutionsImg from '../assets/images/solar_solutions.jpg';
 import UpsSolutionsImg from '../assets/images/ups_solutions.jpg'
-import GeneratorSolutionImg from '../assets/images/generator_solution.jpg'
+import GeneratorSolutionImg from '../assets/images/cummins_generator.jpg'
 import ChlorideExideLogo from '../assets/logos/chloride_exide.png';
 import WecoLogo from '../assets/logos/weco.png'
 import TBBPowerLogo from '../assets/logos/tbb_power.png'
