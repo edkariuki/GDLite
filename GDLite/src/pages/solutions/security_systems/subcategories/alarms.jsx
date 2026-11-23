@@ -14,8 +14,8 @@ import { getSecurityCategoryBySlug } from '../../../../data/security_data';
 import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. alarms_hero.png, alarms_solutions.png)
-import AlarmsHeroImg from '../../../../assets/images/alarm_system.jpg';
-import AlarmsFeatureImg from '../../../../assets/images/fire_suppression.jpg';
+import AlarmsHeroImg from '../../../../assets/images/motion_sensor.jpg';
+import AlarmsFeatureImg from '../../../../assets/images/alarm_lights.jpg';
 
 const SUBCATEGORY_ICONS = {
     Residential: Home,
@@ -71,24 +71,20 @@ export default function Alarms() {
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
-            {/* Hero: title on a solid band, image fades in below it.
-                Set the band colour (#262b2e, used twice) to match the top of the hero photo. */}
-            <section className="relative overflow-hidden bg-[#262b2e]">
-                <div className="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-24 text-white">
+            {/* Hero: full-screen photo with the title over it (no gradient) */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden">
+                <img src={AlarmsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+
+                <div className="relative max-w-7xl w-full mx-auto px-6 sm:px-12 pt-16 sm:pt-28 pb-24 text-white">
                     <Link
                         to="/security-systems"
-                        className="inline-flex items-center text-sm text-white/80 hover:text-white transition"
+                        className="inline-flex items-center text-sm font-medium text-white hover:opacity-80 transition [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"
                     >
                         <ArrowLeft className="w-4 h-4 mr-1" /> Security Systems
                     </Link>
-                    <h1 className="mt-10 sm:mt-14 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05]">
+                    <h1 className="mt-12 sm:mt-16 text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                         Detect Early, Protect Always.
                     </h1>
-                </div>
-
-                <div className="relative h-[50vh] sm:h-[65vh] lg:h-[75vh] -mt-16 sm:-mt-24">
-                    <img src={AlarmsHeroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#262b2e] via-[#262b2e]/40 via-30% to-transparent to-70%" />
                 </div>
             </section>
 
@@ -114,19 +110,22 @@ export default function Alarms() {
                 />
             </section>
 
-            {/* Subcategories on brand accent (dark text for contrast on orange) */}
+            {/* Subcategories on brand accent: 2 or 3 columns, matching how many there are */}
             <section className="bg-[var(--color-brand-accent)] text-[var(--color-content-primary)] px-6 pb-24 pt-4 sm:pt-8">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:divide-x divide-black/15">
+                <div
+                    className={`mx-auto grid grid-cols-1 md:divide-x divide-black/15 ${subcategories.length >= 3 ? 'max-w-6xl md:grid-cols-3' : 'max-w-5xl md:grid-cols-2'
+                        }`}
+                >
                     {subcategories.map((sub, i) => {
                         const Icon = SUBCATEGORY_ICONS[sub.title] || BellRing;
                         return (
                             <div
                                 key={sub.title}
-                                className={`flex flex-col py-10 md:py-6 md:px-14 lg:px-20 ${i > 0 ? 'border-t border-black/15 md:border-t-0' : ''} ${i === 0 ? 'md:pl-0' : ''} ${i === subcategories.length - 1 ? 'md:pr-0' : ''}`}
+                                className={`flex flex-col py-10 md:py-6 md:px-8 lg:px-12 ${i > 0 ? 'border-t border-black/15 md:border-t-0' : ''} ${i === 0 ? 'md:pl-0' : ''} ${i === subcategories.length - 1 ? 'md:pr-0' : ''}`}
                             >
                                 <Icon className="w-10 h-10 text-brand" strokeWidth={1.5} />
-                                <h3 className="mt-6 text-3xl sm:text-4xl font-extrabold leading-tight">{sub.title}</h3>
-                                <p className="mt-4 text-lg opacity-80 leading-relaxed flex-1 max-w-md">{sub.description}</p>
+                                <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{sub.title}</h3>
+                                <p className="mt-4 opacity-80 leading-relaxed flex-1">{sub.description}</p>
                                 <button
                                     type="button"
                                     onClick={() => requestQuote(sub.title)}
