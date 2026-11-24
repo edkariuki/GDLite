@@ -18,12 +18,14 @@ const cardsData = [
         title: "Security Systems",
         description: "Smart protection for homes, businesses, and institutions. Our security setups ensure peace of mind with intelligent monitoring, automated alerts, and secured access—always in your control.",
         image: CctvImg,
+        linkUrl: "/security-systems",
     },
     {
         badge: "03 / Scalability",
         title: "Network Systems",
         description: "Fast and secure networking for modern living and workspaces. GDLite Africa builds strong infrastructure with seamless data flow, structured cabling, and tailored smart connectivity.",
         image: SeverImg,
+        linkUrl: "/network-systems",
     },
 ];
 
