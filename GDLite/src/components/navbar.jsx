@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { Zap, Lock, Radio, ChevronDown, X, Menu } from 'lucide-react'
+import { Zap, ShieldCheck, Network, ChevronDown, X, Menu } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const megaMenuData = {
     products: [
         { title: 'Power Systems', desc: 'Modern solar and backup power solutions', icon: Zap, linkUrl: '/power-systems' },
-        { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: Lock, linkUrl: '/security-systems' },
-        { title: 'Network Systems', desc: 'Infrastructure for seamless connectivity', icon: Radio, linkUrl: '/network-systems' },
+        { title: 'Security Systems', desc: 'Secure your property with our advanced systems', icon: ShieldCheck, linkUrl: '/security-systems' },
+        { title: 'Network Systems', desc: 'Infrastructure for seamless connectivity', icon: Network, linkUrl: '/network-systems' },
     ],
 }
 
