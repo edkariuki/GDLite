@@ -119,14 +119,17 @@ export default function Solar() {
                                 <Icon className="w-10 h-10 text-[var(--color-brand-accent)]" strokeWidth={1.5} />
                                 <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{sol.title}</h3>
                                 <p className="mt-4 text-white/80 leading-relaxed flex-1">{sol.description}</p>
-                                <button
-                                    type="button"
-                                    onClick={() => seeMore(sol.title)}
-                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)] hover:text-white transition-colors group"
+                                <Link
+                                    to={`/gallery/solar/${{
+                                        'Hybrid Solar Systems': 'hybrid',
+                                        'Off-Grid Solar Solutions': 'off-grid',
+                                        'Solar Water Pumping': 'water-pumping',
+                                    }[sol.title]}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)]"
                                 >
                                     See More
-                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                </button>
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         );
                     })}

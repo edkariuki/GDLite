@@ -21,6 +21,7 @@ import Networking from './pages/solutions/network_systems/subcategories/networki
 import Intercomms from './pages/solutions/network_systems/subcategories/intercomms'
 import AccessPoints from './pages/solutions/network_systems/subcategories/access_points'
 import About from './pages/about/about'
+import Gallery from './components/gallery'
 
 export const router = createBrowserRouter([
     {
@@ -126,6 +127,10 @@ export const router = createBrowserRouter([
             {
                 path: 'about',
                 element: <About />,
+            },
+            {
+                path: 'gallery/solar/:service',
+                element: <Gallery />,
             },
         ],
     },
