@@ -33,10 +33,10 @@ export const networkCategories = [
             'Reliable internet for homes and businesses, from fibre and wireless links to failover connections that keep you online.',
         subcategories: [
             {
-                title: 'Linknet Fiber',
+                title: 'Litenet Fiber',
                 description:
                     'Enjoy reliable, high-speed internet through Litenet Fiber, our dedicated ISP subsidiary committed to keeping homes and businesses seamlessly connected.',
-                url: 'https://linknetkenya.co.ke/',
+                // url: 'https://litenetkenya.co.ke/',
                 highlights: [
                     'Speeds up to 1 Gbps',
                     'Symmetrical upload & download',

@@ -162,7 +162,7 @@ export default function InternetProvisioning() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-content-primary leading-[1.1]">
-                            Why Choose <span className="text-[var(--color-brand-accent)]">Linknet Fibre </span>?
+                            Why Choose <span className="text-[var(--color-brand-accent)]">Litenet Fibre </span>?
                         </h2>
                         <p className="mt-8 text-lg text-content-secondary leading-relaxed">
                             Fibre is the fastest and most reliable way to get online today. It keeps up with
