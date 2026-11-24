@@ -127,7 +127,7 @@ export default function Navbar() {
                         )}
                     </div>
 
-                    <a href="#" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">About</a>
+                    <a href="/about" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">About</a>
                     <a href="#" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">Contact</a>
 
                     <div className="pt-4 border-t border-stroke">
