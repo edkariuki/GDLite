@@ -6,7 +6,7 @@ import Solar1 from "../assets/gallery/power/solar/solar_1.PNG";
 import Solar2 from "../assets/gallery/power/solar/solar_2.PNG";
 import Solar3 from "../assets/gallery/power/solar/solar_3.PNG";
 import Solar4 from "../assets/gallery/power/solar/solar_4.png";
-import Solar5 from "../assets/gallery/power/solar/solar_5.png";
+import Solar5 from "../assets/gallery/power/solar/solar_5.PNG";
 import Solar6 from "../assets/gallery/power/solar/solar_6.png";
 import Solar7 from "../assets/gallery/power/solar/solar_7.png";
 import Solar8 from "../assets/gallery/power/solar/solar_8.png";
