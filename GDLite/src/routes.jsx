@@ -21,7 +21,8 @@ import Networking from './pages/solutions/network_systems/categories/networking'
 import Intercomms from './pages/solutions/network_systems/categories/intercomms'
 import AccessPoints from './pages/solutions/network_systems/categories/access_points'
 import About from './pages/about/about'
-import Gallery from './components/gallery'
+// import Gallery from './components/gallery'
+import SolarSolution from './pages/solutions/power_systems/subcategories/solar_solution'
 
 export const router = createBrowserRouter([
     {
@@ -41,7 +42,16 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'solar',
-                        element: <Solar />,
+                        children: [
+                            {
+                                index: true,
+                                element: <Solar />,
+                            },
+                            {
+                                path: ':slug',
+                                element: <SolarSolution />,
+                            },
+                        ],
                     },
                     {
                         path: 'ups',
@@ -128,10 +138,10 @@ export const router = createBrowserRouter([
                 path: 'about',
                 element: <About />,
             },
-            {
-                path: 'gallery/solar/:service',
-                element: <Gallery />,
-            },
+            // {
+            //     path: 'gallery/solar/:service',
+            //     element: <Gallery />,
+            // },
         ],
     },
 ])

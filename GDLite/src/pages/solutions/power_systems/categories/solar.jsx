@@ -7,6 +7,7 @@ import SolarHeroImg from '../../../../assets/images/solar_hero.png';
 import SolarRooftopImg from '../../../../assets/images/solar_solutions.png';
 import BrandCarousel from '../../../../components/brand_carousel';
 import SolarFarm from '../../../../assets/images/solar_farm.png';
+import { SOLAR_SLUG_BY_TITLE } from '../../../../data/solar_solutions';
 
 const SOLUTION_ICONS = {
     'Hybrid Solar Systems': BatteryCharging,
@@ -120,11 +121,7 @@ export default function Solar() {
                                 <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{sol.title}</h3>
                                 <p className="mt-4 text-white/80 leading-relaxed flex-1">{sol.description}</p>
                                 <Link
-                                    to={`/gallery/solar/${{
-                                        'Hybrid Solar Systems': 'hybrid',
-                                        'Off-Grid Solar Solutions': 'off-grid',
-                                        'Solar Water Pumping': 'water-pumping',
-                                    }[sol.title]}`}
+                                    to={`/power-systems/solar/${SOLAR_SLUG_BY_TITLE[sol.title]}`}
                                     className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)]"
                                 >
                                     See More
