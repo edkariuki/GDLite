@@ -12,8 +12,7 @@ export default function SolutionDetail({
     otherTitle,         // e.g. 'Explore Other UPS Solutions'
     serviceOptions,     // contact dropdown options
     defaultService,     // preselected contact option
-    galleryImages,
-    galleryPath,
+    galleryCategory,
 }) {
     const [selectedService, setSelectedService] = useState('');
 
@@ -116,8 +115,8 @@ export default function SolutionDetail({
 
             <ProjectGallery
                 title={`${solution.title} Projects`}
-                images={galleryImages}
-                galleryPath={galleryPath}
+                category={galleryCategory}
+                service={solution.slug}
             />
 
             <ContactSection
