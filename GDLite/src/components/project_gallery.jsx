@@ -1,14 +1,35 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { solarGalleryData } from "../data/solar_gallery";
+import { upsGalleryData } from "../data/ups_gallery";
 
-export default function ProjectGallery({ title = "Projects We've Completed", images = [], limit = 6, galleryPath }) {
+const allGalleries = { solar: solarGalleryData, ups: upsGalleryData };
+
+export default function ProjectGallery({
+    title = "Projects We've Completed",
+    category,
+    service,
+    images: imagesProp,
+    galleryPath: galleryPathProp,
+    limit = 6,
+}) {
     const [selected, setSelected] = useState(null);
+
+    // Use explicit images if given, otherwise look them up by category + service
+    const images = imagesProp ?? allGalleries[category]?.[service]?.images ?? [];
+    const galleryPath =
+        galleryPathProp ?? (category && service ? `/gallery/${category}/${service}` : undefined);
     const visible = images.slice(0, limit);
 
     const close = () => setSelected(null);
     const next = () => setSelected((i) => (i + 1) % images.length);
     const prev = () => setSelected((i) => (i - 1 + images.length) % images.length);
+
+    // Reset the viewer when navigating to a different solution
+    useEffect(() => {
+        setSelected(null);
+    }, [category, service]);
 
     useEffect(() => {
         if (selected === null) return;
@@ -29,10 +50,7 @@ export default function ProjectGallery({ title = "Projects We've Completed", ima
                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                     <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">{title}</h2>
                     {galleryPath && images.length > limit && (
-                        <Link
-                            to={galleryPath}
-                            className="inline-flex items-center font-semibold text-brand"
-                        >
+                        <Link to={galleryPath} className="inline-flex items-center font-semibold text-brand">
                             View Full Gallery <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
                     )}

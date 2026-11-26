@@ -18,24 +18,26 @@ import UpsFeatureImg from '../../../../assets/images/ups_hero.png';
 import UpsHeroImg from '../../../../assets/images/commercial_ups.jpeg';
 import UpsSecurity from '../../../../assets/images/ups_solution.png';
 import UpsHospital from '../../../../assets/images/ups_hospital.jpeg'
+import { UPS_SERVICES } from '../../../../data/ups_solutions';
 
-// Shown in the "Type of Service" dropdown on this page.
-const UPS_SERVICES = ['New UPS Supply & Installation', 'UPS Battery Replacement', 'UPS Servicing & Repair'];
 
 // What a UPS protects — shown on the brand-blue band.
 const APPLICATIONS = [
     {
         icon: Home,
+        slug: 'homes-offices',
         title: 'Homes & Offices',
         text: 'Keep computers, routers, CCTV and POS systems running through power cuts, so work and sales never stop.',
     },
     {
         icon: Server,
+        slug: 'data-rooms',
         title: 'Servers & Data Rooms',
         text: 'Online double-conversion UPS units deliver clean power with zero transfer time for servers, storage and network gear.',
     },
     {
         icon: HeartPulse,
+        slug: 'critical-equipment',
         title: 'Critical Equipment',
         text: 'Reliable backup for medical devices, laboratory instruments and industrial controls where a single interruption is costly.',
     },
@@ -81,11 +83,6 @@ export default function Ups() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    const requestQuote = () => {
-        setSelectedService(UPS_SERVICES[0]);
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    };
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
@@ -133,7 +130,7 @@ export default function Ups() {
                     <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 md:mb-14">What We Keep Running</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x divide-white/20">
-                        {APPLICATIONS.map(({ icon: Icon, title, text }, i) => (
+                        {APPLICATIONS.map(({ icon: Icon, slug, title, text }, i) => (
                             <div
                                 key={title}
                                 className={`flex flex-col py-10 md:py-4 md:px-10 ${i > 0 ? 'border-t border-white/20 md:border-t-0' : ''} ${i === 0 ? 'md:pl-0' : ''} ${i === APPLICATIONS.length - 1 ? 'md:pr-0' : ''}`}
@@ -141,18 +138,16 @@ export default function Ups() {
                                 <Icon className="w-10 h-10 text-[var(--color-brand-accent)]" strokeWidth={1.5} />
                                 <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{title}</h3>
                                 <p className="mt-4 text-white/80 leading-relaxed flex-1">{text}</p>
+                                <Link
+                                    to={`/power-systems/ups/${slug}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)]"
+                                >
+                                    See More
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         ))}
                     </div>
-
-                    <button
-                        type="button"
-                        onClick={requestQuote}
-                        className="mt-12 inline-flex items-center px-8 py-4 font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] rounded-xl hover:opacity-90 transition group"
-                    >
-                        Request a UPS Quote
-                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                    </button>
                 </div>
             </section>
 

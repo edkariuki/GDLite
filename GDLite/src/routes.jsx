@@ -23,6 +23,7 @@ import AccessPoints from './pages/solutions/network_systems/categories/access_po
 import About from './pages/about/about'
 // import Gallery from './components/gallery'
 import SolarSolution from './pages/solutions/power_systems/subcategories/solar_solution'
+import UpsSolution from './pages/solutions/power_systems/subcategories/ups_solution'
 
 export const router = createBrowserRouter([
     {
@@ -55,7 +56,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'ups',
-                        element: <Ups />,
+                        children: [
+                            { index: true, element: <Ups /> },
+                            { path: ':slug', element: <UpsSolution /> },
+                        ],
                     },
                     {
                         path: 'generators',
