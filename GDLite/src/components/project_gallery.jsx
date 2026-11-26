@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { solarGalleryData } from "../data/solar_gallery";
 import { upsGalleryData } from "../data/ups_gallery";
+import { generatorsGalleryData } from "../data/generators_gallery";
 
-const allGalleries = { solar: solarGalleryData, ups: upsGalleryData };
+const allGalleries = { solar: solarGalleryData, ups: upsGalleryData, generators: generatorsGalleryData };
 
 export default function ProjectGallery({
     title = "Projects We've Completed",

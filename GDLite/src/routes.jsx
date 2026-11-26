@@ -24,6 +24,7 @@ import About from './pages/about/about'
 // import Gallery from './components/gallery'
 import SolarSolution from './pages/solutions/power_systems/subcategories/solar_solution'
 import UpsSolution from './pages/solutions/power_systems/subcategories/ups_solution'
+import GeneratorsSolution from './pages/solutions/power_systems/subcategories/generators_solution'
 
 export const router = createBrowserRouter([
     {
@@ -63,7 +64,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'generators',
-                        element: <Generators />,
+                        children: [
+                            { index: true, element: <Generators /> },
+                            { path: ':slug', element: <GeneratorsSolution /> },
+                        ],
                     },
                     {
                         path: 'electrical',

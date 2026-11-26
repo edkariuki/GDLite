@@ -19,28 +19,26 @@ import GeneratorsHeroImg from '../../../../assets/images/generator_hero.png';
 import GeneratorsFeatureImg from '../../../../assets/images/backup_generator.jpg';
 import GeneratorCumminsImg from '../../../../assets/images/cat_generator.jpg';
 import GeneratorsFeatureImg2 from '../../../../assets/images/backup_generator.jpg';
+import { GENERATOR_SERVICES } from '../../../../data/generators_solutions';
 
-// Shown in the "Type of Service" dropdown on this page.
-const GENERATOR_SERVICES = [
-    'New Generator Supply & Installation',
-    'Changeover / ATS Installation',
-    'Generator Servicing & Repair',
-];
 
 // Who we power — shown on the brand-blue band.
 const APPLICATIONS = [
     {
         icon: Home,
+        slug: 'homes-estates',
         title: 'Homes & Estates',
         text: 'Quiet, efficient standby generators that keep lights, water pumps, security systems and appliances running through outages.',
     },
     {
         icon: Building2,
+        slug: 'businesses-institutions',
         title: 'Businesses & Institutions',
         text: 'Backup for offices, hotels, hospitals, schools and retail — sized to carry lifts, cold rooms and critical systems without interruption.',
     },
     {
         icon: Tractor,
+        slug: 'farms-industry',
         title: 'Farms & Industry',
         text: 'Heavy-duty generators for factories, irrigation, construction sites and remote operations that need dependable power all day.',
     },
@@ -87,10 +85,10 @@ export default function Generators() {
         window.scrollTo(0, 0);
     }, []);
 
-    const requestQuote = () => {
-        setSelectedService(GENERATOR_SERVICES[0]);
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    };
+    // const requestQuote = () => {
+    //     setSelectedService(GENERATOR_SERVICES[0]);
+    //     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    // };
 
     return (
         <div className="bg-surface-light text-content-primary font-sans min-h-screen">
@@ -116,7 +114,7 @@ export default function Generators() {
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">Generator Solutions</h2>
                 <p className="mt-5 text-lg text-content-secondary leading-relaxed">
                     We provide dependable generator solutions designed to meet the power demands of commercial facilities, industrial operations and institutions.
-                    From generator supply and installation to servicing and maintenance, we deliver tailored power backup solutions taht help minimize downtime,
+                    From generator supply and installation to servicing and maintenance, we deliver tailored power backup solutions that help minimize downtime,
                     maintain operational continuity and keep your business running when the grid goes down.
                 </p>
             </section>
@@ -139,7 +137,7 @@ export default function Generators() {
                     <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 md:mb-14">Who We Power</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x divide-white/20">
-                        {APPLICATIONS.map(({ icon: Icon, title, text }, i) => (
+                        {APPLICATIONS.map(({ icon: Icon, slug, title, text }, i) => (
                             <div
                                 key={title}
                                 className={`flex flex-col py-10 md:py-4 md:px-10 ${i > 0 ? 'border-t border-white/20 md:border-t-0' : ''} ${i === 0 ? 'md:pl-0' : ''} ${i === APPLICATIONS.length - 1 ? 'md:pr-0' : ''}`}
@@ -147,18 +145,25 @@ export default function Generators() {
                                 <Icon className="w-10 h-10 text-[var(--color-brand-accent)]" strokeWidth={1.5} />
                                 <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{title}</h3>
                                 <p className="mt-4 text-white/80 leading-relaxed flex-1">{text}</p>
+                                <Link
+                                    to={`/power-systems/generators/${slug}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)]"
+                                >
+                                    See More
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         ))}
                     </div>
 
-                    <button
+                    {/* <button
                         type="button"
                         onClick={requestQuote}
                         className="mt-12 inline-flex items-center px-8 py-4 font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] rounded-xl hover:opacity-90 transition group"
                     >
                         Request a Quote
                         <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                    </button>
+                    </button> */}
                 </div>
             </section>
 
