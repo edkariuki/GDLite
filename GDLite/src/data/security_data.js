@@ -38,13 +38,15 @@ export const securityCategories = [
         subcategories: [
             {
                 title: 'Residential',
-                description:
-                    'Biometric and keypad door locks, automated gates, video intercoms and electric fencing that keep your home and family secure without slowing you down.',
+            },
+            {
+                title: 'Workplace',
             },
             {
                 title: 'Commercial',
-                description:
-                    'Biometric and card readers, turnstiles, boom barriers and time-and-attendance systems that control and record who enters every part of your premises.',
+            },
+            {
+                title: 'Secure rooms',
             },
         ],
     },
