@@ -5,8 +5,9 @@ import { solarGalleryData } from "../data/solar_gallery";
 import { upsGalleryData } from "../data/ups_gallery";
 import { generatorsGalleryData } from "../data/generators_gallery";
 import { electricalGalleryData } from "../data/electrical_gallery";
+import { accessControlGalleryData } from "../data/access_control_gallery";
 
-const allGalleries = { solar: solarGalleryData, ups: upsGalleryData, generators: generatorsGalleryData, electrical: electricalGalleryData, };
+const allGalleries = { solar: solarGalleryData, ups: upsGalleryData, generators: generatorsGalleryData, electrical: electricalGalleryData, "access-control": accessControlGalleryData, };
 
 export default function ProjectGallery({
     title = "Projects We've Completed",

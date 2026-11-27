@@ -13,7 +13,37 @@ export default function SolutionDetail({
     serviceOptions,     // contact dropdown options
     defaultService,     // preselected contact option
     galleryCategory,
+    theme = 'brand',
 }) {
+
+    const THEMES = {
+        // --color-brand (blue)
+        brand: {
+            band: 'bg-brand text-white',
+            divide: 'divide-white/20',
+            border: 'border-white/20',
+            number: 'text-[var(--color-brand-accent)]',
+            body: 'text-white/80',
+        },
+        // --color-brand-accent (orange)
+        accent: {
+            band: 'bg-[var(--color-brand-accent)] text-[var(--color-content-primary)]',
+            divide: 'divide-black/15',
+            border: 'border-black/15',
+            number: 'text-brand',
+            body: 'opacity-85',
+        },
+        // --color-brand-dark
+        dark: {
+            band: 'bg-[var(--color-brand-dark)] text-white',
+            divide: 'divide-white/20',
+            border: 'border-white/20',
+            number: 'text-[var(--color-brand-accent)]',
+            body: 'text-white/80',
+        },
+    };
+
+    const t = THEMES[theme] ?? THEMES.brand;
     const [selectedService, setSelectedService] = useState('');
 
     useEffect(() => {
@@ -62,15 +92,21 @@ export default function SolutionDetail({
             </section>
 
             {/* How it works */}
-            <section className="bg-brand text-white px-6 py-20">
+            <section className={`px-6 py-20 ${t.band}`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl sm:text-5xl font-extrabold">How It Works</h2>
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-4 md:divide-x divide-white/20">
+                    <div className={`mt-12 grid grid-cols-1 md:grid-cols-4 md:divide-x ${t.divide}`}>
                         {solution.steps.map((s, i) => (
-                            <div key={s.title} className={`py-8 md:py-2 md:px-8 ${i === 0 ? 'md:pl-0' : ''} ${i > 0 ? 'border-t border-white/20 md:border-t-0' : ''}`}>
-                                <span className="text-5xl font-extrabold text-[var(--color-brand-accent)]">{String(i + 1).padStart(2, '0')}</span>
+                            <div
+                                key={s.title}
+                                className={`py-8 md:py-2 md:px-8 ${i === 0 ? 'md:pl-0' : ''} ${i > 0 ? `border-t md:border-t-0 ${t.border}` : ''
+                                    }`}
+                            >
+                                <span className={`text-5xl font-extrabold ${t.number}`}>
+                                    {String(i + 1).padStart(2, '0')}
+                                </span>
                                 <h3 className="mt-4 text-xl font-bold">{s.title}</h3>
-                                <p className="mt-3 text-white/80 leading-relaxed">{s.text}</p>
+                                <p className={`mt-3 leading-relaxed ${t.body}`}>{s.text}</p>
                             </div>
                         ))}
                     </div>

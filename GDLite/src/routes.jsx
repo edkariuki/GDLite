@@ -26,6 +26,7 @@ import SolarSolution from './pages/solutions/power_systems/subcategories/solar_s
 import UpsSolution from './pages/solutions/power_systems/subcategories/ups_solution'
 import GeneratorsSolution from './pages/solutions/power_systems/subcategories/generators_solution'
 import ElectricalSolution from './pages/solutions/power_systems/subcategories/electrical_solution'
+import AccessControlSolution from './pages/solutions/security_systems/subcategories/access_control'
 
 export const router = createBrowserRouter([
     {
@@ -92,7 +93,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'access-control',
-                        element: <AccessControl />,
+                        children: [
+                            { index: true, element: <AccessControl /> },
+                            { path: ':slug', element: <AccessControlSolution /> },
+                        ],
                     },
                     {
                         path: 'cctv',

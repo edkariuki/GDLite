@@ -27,6 +27,7 @@ import CriticalAccessImg from '../../../../assets/images/critical_access.jpg';
 const ACCESS_SECTIONS = [
     {
         icon: Home,
+        slug: 'residential',
         title: 'Residential Access Control',
         text: 'Enhance your home security with smart locks and access solutions that give you greater control over who enters, keeping your family and property safer.',
         image: SmartLocksImg,
@@ -34,6 +35,7 @@ const ACCESS_SECTIONS = [
     },
     {
         icon: Briefcase,
+        slug: 'workplace-office',
         title: 'Workplace & Office Access Control',
         text: 'Manage employee time logs and visitor access with ease, protect sensitive work areas and improve workplace security through reliable controlled-entry systems.',
         image: OfficeAccessImg,
@@ -41,6 +43,7 @@ const ACCESS_SECTIONS = [
     },
     {
         icon: Building2,
+        slug: 'commercial',
         title: 'Commercial Access Control',
         text: 'Protect your business, staff and assets with intelligent access solutions that help prevent unauthorised entry and give you greater control over your premises.',
         image: CardAccessImg,
@@ -48,6 +51,7 @@ const ACCESS_SECTIONS = [
     },
     {
         icon: Server,
+        slug: 'secure-rooms',
         title: 'Secure Rooms & Server Rooms',
         text: 'Protect critical infrastructure and sensitive equipment, such as IT and lab equipment, with restricted access systems that ensure only authorised personnel can enter your secure rooms.',
         image: BiometricAccessImg,
@@ -130,7 +134,7 @@ export default function AccessControl() {
             </section>
 
             {/* Four access control areas: photo fading into orange, then title + text on orange */}
-            {ACCESS_SECTIONS.map(({ icon: Icon, title, text, image, imagePosition }) => (
+            {ACCESS_SECTIONS.map(({ icon: Icon, slug, title, text, image, imagePosition }) => (
                 <React.Fragment key={title}>
                     <section aria-hidden="true" className="relative h-[60vh] sm:h-[80vh] overflow-hidden">
                         <img
@@ -156,14 +160,13 @@ export default function AccessControl() {
                             </div>
                             <div className="md:pt-16">
                                 <p className="text-lg sm:text-xl opacity-85 leading-relaxed">{text}</p>
-                                <button
-                                    type="button"
-                                    onClick={() => requestQuote(title)}
-                                    className="mt-8 inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white bg-brand hover:bg-brand-hover transition-colors group"
+                                <Link
+                                    to={`/security-systems/access-control/${slug}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand)]"
                                 >
-                                    Request a Quote
-                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                </button>
+                                    See More
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         </div>
                     </section>
