@@ -27,6 +27,7 @@ import UpsSolution from './pages/solutions/power_systems/subcategories/ups_solut
 import GeneratorsSolution from './pages/solutions/power_systems/subcategories/generators_solution'
 import ElectricalSolution from './pages/solutions/power_systems/subcategories/electrical_solution'
 import AccessControlSolution from './pages/solutions/security_systems/subcategories/access_control'
+import AlarmsSolution from './pages/solutions/security_systems/subcategories/alarms_solution'
 
 export const router = createBrowserRouter([
     {
@@ -104,7 +105,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'alarms',
-                        element: <Alarms />,
+                        children: [
+                            { index: true, element: <Alarms /> },
+                            { path: ':slug', element: <AlarmsSolution /> },
+                        ],
                     },
                     {
                         path: 'electric-fence',
