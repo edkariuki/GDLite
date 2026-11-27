@@ -25,6 +25,7 @@ import About from './pages/about/about'
 import SolarSolution from './pages/solutions/power_systems/subcategories/solar_solution'
 import UpsSolution from './pages/solutions/power_systems/subcategories/ups_solution'
 import GeneratorsSolution from './pages/solutions/power_systems/subcategories/generators_solution'
+import ElectricalSolution from './pages/solutions/power_systems/subcategories/electrical_solution'
 
 export const router = createBrowserRouter([
     {
@@ -71,7 +72,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'electrical',
-                        element: <Electrical />,
+                        children: [
+                            { index: true, element: <Electrical /> },
+                            { path: ':slug', element: <ElectricalSolution /> },
+                        ],
                     },
                     {
                         path: ':categorySlug',

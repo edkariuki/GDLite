@@ -4,8 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { solarGalleryData } from "../data/solar_gallery";
 import { upsGalleryData } from "../data/ups_gallery";
 import { generatorsGalleryData } from "../data/generators_gallery";
+import { electricalGalleryData } from "../data/electrical_gallery";
 
-const allGalleries = { solar: solarGalleryData, ups: upsGalleryData, generators: generatorsGalleryData };
+const allGalleries = { solar: solarGalleryData, ups: upsGalleryData, generators: generatorsGalleryData, electrical: electricalGalleryData, };
 
 export default function ProjectGallery({
     title = "Projects We've Completed",

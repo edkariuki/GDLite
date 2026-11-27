@@ -18,6 +18,7 @@ import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. electrical_hero.png, electrical_solutions.png)
 import ElectricalHeroImg from '../../../../assets/images/voltmeter.jpg';
 import ElectricalFeatureImg from '../../../../assets/images/electrical_design.jpg';
+import { ELECTRICAL_SLUG_BY_TITLE } from '../../../../data/electrical_solutions';
 
 const SUBCATEGORY_ICONS = {
     Commercial: Building2,
@@ -130,14 +131,13 @@ export default function Electrical() {
                                 <Icon className="w-10 h-10 text-[var(--color-brand-accent)]" strokeWidth={1.5} />
                                 <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{sub.title}</h3>
                                 <p className="mt-4 text-white/80 leading-relaxed flex-1">{sub.description}</p>
-                                <button
-                                    type="button"
-                                    onClick={() => requestQuote(sub.title)}
-                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)] hover:text-white transition-colors group"
+                                <Link
+                                    to={`/power-systems/electrical/${ELECTRICAL_SLUG_BY_TITLE[sub.title]}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)]"
                                 >
-                                    Request a Quote
-                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                </button>
+                                    See More
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         );
                     })}

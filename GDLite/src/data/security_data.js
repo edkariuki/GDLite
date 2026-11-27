@@ -1,4 +1,4 @@
-import { Fingerprint, Cctv, BellRing, DoorOpen } from 'lucide-react';
+import { Fingerprint, Cctv, BellRing, DoorOpen, Fence } from 'lucide-react';
 import AlarmSystemsImg from '../assets/images/alarm_system.jpg';
 import CctvImg from '../assets/images/cctv_img.jpg';
 import BiometricAccessImg from '../assets/images/biometric_access.jpg';
