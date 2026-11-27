@@ -1,6 +1,12 @@
 import { Fingerprint, Cctv, BellRing, DoorOpen, Fence } from 'lucide-react';
 import AlarmSystemsImg from '../assets/images/alarm_system.jpg';
 import CctvImg from '../assets/images/cctv_img.jpg';
+import ResidentialCctv from '../assets/images/residential_cctv.jpg';
+import CommercialCctv from '../assets/images/commercial_cctv.jpg';
+import TrafficCctv from '../assets/images/traffic_cctv.jpg';
+import FarmCctv from '../assets/images/farm_cctv.png';
+import SiteCctv from '../assets/images/site_cctv.jpg';
+import VehicleCctv from '../assets/images/vehicle_cctv.jpg';
 import BiometricAccessImg from '../assets/images/biometric_access.jpg';
 import ElectricFenceImg from '../assets/images/electric_fence.jpg';
 import AutomaticGateImg from '../assets/images/automatic_gate.jpg';
@@ -63,7 +69,7 @@ export const securityCategories = [
                 slug: 'residential',
                 title: 'Residential CCTV',
                 tagline: 'Protect your home and loved ones with smart surveillance and remote monitoring, wherever you are.',
-                cover: CctvImg,
+                cover: ResidentialCctv,
                 gallery: [
                     { src: CctvImg, caption: 'Homestead fitted with CCTV' },
                     { src: CctvImg, caption: 'Homestead fitted with CCTV' },
@@ -75,7 +81,7 @@ export const securityCategories = [
                 slug: 'commercial',
                 title: 'Commercial CCTV',
                 tagline: 'Safeguard your business, monitor daily operations and maintain visibility across your premises.',
-                cover: CctvImg,
+                cover: CommercialCctv,
                 gallery: [
                     { src: CctvImg, caption: 'Factory CCTV' },
                     { src: CctvImg, caption: 'Retail CCTV' },
@@ -89,7 +95,7 @@ export const securityCategories = [
                 title: 'Outdoor & Traffic CCTV',
                 tagline:
                     'From highway surveillance to fleet and logistics monitoring, we deliver intelligent traffic solutions that improve visibility, track vehicle movement and support safer, more efficient operations.',
-                cover: CctvImg,
+                cover: TrafficCctv,
                 gallery: [
                     { src: CctvImg, caption: 'Highway CCTV' },
                     { src: CctvImg, caption: 'Depot & yard CCTV' },
@@ -100,7 +106,7 @@ export const securityCategories = [
                 slug: 'farm',
                 title: 'Farm CCTV',
                 tagline: 'Protect livestock, crops, equipment and farm operations with surveillance solutions tailored to agricultural environments.',
-                cover: CctvImg,
+                cover: FarmCctv,
                 gallery: [
                     { src: CctvImg, caption: 'Farm surveillance' },
                     { src: CctvImg, caption: 'Farm surveillance' },
@@ -111,14 +117,14 @@ export const securityCategories = [
                 slug: 'site',
                 title: 'Site CCTV',
                 tagline: 'Secure construction sites and project locations against theft, vandalism and unauthorised access.',
-                cover: CctvImg,
+                cover: SiteCctv,
                 gallery: [{ src: CctvImg, caption: 'Construction site CCTV' }],
             },
             {
                 slug: 'vehicle',
                 title: 'Vehicle CCTV',
                 tagline: 'Enhance vehicle security with onboard surveillance that helps monitor activities, protect assets and improve accountability.',
-                cover: CctvImg,
+                cover: VehicleCctv,
                 gallery: [{ src: CctvImg, caption: 'Onboard vehicle CCTV' }],
             },
         ],

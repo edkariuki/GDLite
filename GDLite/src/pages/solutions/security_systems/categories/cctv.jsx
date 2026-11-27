@@ -6,7 +6,7 @@ import ContactSection from '../../../../components/contact_section';
 import BrandCarousel from '../../../../components/brand_carousel';
 import SubcategoryShowcase from '../../../../components/subcategory_showcase';
 // TODO: replace with dedicated photos (e.g. cctv_hero.png, cctv_solutions.png)
-import CctvHeroImg from '../../../../assets/images/cctv_img.jpg';
+import CctvHeroImg from '../../../../assets/images/cctv_surveilance.jpeg';
 import CctvFeatureImg from '../../../../assets/images/cctv_img.jpg';
 
 const WHY_CCTV = [
