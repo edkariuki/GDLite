@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaWhatsapp } from 'react-icons/fa6';
+import Logo from '../assets/logos/gdlite_logo.png';
 
 // Replace the hrefs with your real profiles. Delete any you don't use.
 const SOCIALS = [
@@ -50,9 +51,9 @@ const LINK_GROUPS = [
 
 // Replace with your real details.
 const CONTACT = {
-    phone: '+254 700 000 000',
+    phones: ['+254 705 690 695', '+254 794 585 383'],
     email: 'gdliteafrica@gmail.com',
-    address: 'Spur Mall, Thika Road',
+    address: 'Spur Mall 3rd Floor, Thika Road',
 };
 
 export default function Footer() {
@@ -64,8 +65,12 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_repeat(3,1fr)] gap-12">
                     {/* Brand + socials */}
                     <div>
-                        <Link to="/" className="text-2xl font-extrabold tracking-tight">
-                            GDLITE<span className="text-[var(--color-brand-accent)]">AFRICA</span>
+                        <Link to="/" aria-label="GDLite Africa home" className="inline-block">
+                            <img
+                                src={Logo}
+                                alt="GDLite Africa"
+                                className="h-12 w-auto"
+                            />
                         </Link>
                         <p className="mt-4 text-white/70 leading-relaxed max-w-sm">
                             Power, security and network solutions for homes, businesses and institutions.
@@ -114,16 +119,28 @@ export default function Footer() {
 
                 {/* Contact row */}
                 <div className="mt-14 pt-8 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-6 text-white/80">
-                    <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="inline-flex items-center gap-3 hover:text-white transition">
-                        <Phone className="w-5 h-5 text-[var(--color-brand-accent)]" strokeWidth={1.75} />
-                        {CONTACT.phone}
-                    </a>
-                    <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-3 hover:text-white transition">
-                        <Mail className="w-5 h-5 text-[var(--color-brand-accent)]" strokeWidth={1.75} />
+                    <div className="inline-flex items-start gap-3">
+                        <Phone className="w-5 h-5 mt-0.5 text-[var(--color-brand-accent)]" strokeWidth={1.75} />
+                        <div className="flex flex-col gap-1">
+                            {CONTACT.phones.map((phone) => (
+                                <a
+                                    key={phone}
+                                    href={`tel:${phone.replace(/\s/g, '')}`}
+                                    className="hover:text-white transition"
+                                >
+                                    {phone}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    <a href={`mailto:${CONTACT.email}`} className="inline-flex items-start gap-3 hover:text-white transition">
+                        <Mail className="w-5 h-5 mt-0.5 text-[var(--color-brand-accent)]" strokeWidth={1.75} />
                         {CONTACT.email}
                     </a>
-                    <span className="inline-flex items-center gap-3">
-                        <MapPin className="w-5 h-5 text-[var(--color-brand-accent)]" strokeWidth={1.75} />
+
+                    <span className="inline-flex items-start gap-3">
+                        <MapPin className="w-5 h-5 mt-0.5 text-[var(--color-brand-accent)]" strokeWidth={1.75} />
                         {CONTACT.address}
                     </span>
                 </div>
