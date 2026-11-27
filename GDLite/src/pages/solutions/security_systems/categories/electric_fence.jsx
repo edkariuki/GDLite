@@ -18,6 +18,7 @@ import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. electric_fence_hero.png, electric_fence_solutions.png)
 import FenceHeroImg from '../../../../assets/images/electricfence.jpg';
 import FenceFeatureImg from '../../../../assets/images/electric_fence.jpg';
+import { getElectricFenceSlugByTitle } from '../../../../data/electric_fence_solutions';
 
 const SUBCATEGORY_ICONS = {
     Residential: Home,
@@ -126,14 +127,13 @@ export default function ElectricFence() {
                                 <Icon className="w-10 h-10 text-brand" strokeWidth={1.5} />
                                 <h3 className="mt-6 text-2xl sm:text-3xl font-extrabold leading-tight">{sub.title}</h3>
                                 <p className="mt-4 opacity-80 leading-relaxed flex-1">{sub.description}</p>
-                                <button
-                                    type="button"
-                                    onClick={() => requestQuote(sub.title)}
-                                    className="mt-8 self-start inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white bg-brand hover:bg-brand-hover transition-colors group"
+                                <Link
+                                    to={`/security-systems/electric-fence/${getElectricFenceSlugByTitle(sub.title)}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand)]"
                                 >
-                                    Request a Quote
-                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                </button>
+                                    See More
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         );
                     })}

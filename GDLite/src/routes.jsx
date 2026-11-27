@@ -28,6 +28,7 @@ import GeneratorsSolution from './pages/solutions/power_systems/subcategories/ge
 import ElectricalSolution from './pages/solutions/power_systems/subcategories/electrical_solution'
 import AccessControlSolution from './pages/solutions/security_systems/subcategories/access_control'
 import AlarmsSolution from './pages/solutions/security_systems/subcategories/alarms_solution'
+import ElectricFenceSolution from './pages/solutions/security_systems/subcategories/electric_fence_solution'
 
 export const router = createBrowserRouter([
     {
@@ -112,7 +113,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'electric-fence',
-                        element: <ElectricFence />,
+                        children: [
+                            { index: true, element: <ElectricFence /> },
+                            { path: ':slug', element: <ElectricFenceSolution /> },
+                        ],
                     },
                     {
                         path: 'gate-automation',
