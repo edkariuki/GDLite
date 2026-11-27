@@ -30,6 +30,7 @@ import AccessControlSolution from './pages/solutions/security_systems/subcategor
 import AlarmsSolution from './pages/solutions/security_systems/subcategories/alarms_solution'
 import ElectricFenceSolution from './pages/solutions/security_systems/subcategories/electric_fence_solution'
 import GateAutomationSolution from './pages/solutions/security_systems/subcategories/gate_automation_solution'
+import CableStructuresSolution from './pages/solutions/network_systems/subcategories/cable_structures_solution'
 
 export const router = createBrowserRouter([
     {
@@ -142,7 +143,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'cable-structures',
-                        element: <CableStructures />,
+                        children: [
+                            { index: true, element: <CableStructures /> },
+                            { path: ':slug', element: <CableStructuresSolution /> },
+                        ],
                     },
                     {
                         path: 'fibre-optic-deployment',

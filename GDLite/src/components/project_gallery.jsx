@@ -9,11 +9,13 @@ import { accessControlGalleryData } from "../data/access_control_gallery";
 import { alarmsGalleryData } from "../data/alarms_gallery";
 import { electricFenceGalleryData } from "../data/electric_fence_gallery";
 import { gateAutomationGalleryData } from "../data/gate_automation_gallery";
+import { cableStructuresGalleryData } from "../data/cable_structures_gallery";
 
 const allGalleries = {
     solar: solarGalleryData, ups: upsGalleryData, generators: generatorsGalleryData,
     electrical: electricalGalleryData, "access-control": accessControlGalleryData,
     alarms: alarmsGalleryData, "electric-fence": electricFenceGalleryData, "gate-automation": gateAutomationGalleryData,
+    "cable-structures": cableStructuresGalleryData,
 };
 
 export default function ProjectGallery({

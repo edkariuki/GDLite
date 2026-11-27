@@ -7,6 +7,7 @@ import BrandCarousel from '../../../../components/brand_carousel';
 // TODO: replace with dedicated photos (e.g. cable_structures_hero.png, cable_structures_solutions.png)
 import CableHeroImg from '../../../../assets/images/structured_cabling_hero.jpg';
 import CableFeatureImg from '../../../../assets/images/cable_mgt_feature.jpeg';
+import { getCableStructuresSlugByTitle } from '../../../../data/cable_structures_solutions';
 
 const SUBCATEGORY_ICONS = {
     Commercial: Store,
@@ -114,14 +115,13 @@ export default function CableStructures() {
                                 <Icon className="w-10 h-10 text-[var(--color-brand-accent)]" strokeWidth={1.5} />
                                 <h3 className="mt-6 text-3xl sm:text-4xl font-extrabold leading-tight">{sub.title}</h3>
                                 <p className="mt-4 text-lg text-white/75 leading-relaxed flex-1 max-w-md">{sub.description}</p>
-                                <button
-                                    type="button"
-                                    onClick={() => requestQuote(sub.title)}
-                                    className="mt-8 self-start inline-flex items-center px-6 py-3 rounded-xl font-bold text-[var(--color-content-primary)] bg-[var(--color-brand-accent)] hover:opacity-90 transition group"
+                                <Link
+                                    to={`/network-systems/cable-structures/${getCableStructuresSlugByTitle(sub.title)}`}
+                                    className="mt-8 self-start inline-flex items-center font-semibold text-[var(--color-brand-accent)]"
                                 >
-                                    Request a Quote
-                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                </button>
+                                    See More
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
                             </div>
                         );
                     })}
