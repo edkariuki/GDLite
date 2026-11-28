@@ -15,7 +15,7 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
  * basePath: e.g. '/security-systems/cctv' → links to `${basePath}/${slug}`
  * interval: ms between automatic moves (0 turns autoplay off)
  */
-export default function SubcategoryShowcase({ items = [], basePath, interval = 5000 }) {
+export default function SubcategoryShowcase({ items = [], basePath, interval = 2000 }) {
     const count = items.length;
     const looped = count > 1;
     const belt = looped ? [...items, ...items, ...items] : items;
@@ -199,8 +199,8 @@ export default function SubcategoryShowcase({ items = [], basePath, interval = 5
                             onClick={() => goTo(i)}
                             aria-current={i === active}
                             className={`px-4 py-2 rounded-full text-sm font-semibold transition ${i === active
-                                    ? 'bg-[var(--color-content-primary)] text-white'
-                                    : 'bg-white/60 text-[var(--color-content-primary)] hover:bg-white'
+                                ? 'bg-[var(--color-content-primary)] text-white'
+                                : 'bg-white/60 text-[var(--color-content-primary)] hover:bg-white'
                                 }`}
                         >
                             {item.title}
