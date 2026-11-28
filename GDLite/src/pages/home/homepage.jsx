@@ -8,6 +8,7 @@ import ContactSection from '../../components/contact_section';
 import WhyChooseUs from '../../components/why_choose_us';
 import ProjectGallery from '../../components/project_gallery';
 import { featuredProjects } from '../../data/featured_projects';
+import ProjectsMarquee from '../../components/projects_marquee';
 
 const cardsData = [
     {
@@ -179,11 +180,7 @@ function Homepage() {
             <WhyChooseUs />
 
             <div className="bg-surface-light">
-                <ProjectGallery
-                    title="Projects Delivered"
-                    images={featuredProjects}
-                    limit={6}
-                />
+                <ProjectsMarquee title="Projects Delivered" items={featuredProjects} />
             </div>
 
             <ContactSection

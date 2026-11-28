@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Zap, ShieldCheck, Network, ChevronDown, X, Menu } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const megaMenuData = {
     products: [
@@ -18,6 +18,20 @@ export default function Navbar() {
     const handleMobileLinkClick = () => {
         setMobileOpen(false)
         setMobileProductsOpen(false)
+    }
+
+    const navigate = useNavigate()
+
+    const handleEnquire = () => {
+        setMobileOpen(false)
+        setMobileProductsOpen(false)
+
+        const section = document.getElementById('contact')
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' })
+        } else {
+            navigate('/contact')
+        }
     }
 
     return (
@@ -83,11 +97,13 @@ export default function Navbar() {
                     <a href="/contact" className="text-content-body hover:text-content-primary font-medium">Contact</a>
                 </div>
 
-                <div className="hidden md:flex items-center gap-4">
-                    <a href="#" className="px-5 py-2.5 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover transition-colors">
-                        Enquire Now
-                    </a>
-                </div>
+                <button
+                    type="button"
+                    onClick={handleEnquire}
+                    className="px-5 py-2.5 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover transition-colors"
+                >
+                    Enquire Now
+                </button>
 
                 <button className="md:hidden p-2 text-content-body" onClick={() => setMobileOpen(!mobileOpen)}>
                     {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -130,15 +146,13 @@ export default function Navbar() {
                     <a href="/about" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">About</a>
                     <a href="/contact" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">Contact</a>
 
-                    <div className="pt-4 border-t border-stroke">
-                        <a
-                            href="#"
-                            onClick={handleMobileLinkClick}
-                            className="block text-center w-full px-5 py-2.5 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover transition-colors"
-                        >
-                            Enquire Now
-                        </a>
-                    </div>
+                    <button
+                        type="button"
+                        onClick={handleEnquire}
+                        className="block text-center w-full px-5 py-2.5 text-sm font-semibold text-white bg-brand rounded-lg hover:bg-brand-hover transition-colors"
+                    >
+                        Enquire Now
+                    </button>
                 </div>
             )}
         </nav>

@@ -1,14 +1,20 @@
 import { solarGalleryData } from './solar_gallery';
 import { accessControlGalleryData } from './access_control_gallery';
-// import { cctvGalleryData } from './cctv_gallery';   // add once it exists
+// import { cableStructuresGalleryData } from './cable_structures_gallery';
 
-const take = (data, key, n = 1) => (data[key]?.images ?? []).slice(0, n);
+const pick = (data, key, category, caption, n = 2) =>
+    (data[key]?.images ?? []).slice(0, n).map((i) => ({
+        src: typeof i === 'string' ? i : i.src,
+        caption: (typeof i === 'object' && i.caption) || caption,
+        category,
+    }));
 
-// A mix across categories. Change the keys and counts to showcase your best work.
-export const featuredProjects = [
-    ...take(solarGalleryData, 'hybrid', 2),
-    ...take(solarGalleryData, 'off-grid', 1),
-    ...take(accessControlGalleryData, 'commercial', 1),
-    ...take(accessControlGalleryData, 'residential', 1),
-    // ...take(cctvGalleryData, 'some-key', 1),
-];
+const power = pick(solarGalleryData, 'hybrid', 'power', 'Hybrid solar installation');
+const security = pick(accessControlGalleryData, 'commercial', 'security', 'Commercial access control');
+const network = []; // e.g. pick(cableStructuresGalleryData, 'commercial', 'network', 'Structured cabling')
+
+// Interleave so the loop alternates between categories
+const maxLen = Math.max(power.length, security.length, network.length);
+export const featuredProjects = Array.from({ length: maxLen }, (_, i) =>
+    [power[i], security[i], network[i]].filter(Boolean)
+).flat();
