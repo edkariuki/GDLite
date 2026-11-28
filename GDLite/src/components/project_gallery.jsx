@@ -28,17 +28,17 @@ export default function ProjectGallery({
 }) {
     const [selected, setSelected] = useState(null);
 
-    // Use explicit images if given, otherwise look them up by category + service
-    const images = imagesProp ?? allGalleries[category]?.[service]?.images ?? [];
+    const raw = imagesProp ?? allGalleries[category]?.[service]?.images ?? [];
+    const items = raw.map((i) => (typeof i === "string" ? { src: i, caption: "" } : i));
+
     const galleryPath =
         galleryPathProp ?? (category && service ? `/gallery/${category}/${service}` : undefined);
-    const visible = images.slice(0, limit);
+    const visible = items.slice(0, limit);
 
     const close = () => setSelected(null);
-    const next = () => setSelected((i) => (i + 1) % images.length);
-    const prev = () => setSelected((i) => (i - 1 + images.length) % images.length);
+    const next = () => setSelected((i) => (i + 1) % items.length);
+    const prev = () => setSelected((i) => (i - 1 + items.length) % items.length);
 
-    // Reset the viewer when navigating to a different solution
     useEffect(() => {
         setSelected(null);
     }, [category, service]);
@@ -52,16 +52,16 @@ export default function ProjectGallery({
         };
         window.addEventListener("keydown", onKey);
         return () => window.removeEventListener("keydown", onKey);
-    }, [selected, images.length]);
+    }, [selected, items.length]);
 
-    if (!images.length) return null;
+    if (!items.length) return null;
 
     return (
         <section className="py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                     <h2 className="text-4xl sm:text-5xl font-extrabold text-content-primary">{title}</h2>
-                    {galleryPath && images.length > limit && (
+                    {galleryPath && items.length > limit && (
                         <Link to={galleryPath} className="inline-flex items-center font-semibold text-brand">
                             View Full Gallery <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
@@ -69,18 +69,23 @@ export default function ProjectGallery({
                 </div>
 
                 <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {visible.map((src, i) => (
+                    {visible.map((item, i) => (
                         <button
                             key={i}
                             onClick={() => setSelected(i)}
-                            className="group block w-full aspect-[4/3] overflow-hidden rounded-2xl bg-surface-card border border-stroke-light p-0"
+                            className="group relative block w-full aspect-[4/3] overflow-hidden rounded-2xl bg-surface-card border border-stroke-light p-0"
                         >
                             <img
-                                src={src}
-                                alt=""
+                                src={item.src}
+                                alt={item.caption}
                                 loading="lazy"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
+                            {item.caption && (
+                                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-4 pt-10 pb-3 text-left text-sm font-medium text-white">
+                                    {item.caption}
+                                </span>
+                            )}
                         </button>
                     ))}
                 </div>
@@ -88,13 +93,13 @@ export default function ProjectGallery({
 
             {selected !== null && (
                 <div
-                    className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-5"
+                    className="fixed inset-0 z-[9999] bg-black/95 flex flex-col items-center justify-center p-5"
                     onClick={close}
                 >
                     <button onClick={close} aria-label="Close" className="absolute top-5 right-7 text-white text-4xl">
                         &times;
                     </button>
-                    {images.length > 1 && (
+                    {items.length > 1 && (
                         <>
                             <button
                                 onClick={(e) => { e.stopPropagation(); prev(); }}
@@ -113,11 +118,16 @@ export default function ProjectGallery({
                         </>
                     )}
                     <img
-                        src={images[selected]}
-                        alt=""
+                        src={items[selected].src}
+                        alt={items[selected].caption}
                         onClick={(e) => e.stopPropagation()}
-                        className="max-w-[90vw] max-h-[85vh] object-contain"
+                        className="max-w-[90vw] max-h-[80vh] object-contain"
                     />
+                    {items[selected].caption && (
+                        <p className="mt-4 text-white/85 text-center" onClick={(e) => e.stopPropagation()}>
+                            {items[selected].caption}
+                        </p>
+                    )}
                 </div>
             )}
         </section>

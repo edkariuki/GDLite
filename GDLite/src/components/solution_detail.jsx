@@ -13,6 +13,7 @@ export default function SolutionDetail({
     serviceOptions,     // contact dropdown options
     defaultService,     // preselected contact option
     galleryCategory,
+    galleryImages,
     theme = 'brand',
 }) {
 
@@ -152,6 +153,7 @@ export default function SolutionDetail({
             <ProjectGallery
                 title={`${solution.title} Projects`}
                 category={galleryCategory}
+                images={galleryImages}
                 service={solution.slug}
             />
 

@@ -1,6 +1,9 @@
 import { Fingerprint, Cctv, BellRing, DoorOpen, Fence } from 'lucide-react';
 import AlarmSystemsImg from '../assets/images/alarm_system.jpg';
 import CctvImg from '../assets/images/cctv_img.jpg';
+import Cctv1 from '../assets/gallery/security/cctv_1.png';
+import Cctv2 from '../assets/gallery/security/cctv_2.png';
+import Cctv3 from '../assets/gallery/security/cctv_3.png';
 import ResidentialCctv from '../assets/images/residential_cctv.jpg';
 import CommercialCctv from '../assets/images/commercial_cctv.jpg';
 import TrafficCctv from '../assets/images/traffic_cctv.jpg';
@@ -71,10 +74,9 @@ export const securityCategories = [
                 tagline: 'Protect your home and loved ones with smart surveillance and remote monitoring, wherever you are.',
                 cover: ResidentialCctv,
                 gallery: [
-                    { src: CctvImg, caption: 'Homestead fitted with CCTV' },
-                    { src: CctvImg, caption: 'Homestead fitted with CCTV' },
-                    { src: CctvImg, caption: 'Homestead fitted with CCTV' },
-                    { src: CctvImg, caption: 'Viewing home cameras on your phone' },
+                    { src: Cctv1, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv2, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv3, caption: 'Viewing home cameras on your phone' },
                 ],
             },
             {
@@ -83,11 +85,9 @@ export const securityCategories = [
                 tagline: 'Safeguard your business, monitor daily operations and maintain visibility across your premises.',
                 cover: CommercialCctv,
                 gallery: [
-                    { src: CctvImg, caption: 'Factory CCTV' },
-                    { src: CctvImg, caption: 'Retail CCTV' },
-                    { src: CctvImg, caption: 'Go-down CCTV' },
-                    { src: CctvImg, caption: 'Office CCTV' },
-                    { src: CctvImg, caption: 'Command & monitoring station' },
+                    { src: Cctv1, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv2, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv3, caption: 'Viewing home cameras on your phone' },
                 ],
             },
             {
@@ -97,9 +97,9 @@ export const securityCategories = [
                     'From highway surveillance to fleet and logistics monitoring, we deliver intelligent traffic solutions that improve visibility, track vehicle movement and support safer, more efficient operations.',
                 cover: TrafficCctv,
                 gallery: [
-                    { src: CctvImg, caption: 'Highway CCTV' },
-                    { src: CctvImg, caption: 'Depot & yard CCTV' },
-                    { src: CctvImg, caption: 'Stadium CCTV' },
+                    { src: Cctv1, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv2, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv3, caption: 'Viewing home cameras on your phone' },
                 ],
             },
             {
@@ -108,9 +108,9 @@ export const securityCategories = [
                 tagline: 'Protect livestock, crops, equipment and farm operations with surveillance solutions tailored to agricultural environments.',
                 cover: FarmCctv,
                 gallery: [
-                    { src: CctvImg, caption: 'Farm surveillance' },
-                    { src: CctvImg, caption: 'Farm surveillance' },
-                    { src: CctvImg, caption: 'Farm surveillance' },
+                    { src: Cctv1, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv2, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv3, caption: 'Viewing home cameras on your phone' },
                 ],
             },
             {
@@ -118,14 +118,22 @@ export const securityCategories = [
                 title: 'Site CCTV',
                 tagline: 'Secure construction sites and project locations against theft, vandalism and unauthorised access.',
                 cover: SiteCctv,
-                gallery: [{ src: CctvImg, caption: 'Construction site CCTV' }],
+                gallery: [
+                    { src: Cctv1, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv2, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv3, caption: 'Viewing home cameras on your phone' },
+                ],
             },
             {
                 slug: 'vehicle',
                 title: 'Vehicle CCTV',
                 tagline: 'Enhance vehicle security with onboard surveillance that helps monitor activities, protect assets and improve accountability.',
                 cover: VehicleCctv,
-                gallery: [{ src: CctvImg, caption: 'Onboard vehicle CCTV' }],
+                gallery: [
+                    { src: Cctv1, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv2, caption: 'Homestead fitted with CCTV' },
+                    { src: Cctv3, caption: 'Viewing home cameras on your phone' },
+                ],
             },
         ],
     },

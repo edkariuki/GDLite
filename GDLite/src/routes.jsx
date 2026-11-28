@@ -31,6 +31,7 @@ import AlarmsSolution from './pages/solutions/security_systems/subcategories/ala
 import ElectricFenceSolution from './pages/solutions/security_systems/subcategories/electric_fence_solution'
 import GateAutomationSolution from './pages/solutions/security_systems/subcategories/gate_automation_solution'
 import CableStructuresSolution from './pages/solutions/network_systems/subcategories/cable_structures_solution'
+import CctvSolution from './pages/solutions/security_systems/subcategories/cctv_solution'
 
 export const router = createBrowserRouter([
     {
@@ -104,7 +105,10 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'cctv',
-                        element: <Cctv />,
+                        children: [
+                            { index: true, element: <Cctv /> },
+                            { path: ':slug', element: <CctvSolution /> },
+                        ],
                     },
                     {
                         path: 'alarms',

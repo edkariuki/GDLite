@@ -180,7 +180,7 @@ function Homepage() {
 
             <div className="bg-surface-light">
                 <ProjectGallery
-                    title="Projects We've Delivered"
+                    title="Projects Delivered"
                     images={featuredProjects}
                     limit={6}
                 />
