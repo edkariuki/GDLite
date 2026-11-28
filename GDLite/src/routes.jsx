@@ -32,6 +32,7 @@ import ElectricFenceSolution from './pages/solutions/security_systems/subcategor
 import GateAutomationSolution from './pages/solutions/security_systems/subcategories/gate_automation_solution'
 import CableStructuresSolution from './pages/solutions/network_systems/subcategories/cable_structures_solution'
 import CctvSolution from './pages/solutions/security_systems/subcategories/cctv_solution'
+import Contact from './pages/contact/contact'
 
 export const router = createBrowserRouter([
     {
@@ -173,6 +174,10 @@ export const router = createBrowserRouter([
             {
                 path: 'about',
                 element: <About />,
+            },
+            {
+                path: 'contact',
+                element: <Contact />,
             },
             // {
             //     path: 'gallery/solar/:service',

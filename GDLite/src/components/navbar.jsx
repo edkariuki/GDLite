@@ -80,7 +80,7 @@ export default function Navbar() {
                     </div>
 
                     <a href="/about" className="text-content-body hover:text-content-primary font-medium">About</a>
-                    <a href="#" className="text-content-body hover:text-content-primary font-medium">Contact</a>
+                    <a href="/contact" className="text-content-body hover:text-content-primary font-medium">Contact</a>
                 </div>
 
                 <div className="hidden md:flex items-center gap-4">
@@ -128,7 +128,7 @@ export default function Navbar() {
                     </div>
 
                     <a href="/about" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">About</a>
-                    <a href="#" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">Contact</a>
+                    <a href="/contact" onClick={handleMobileLinkClick} className="block font-medium text-content-primary">Contact</a>
 
                     <div className="pt-4 border-t border-stroke">
                         <a
